@@ -20,7 +20,7 @@ dozero:
         pio_sm_set_consecutive_pindirs(pio, sm, pins, 1, true);
 
         pio_sm_config c = dshot_program_get_default_config(offset);
-        sm_config_set_sideset_pins(&c, pins); 
+        sm_config_set_sideset_pins(&c, pins);
         sm_config_set_out_shift(&c, false, true, 16);
 
         float div = clock_get_hz(clk_sys) / (1800000);
