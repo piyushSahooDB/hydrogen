@@ -1,6 +1,6 @@
 src/build/
 src/install/
-src/log/s
+src/log/
 
 .DS_Store
 
