@@ -1,2 +1,0 @@
-Invoking command in '/home/cupcake/hydrogen_ws/src/build/gz-sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/cupcake/hydrogen_ws/src/gz-sim -DCMAKE_INSTALL_PREFIX=/home/cupcake/hydrogen_ws/src/install/gz-sim
-Invoked command in '/home/cupcake/hydrogen_ws/src/build/gz-sim' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/cupcake/hydrogen_ws/src/gz-sim -DCMAKE_INSTALL_PREFIX=/home/cupcake/hydrogen_ws/src/install/gz-sim
