@@ -30,6 +30,7 @@ All of the following are little endian
         bit 4  : Comm fault
         bit 5  : Sensor fault
         bit 6–7: Reserved
+    When error is set, call interrupt to make master immediately push a telemetry request
 
     Recieved frame structure:
     - 8 bits sof 
