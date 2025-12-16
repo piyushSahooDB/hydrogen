@@ -46,6 +46,13 @@
         <propeller_diameter>0.2</propeller_diameter>
       </plugin>
   </gazebo>
+  <gazebo>
+<plugin
+    filename="ignition-gazebo-imu-system"
+    name="ignition::gazebo::systems::Imu">
+  <topic>imu</topic>
+</plugin>
+</gazebo>
   
  <gazebo>
   <plugin filename="ignition-gazebo-sensors-system" name="ignition::gazebo::systems::Sensors">

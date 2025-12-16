@@ -1,11 +1,15 @@
 import os
+
 from ament_index_python.packages import get_package_share_directory
+
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, AppendEnvironmentVariable, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration
+
 from launch_ros.actions import Node
 from launch_ros.descriptions import ParameterValue
+
 
 def generate_launch_description():
 
@@ -15,9 +19,9 @@ def generate_launch_description():
     pkg_share = get_package_share_directory(package_name)
     worlds_path = os.path.join(pkg_share, 'worlds')
     model_path = os.path.join(pkg_share, 'model')
-    
-    install_dir = os.path.dirname(pkg_share) 
-    
+
+    install_dir = os.path.dirname(pkg_share)
+
     x_pos = LaunchConfiguration('x')
     y_pos = LaunchConfiguration('y')
     z_pos = LaunchConfiguration('z')
@@ -35,55 +39,53 @@ def generate_launch_description():
         value=os.pathsep.join([worlds_path, install_dir])
     )
 
+    xacro_file = os.path.join(model_path, 'robot.xacro')
 
-    xacro_file = os.path.join(model_path, "robot.xacro")
-    
     robot_description = ParameterValue(
         Command(['xacro ', xacro_file]),
         value_type=str
     )
 
-    world_file = os.path.join(pkg_share, "worlds", "buoyant_pool.sdf")
+    world_file = os.path.join(pkg_share, 'worlds', 'buoyant_pool.sdf')
 
     gazebo_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
-                get_package_share_directory("ros_gz_sim"),
-                "launch",
-                "gz_sim.launch.py"
+                get_package_share_directory('ros_gz_sim'),
+                'launch',
+                'gz_sim.launch.py'
             )
         ),
         launch_arguments={
-            "gz_args": f"-r -v 4 {world_file}",
-            "on_exit_shutdown": "true"
+            'gz_args': f'-r -v 4 {world_file}',
+            'on_exit_shutdown': 'true'
         }.items()
     )
 
-
     spawn_robot = Node(
-        package="ros_gz_sim",
-        executable="create",
+        package='ros_gz_sim',
+        executable='create',
         arguments=[
-            "-name", robot_name,
-            "-topic", "robot_description", 
-            "-x", x_pos,
-            "-y", y_pos,
-            "-z", z_pos,
-            "-R", roll,
-            "-P", pitch,
-            "-Y", yaw
+            '-name', robot_name,
+            '-topic', 'robot_description',
+            '-x', x_pos,
+            '-y', y_pos,
+            '-z', z_pos,
+            '-R', roll,
+            '-P', pitch,
+            '-Y', yaw
         ],
-        output="screen",
+        output='screen'
     )
 
     robot_state_publisher = Node(
-        package="robot_state_publisher",
-        executable="robot_state_publisher",
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
         parameters=[
-            {"robot_description": robot_description},
-            {"use_sim_time": True}
+            {'robot_description': robot_description},
+            {'use_sim_time': True}
         ],
-        output="screen"
+        output='screen'
     )
 
     bridge_params = os.path.join(
@@ -92,20 +94,19 @@ def generate_launch_description():
         'bridge_params.yaml'
     )
 
-    start_gazebo_ros_bridge_cmd = Node(
+    ros_gz_bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
         name='parameter_bridge',
         output='screen',
-        parameters=[{
-            'config_file': bridge_params,
-            'use_sim_time': True
-        }]
+        arguments=[
+            '--ros-args',
+            '--param', f'config_file:={bridge_params}'
+        ],
+        parameters=[{'use_sim_time': True}]
     )
-    
-
     ld = LaunchDescription()
-    
+
     ld.add_action(DeclareLaunchArgument('x', default_value='3.5', description='Spawn X position'))
     ld.add_action(DeclareLaunchArgument('y', default_value='-21.5', description='Spawn Y position'))
     ld.add_action(DeclareLaunchArgument('z', default_value='2.5', description='Spawn Z position'))
@@ -118,7 +119,7 @@ def generate_launch_description():
     ld.add_action(gazebo_launch)
     ld.add_action(robot_state_publisher)
     ld.add_action(spawn_robot)
-    ld.add_action(start_gazebo_ros_bridge_cmd)  
- 
+    ld.add_action(ros_gz_bridge)
 
     return ld
+
