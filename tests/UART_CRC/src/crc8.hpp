@@ -26,4 +26,21 @@ inline uint8_t crc8(const uint8_t* data, uint32_t len)
     return crc; 
 }
 
+inline bool commandRequiresCrc(uint8_t cmd)
+{
+    switch(cmd)
+    {
+        case 0xC0: //STOP_ELECTRONICS
+            return false;
+        case 0xC7: //STOP_THRUSTERS
+            return false;
+        case 0xB8: //START_THRUSTERS
+            return true;
+        case 0xBF: //TELEMETRY
+            return true;
+        default:
+            return false;
+    }
+}
+
 #endif

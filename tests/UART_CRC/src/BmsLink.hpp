@@ -12,6 +12,13 @@ struct TelemetryData {
     uint8_t error;
 };
 
+enum Command : uint8_t {
+    STOP_ELECTRONICS = 0xC0,
+    STOP_THRUSTERS   = 0xC7,  
+    START_THRUSTERS  = 0xB8,
+    TELEMETRY        = 0xBF
+};
+
 class BmsLink {
 public:
     // -------- Public Variables --------
@@ -21,6 +28,7 @@ private:
     HardwareSerial* m_serial;
     uint32_t m_baud;
     uint8_t m_sequence;
+    Command m_currentCommand;
 
     uint8_t m_errorByte;
     bool m_errorPending;
@@ -28,13 +36,15 @@ private:
     uint8_t m_rxBuffer[32];
     size_t m_rxIndex;
 
+    TelemetryData m_telemetry;
+
 public:
     // -------- Public Functions --------
     BmsLink(HardwareSerial& serial, uint32_t baud);
 
     void begin();
     void update();
-    void sendTelemetry(const TelemetryData& data);
+    void sendTelemetry();
     void pushError(uint8_t errorFlags);
 
 private:
