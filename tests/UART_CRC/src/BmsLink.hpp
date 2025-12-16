@@ -13,6 +13,7 @@ struct TelemetryData {
 };
 
 enum Command : uint8_t {
+    NONE             = 0x00,
     STOP_ELECTRONICS = 0xC0,
     STOP_THRUSTERS   = 0xC7,  
     START_THRUSTERS  = 0xB8,
@@ -54,4 +55,9 @@ private:
     void sendAck();
     void sendNack();
     void sendPendingError();
+
+    bool execStopElectronics();
+    bool execStopThrusters();
+    bool execStartThrusters();
+    bool execTelemetry();
 };

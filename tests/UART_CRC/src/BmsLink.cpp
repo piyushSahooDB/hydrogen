@@ -2,6 +2,7 @@
 
 // -------- Public Functions --------
 BmsLink::BmsLink(HardwareSerial& serial, uint32_t baud) {
+    m_currentCommand = NONE;
     m_serial = &serial;
     m_baud = baud;
     m_sequence = 0;
@@ -19,6 +20,23 @@ void BmsLink::update() {
 
     if (m_errorPending && m_serial->availableForWrite() >= 11) {
         sendPendingError();
+    }
+
+    if(m_currentCommand != NONE) {
+        switch(m_currentCommand) {
+            case STOP_ELECTRONICS:
+                if(execStopElectronics()) {m_currentCommand = NONE;} //returns true on success
+                break;
+            case STOP_THRUSTERS:
+                if(execStopThrusters()) {m_currentCommand = NONE;}
+                break;
+            case START_THRUSTERS:
+                if(execStartThrusters()) {m_currentCommand = NONE;}
+                break;
+            case TELEMETRY:
+                if(execTelemetry()) {m_currentCommand = NONE;}
+                break;
+        }
     }
 }
 
@@ -128,4 +146,17 @@ void BmsLink::sendPendingError() {
         sendTelemetry();
         m_errorPending = false;
     }
+}
+
+bool BmsLink::execStopElectronics() {
+    return true;
+}
+bool BmsLink::execStopThrusters() {
+    return true;
+}
+bool BmsLink::execStartThrusters() {
+    return true;
+}
+bool BmsLink::execTelemetry() {
+    return true;
 }
