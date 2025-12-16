@@ -1,0 +1,4 @@
+output_bags:
+  - uri: my_output.mcap
+    storage_id: mcap
+
