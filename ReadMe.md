@@ -1,3 +1,4 @@
 # Hydrogen – Team AUV MIT-B
 
-Building our 2nd prototype to participate in RoboSub 2026.
+## BMS Branch:
+> Focussed on the BMS controller
