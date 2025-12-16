@@ -3,20 +3,18 @@
 #include <Arduino.h>
 #include "crc8.hpp"
 
-// Telemetry frame structure
 struct TelemetryData {
+    uint8_t sequence;
     int16_t current_mA;
     uint16_t output_mV;
     uint16_t total_mV;
     int16_t temp_centiC;
     uint8_t error;
-    uint8_t sequence;
 };
 
 class BmsLink {
 public:
     // -------- Public Variables --------
-    // (currently none, but could expose telemetry state)
 
 private:
     // -------- Private Variables --------

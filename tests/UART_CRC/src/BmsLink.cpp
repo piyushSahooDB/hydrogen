@@ -15,33 +15,30 @@ void BmsLink::begin() {
 }
 
 void BmsLink::update() {
-    // Non-blocking RX parsing
     parseRx();
 
-    // Non-blocking error frame sending
-    if (m_errorPending && m_serial->availableForWrite() >= 11) { 
-        // Only send if there is enough room in TX buffer
+    if (m_errorPending && m_serial->availableForWrite() >= 11) {
         sendPendingError();
     }
 }
 
 void BmsLink::sendTelemetry(const TelemetryData& data) {
-    uint8_t frame[11];
-    frame[0] = data.sequence;
-    frame[1] = data.current_mA & 0xFF;
-    frame[2] = (data.current_mA >> 8) & 0xFF;
-    frame[3] = data.output_mV & 0xFF;
-    frame[4] = (data.output_mV >> 8) & 0xFF;
-    frame[5] = data.total_mV & 0xFF;
-    frame[6] = (data.total_mV >> 8) & 0xFF;
-    frame[7] = data.temp_centiC & 0xFF;
-    frame[8] = (data.temp_centiC >> 8) & 0xFF;
-    frame[9] = data.error;
+    uint8_t frame[12];
+    frame[0] = 0xAE;
+    frame[1] = data.sequence;
+    frame[2] = data.current_mA & 0xFF;
+    frame[3] = (data.current_mA >> 8) & 0xFF;
+    frame[4] = data.output_mV & 0xFF;
+    frame[5] = (data.output_mV >> 8) & 0xFF;
+    frame[6] = data.total_mV & 0xFF;
+    frame[7] = (data.total_mV >> 8) & 0xFF;
+    frame[8] = data.temp_centiC & 0xFF;
+    frame[9] = (data.temp_centiC >> 8) & 0xFF;
+    frame[10] = data.error;
 
     uint8_t crc = crc8(frame, 10);
-    frame[10] = crc;
+    frame[11] = crc;
 
-    m_serial->write(0xAE); // SOF
     m_serial->write(frame, sizeof(frame));
 }
 

@@ -1,3 +1,4 @@
 - Switch from normal serial to esp32 HardwareSerial
 - UART IS FULL DUPLEX DUMBASS, but stick to the prompting, sending info EXCEPT FOR ERRORS
 - Write validation logic 
+- Write full push error
