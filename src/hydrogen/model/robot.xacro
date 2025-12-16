@@ -193,6 +193,20 @@
       </sensor>
     </gazebo>
 
+    <gazebo>
+      <plugin
+        filename="libauv_absolute_depth.so"
+        name="AUVAbsoluteDepth">
+
+        <!-- Reference plane (e.g., water surface) -->
+        <reference_z>0.0</reference_z>
+
+        <!-- Ignition Transport topic -->
+        <topic>/altimeter</topic>
+
+      </plugin>
+    </gazebo>
+
   </xacro:macro>
   <xacro:zed_camera name="zed_camera_front_link" xyz="0.162 0 0.016" rpy="0 0 0"/>
 

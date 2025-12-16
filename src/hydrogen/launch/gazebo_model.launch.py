@@ -17,6 +17,9 @@ def generate_launch_description():
     robot_name = 'Hydrogen'
 
     pkg_share = get_package_share_directory(package_name)
+    pkg_share = get_package_share_directory(package_name)
+
+    plugins_path = os.path.join(pkg_share, 'plugins')
     worlds_path = os.path.join(pkg_share, 'worlds')
     model_path = os.path.join(pkg_share, 'model')
 
@@ -28,6 +31,16 @@ def generate_launch_description():
     roll = LaunchConfiguration('R')
     pitch = LaunchConfiguration('P')
     yaw = LaunchConfiguration('Y')
+
+    set_ign_plugin_path = AppendEnvironmentVariable(
+    name='IGN_GAZEBO_SYSTEM_PLUGIN_PATH',
+    value=plugins_path
+)
+
+    set_gz_plugin_path = AppendEnvironmentVariable(
+        name='GZ_SIM_SYSTEM_PLUGIN_PATH',
+        value=plugins_path
+    )
 
     set_ign_resource_path = AppendEnvironmentVariable(
         name='IGN_GAZEBO_RESOURCE_PATH',
@@ -116,6 +129,8 @@ def generate_launch_description():
 
     ld.add_action(set_ign_resource_path)
     ld.add_action(set_gz_resource_path)
+    ld.add_action(set_ign_plugin_path)
+    ld.add_action(set_gz_plugin_path)
     ld.add_action(gazebo_launch)
     ld.add_action(robot_state_publisher)
     ld.add_action(spawn_robot)

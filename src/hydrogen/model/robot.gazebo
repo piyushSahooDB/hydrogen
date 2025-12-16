@@ -86,5 +86,18 @@
     </plugin>
   </gazebo>
 
+    <gazebo>
+    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+      <topic>joint_states</topic>
+      <update_rate>30.0</update_rate>
+      <frame_name>base_link</frame_name>
+      <joint_name>front_propeller_joint</joint_name>
+      <joint_name>left_propeller_1_joint</joint_name>
+      <joint_name>left_propeller_2_joint</joint_name>
+      <joint_name>right_propeller_1_joint</joint_name>
+      <joint_name>right_propeller_2_joint</joint_name>
+    </plugin>
+    </gazebo>
+
 </robot>
 
