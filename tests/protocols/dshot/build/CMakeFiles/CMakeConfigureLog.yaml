@@ -1103,7 +1103,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
       
       The C compiler identification is GNU, found in:
-        /Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/3.31.5/CompilerIdC/CMakeCCompilerId.o
+        /Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/3.31.5/CompilerIdC/CMakeCCompilerId.o
       
   -
     kind: "message-v1"
@@ -1155,7 +1155,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
       
       The CXX compiler identification is GNU, found in:
-        /Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/3.31.5/CompilerIdCXX/CMakeCXXCompilerId.o
+        /Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/3.31.5/CompilerIdCXX/CMakeCXXCompilerId.o
       
   -
     kind: "message-v1"
@@ -1179,8 +1179,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/CMakeScratch/TryCompile-l7qNdO"
-      binary: "/Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/CMakeScratch/TryCompile-l7qNdO"
+      source: "/Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/CMakeScratch/TryCompile-pkGxTF"
+      binary: "/Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/CMakeScratch/TryCompile-pkGxTF"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_C_FLAGS_DEBUG: "-Og -g"
@@ -1191,10 +1191,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/CMakeScratch/TryCompile-l7qNdO'
+        Change Dir: '/Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/CMakeScratch/TryCompile-pkGxTF'
         
-        Run Build Command(s): /Users/chaturvasireddy/.pico-sdk/ninja/v1.12.1/ninja -v cmTC_d30c1
-        [1/2] /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb  -std=gnu11   -v -o CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o -c /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /Users/chaturvasireddy/.pico-sdk/ninja/v1.12.1/ninja -v cmTC_26c5f
+        [1/2] /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb  -std=gnu11   -v -o CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o -c /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc
         Target: arm-none-eabi
@@ -1202,8 +1202,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d30c1.dir/'
-         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d30c1.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu11 -version -o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccgVU3xy.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_26c5f.dir/'
+         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_26c5f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu11 -version -o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//cc9NMgff.s
         GNU C11 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)
         	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.29.30), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -1220,13 +1220,13 @@ events:
          /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 37d23b2e3347d18c1231e07805cbe085
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d30c1.dir/'
-         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccgVU3xy.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_26c5f.dir/'
+         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//cc9NMgff.s
         GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119
         COMPILER_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.'
-        [2/2] : && /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o -o cmTC_d30c1.elf   && :
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o -o cmTC_26c5f.elf   && :
         Using built-in specs.
         COLLECT_GCC=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc
         COLLECT_LTO_WRAPPER=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper
@@ -1237,10 +1237,10 @@ events:
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
         COMPILER_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_d30c1.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_d30c1.elf.'
-         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2 -plugin /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so -plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccQlfVSO.res --sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_d30c1.elf -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_26c5f.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_26c5f.elf.'
+         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2 -plugin /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so -plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccuzPY6u.res --sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_26c5f.elf -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o
         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 00008000
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_d30c1.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_d30c1.elf.'
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_26c5f.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_26c5f.elf.'
         
       exitCode: 0
   -
@@ -1273,10 +1273,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/CMakeScratch/TryCompile-l7qNdO']
+        ignore line: [Change Dir: '/Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/CMakeScratch/TryCompile-pkGxTF']
         ignore line: []
-        ignore line: [Run Build Command(s): /Users/chaturvasireddy/.pico-sdk/ninja/v1.12.1/ninja -v cmTC_d30c1]
-        ignore line: [[1/2] /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb  -std=gnu11   -v -o CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o -c /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /Users/chaturvasireddy/.pico-sdk/ninja/v1.12.1/ninja -v cmTC_26c5f]
+        ignore line: [[1/2] /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb  -std=gnu11   -v -o CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o -c /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc]
         ignore line: [Target: arm-none-eabi]
@@ -1284,8 +1284,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d30c1.dir/']
-        ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d30c1.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu11 -version -o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccgVU3xy.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_26c5f.dir/']
+        ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_26c5f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu11 -version -o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//cc9NMgff.s]
         ignore line: [GNU C11 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.29.30)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -1302,13 +1302,13 @@ events:
         ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 37d23b2e3347d18c1231e07805cbe085]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d30c1.dir/']
-        ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccgVU3xy.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_26c5f.dir/']
+        ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//cc9NMgff.s]
         ignore line: [GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119]
         ignore line: [COMPILER_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] : && /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o -o cmTC_d30c1.elf   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o -o cmTC_26c5f.elf   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper]
@@ -1319,17 +1319,17 @@ events:
         ignore line: [gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) ]
         ignore line: [COMPILER_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_d30c1.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_d30c1.elf.']
-        link line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2 -plugin /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so -plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccQlfVSO.res --sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_d30c1.elf -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_26c5f.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_26c5f.elf.']
+        link line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2 -plugin /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so -plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccuzPY6u.res --sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_26c5f.elf -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o]
           arg [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccQlfVSO.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccuzPY6u.res] ==> ignore
           arg [--sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_d30c1.elf] ==> ignore
+          arg [cmTC_26c5f.elf] ==> ignore
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -1338,10 +1338,10 @@ events:
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib]
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_d30c1.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_26c5f.dir/CMakeCCompilerABI.c.o] ==> ignore
         ignore line: [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00008000]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_d30c1.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_d30c1.elf.']
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_26c5f.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_26c5f.elf.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
@@ -1366,8 +1366,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/CMakeScratch/TryCompile-2pU5xL"
-      binary: "/Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/CMakeScratch/TryCompile-2pU5xL"
+      source: "/Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/CMakeScratch/TryCompile-nklc1i"
+      binary: "/Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/CMakeScratch/TryCompile-nklc1i"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_CXX_FLAGS_DEBUG: "-Og -g"
@@ -1379,10 +1379,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/CMakeScratch/TryCompile-2pU5xL'
+        Change Dir: '/Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/CMakeScratch/TryCompile-nklc1i'
         
-        Run Build Command(s): /Users/chaturvasireddy/.pico-sdk/ninja/v1.12.1/ninja -v cmTC_0ab62
-        [1/2] /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb  -std=gnu++17   -v -o CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o -c /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /Users/chaturvasireddy/.pico-sdk/ninja/v1.12.1/ninja -v cmTC_c1953
+        [1/2] /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb  -std=gnu++17   -v -o CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o -c /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++
         Target: arm-none-eabi
@@ -1390,8 +1390,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_0ab62.dir/'
-         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0ab62.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu++17 -version -o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccY3CUiE.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_c1953.dir/'
+         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c1953.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu++17 -version -o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccjNkXRx.s
         GNU C++17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)
         	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.29.30), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -1414,13 +1414,13 @@ events:
          /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 27b9f5562618372de894011fc251f42d
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_0ab62.dir/'
-         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccY3CUiE.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_c1953.dir/'
+         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccjNkXRx.s
         GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119
         COMPILER_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0ab62.elf   && :
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c1953.elf   && :
         Using built-in specs.
         COLLECT_GCC=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++
         COLLECT_LTO_WRAPPER=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper
@@ -1431,10 +1431,10 @@ events:
         gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 
         COMPILER_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_0ab62.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_0ab62.elf.'
-         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2 -plugin /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so -plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccurBb1Z.res --sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_0ab62.elf -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_c1953.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_c1953.elf.'
+         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2 -plugin /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so -plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccci1UtQ.res --sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_c1953.elf -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o
         /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 00008000
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_0ab62.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_0ab62.elf.'
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_c1953.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_c1953.elf.'
         
       exitCode: 0
   -
@@ -1473,10 +1473,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/CMakeFiles/CMakeScratch/TryCompile-2pU5xL']
+        ignore line: [Change Dir: '/Users/chaturvasireddy/Documents/Code/DShotPIO/build/CMakeFiles/CMakeScratch/TryCompile-nklc1i']
         ignore line: []
-        ignore line: [Run Build Command(s): /Users/chaturvasireddy/.pico-sdk/ninja/v1.12.1/ninja -v cmTC_0ab62]
-        ignore line: [[1/2] /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb  -std=gnu++17   -v -o CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o -c /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /Users/chaturvasireddy/.pico-sdk/ninja/v1.12.1/ninja -v cmTC_c1953]
+        ignore line: [[1/2] /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb  -std=gnu++17   -v -o CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o -c /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++]
         ignore line: [Target: arm-none-eabi]
@@ -1484,8 +1484,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_0ab62.dir/']
-        ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0ab62.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu++17 -version -o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccY3CUiE.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_c1953.dir/']
+        ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/ -isysroot /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /Users/chaturvasireddy/.pico-sdk/cmake/v3.31.5/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c1953.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu++17 -version -o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccjNkXRx.s]
         ignore line: [GNU C++17 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) version 14.2.1 20241119 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.29.30)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -1508,13 +1508,13 @@ events:
         ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 27b9f5562618372de894011fc251f42d]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_0ab62.dir/']
-        ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccY3CUiE.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_c1953.dir/']
+        ignore line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o /var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccjNkXRx.s]
         ignore line: [GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119]
         ignore line: [COMPILER_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0ab62.elf   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c1953.elf   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper]
@@ -1525,17 +1525,17 @@ events:
         ignore line: [gcc version 14.2.1 20241119 (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) ]
         ignore line: [COMPILER_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/:/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_0ab62.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_0ab62.elf.']
-        link line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2 -plugin /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so -plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccurBb1Z.res --sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_0ab62.elf -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_c1953.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_c1953.elf.']
+        link line: [ /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2 -plugin /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so -plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccci1UtQ.res --sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi -X -o cmTC_c1953.elf -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1 -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib -L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o]
           arg [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../libexec/gcc/arm-none-eabi/14.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccurBb1Z.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/cs/qx565css6pq7xjx3ct9qgtgc0000gn/T//ccci1UtQ.res] ==> ignore
           arg [--sysroot=/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_0ab62.elf] ==> ignore
+          arg [cmTC_c1953.elf] ==> ignore
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -1544,10 +1544,10 @@ events:
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib]
           arg [-L/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib] ==> dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_0ab62.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_c1953.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
         ignore line: [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00008000]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_0ab62.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_0ab62.elf.']
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_c1953.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_c1953.elf.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp] ==> [/Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp]

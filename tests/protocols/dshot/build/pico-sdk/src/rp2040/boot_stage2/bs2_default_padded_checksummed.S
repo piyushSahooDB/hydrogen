@@ -1,4 +1,4 @@
-// Padded and checksummed version of: /Users/chaturvasireddy/Documents/AUV/hydrogen/tests/protocols/dshot/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /Users/chaturvasireddy/Documents/Code/DShotPIO/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb
