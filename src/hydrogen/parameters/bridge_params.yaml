@@ -34,5 +34,37 @@
   gz_type_name: gz.msgs.IMU
   direction: GZ_TO_ROS
 
+# gz topic published by JointState Plugin
+- ros_topic_name: "joint_states"
+  gz_topic_name: "joint_states"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "gz.msgs.Model"
+  direction: "GZ_TO_ROS"
+
+
+# #gz topic published by camera plugin
+- ros_topic_name: "camera/depth_image_raw/front"
+  gz_topic_name: "/zed_camera_front_link/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: "GZ_TO_ROS"
+
+# #gz topic published by camera plugin
+- ros_topic_name: "point_cloud_front"
+  gz_topic_name: "/zed_camera_front_link/depth_image/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "ignition.msgs.PointCloudPacked"
+  direction: "GZ_TO_ROS"
+
+
+- ros_topic_name: /altimeter
+  gz_topic_name: /altimeter
+  ros_type_name: std_msgs/msg/Float64
+  gz_type_name: ignition.msgs.Double
+  direction: GZ_TO_ROS
+
+
+
+
 
 
