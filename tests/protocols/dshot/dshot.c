@@ -17,23 +17,23 @@ int main() {
 
     dshot_program_init(pio, sm, offset, 0);
 
-    for (int i = 0;i < 2000;i++) {
-        pio_sm_put_blocking(pio, sm, 0x00000000);
+    for (int i = 0;i < 4000;i++) {
+        pio_sm_put_blocking(pio, sm, 0x000F << 16);
         sleep_ms(1);
     }
     for (int i = 0;i < 10;i++) {
-        pio_sm_put_blocking(pio, sm, (uint32_t)0x0145 << 16);
+        pio_sm_put_blocking(pio, sm, (uint32_t)0x014A << 16);
         sleep_ms(1);
     }
     while (true) {
+        gpio_put(15, 1);
+
         for (int i = 0;i < 10000;i++) {
-            gpio_put(15, 1);
-            pio_sm_put_blocking(pio, sm, (uint32_t)0x1265 << 16);
+            pio_sm_put_blocking(pio, sm, (uint32_t)0x126A << 16);
             sleep_ms(1);
         }
         // for (int i = 0;i < 10000;i++) {
-        //     gpio_put(15, 1);
-        //     pio_sm_put_blocking(pio, sm, (uint32_t)0xC16B << 16);
+        //     pio_sm_put_blocking(pio, sm, (uint32_t)0xA86B << 16);
         //     sleep_ms(1);
         // }
     }

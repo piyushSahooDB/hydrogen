@@ -184,7 +184,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x13 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdlib/stdlib.c.o
  .debug_line    0x00000000      0x44b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdlib/stdlib.c.o
- .debug_str     0x00000000      0x3be CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdlib/stdlib.c.o
+ .debug_str     0x00000000      0x3d3 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdlib/stdlib.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdlib/stdlib.c.o
  .debug_frame   0x00000000       0x28 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdlib/stdlib.c.o
  .ARM.attributes
@@ -198,8 +198,6 @@ Discarded input sections
                 0x00000000       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
  .text.gpio_get_function
                 0x00000000       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .text.gpio_set_pulls
-                0x00000000       0x28 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
  .text.gpio_set_irqover
                 0x00000000       0x24 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
  .text.gpio_set_inover
@@ -270,7 +268,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x13 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2040/pico_platform/platform.c.o
  .debug_line    0x00000000      0x292 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2040/pico_platform/platform.c.o
- .debug_str     0x00000000      0x209 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2040/pico_platform/platform.c.o
+ .debug_str     0x00000000      0x21e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2040/pico_platform/platform.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2040/pico_platform/platform.c.o
  .debug_frame   0x00000000       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2040/pico_platform/platform.c.o
  .ARM.attributes
@@ -283,7 +281,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_common/common.c.o
  .debug_line    0x00000000       0x78 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_common/common.c.o
- .debug_str     0x00000000      0x1a8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_common/common.c.o
+ .debug_str     0x00000000      0x1bd CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_common/common.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_common/common.c.o
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_common/common.c.o
@@ -402,7 +400,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x14b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/sem.c.o
  .debug_line    0x00000000      0xeec CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/sem.c.o
- .debug_str     0x00000000      0x520 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/sem.c.o
+ .debug_str     0x00000000      0x535 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/sem.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/sem.c.o
  .debug_frame   0x00000000      0x100 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/sem.c.o
  .ARM.attributes
@@ -457,7 +455,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x2b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
  .debug_line    0x00000000      0x459 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
- .debug_str     0x00000000      0x2db CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
+ .debug_str     0x00000000      0x2f0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
  .debug_frame   0x00000000       0x50 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/critical_section.c.o
  .ARM.attributes
@@ -525,7 +523,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x58 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/timeout_helper.c.o
  .debug_line    0x00000000      0x524 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/timeout_helper.c.o
- .debug_str     0x00000000      0x3fc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/timeout_helper.c.o
+ .debug_str     0x00000000      0x411 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/timeout_helper.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/timeout_helper.c.o
  .debug_frame   0x00000000       0x70 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/timeout_helper.c.o
  .ARM.attributes
@@ -629,7 +627,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x64 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/datetime.c.o
  .debug_line    0x00000000      0x5c3 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/datetime.c.o
- .debug_str     0x00000000      0x3a9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/datetime.c.o
+ .debug_str     0x00000000      0x3be CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/datetime.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/datetime.c.o
  .debug_frame   0x00000000      0x124 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/datetime.c.o
  .ARM.attributes
@@ -671,7 +669,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x480 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/pheap.c.o
  .debug_line    0x00000000     0x1435 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/pheap.c.o
- .debug_str     0x00000000      0x3f2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/pheap.c.o
+ .debug_str     0x00000000      0x407 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/pheap.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/pheap.c.o
  .debug_frame   0x00000000      0x184 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/pheap.c.o
  .ARM.attributes
@@ -704,7 +702,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x10f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/queue.c.o
  .debug_line    0x00000000      0xfe7 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/queue.c.o
- .debug_str     0x00000000      0x492 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/queue.c.o
+ .debug_str     0x00000000      0x4a7 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/queue.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/queue.c.o
  .debug_frame   0x00000000       0xf0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_util/queue.c.o
  .ARM.attributes
@@ -739,7 +737,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x259 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
  .debug_line    0x00000000     0x101a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
- .debug_str     0x00000000      0xc4d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
+ .debug_str     0x00000000      0xc62 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
  .debug_frame   0x00000000       0xec CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_uart/uart.c.o
  .ARM.attributes
@@ -798,7 +796,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x3a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_vreg/vreg.c.o
  .debug_line    0x00000000      0x37e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_vreg/vreg.c.o
- .debug_str     0x00000000      0x375 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_vreg/vreg.c.o
+ .debug_str     0x00000000      0x38a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_vreg/vreg.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_vreg/vreg.c.o
  .debug_frame   0x00000000       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_vreg/vreg.c.o
  .ARM.attributes
@@ -837,7 +835,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xe5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
  .debug_line    0x00000000      0x81e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_str     0x00000000      0x3d2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_str     0x00000000      0x3e7 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
  .debug_frame   0x00000000       0xd8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_watchdog/watchdog.c.o
  .ARM.attributes
@@ -864,7 +862,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
  .debug_line    0x00000000       0x76 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
- .debug_str     0x00000000      0x1a6 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+ .debug_str     0x00000000      0x1bb CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
@@ -876,7 +874,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
  .debug_line    0x00000000       0x79 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
- .debug_str     0x00000000      0x1a9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+ .debug_str     0x00000000      0x1be CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
@@ -910,7 +908,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x4f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_flash/flash.c.o
  .debug_line    0x00000000      0x4df CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_flash/flash.c.o
- .debug_str     0x00000000      0x74a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_flash/flash.c.o
+ .debug_str     0x00000000      0x75f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_flash/flash.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_flash/flash.c.o
  .debug_frame   0x00000000       0xa0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_flash/flash.c.o
  .ARM.attributes
@@ -937,12 +935,12 @@ Discarded input sections
                 0x00000000       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
  .debug_line    0x00000000       0xa6 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
  .debug_line_str
-                0x00000000       0x8a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
+                0x00000000       0x9f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
  .debug_info    0x00000000       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
  .debug_abbrev  0x00000000       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
  .debug_aranges
                 0x00000000       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
- .debug_str     0x00000000       0x98 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
+ .debug_str     0x00000000       0xad CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
  .debug_rnglists
                 0x00000000       0x2b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_divider/divider.S.o
  .ARM.attributes
@@ -972,7 +970,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x13 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
  .debug_line    0x00000000      0x35e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
- .debug_str     0x00000000      0x26f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+ .debug_str     0x00000000      0x284 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
  .debug_frame   0x00000000       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
  .ARM.attributes
@@ -1162,7 +1160,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x5be CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_math.c.o
  .debug_line    0x00000000     0x2d6b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_math.c.o
- .debug_str     0x00000000      0x52b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_math.c.o
+ .debug_str     0x00000000      0x540 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_math.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_math.c.o
  .debug_frame   0x00000000      0x444 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_math.c.o
  .ARM.attributes
@@ -1363,7 +1361,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x3ff CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_math.c.o
  .debug_line    0x00000000     0x25d6 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_math.c.o
- .debug_str     0x00000000      0x53e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_math.c.o
+ .debug_str     0x00000000      0x553 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_math.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_math.c.o
  .debug_frame   0x00000000      0x388 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_math.c.o
  .ARM.attributes
@@ -1405,7 +1403,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x49 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
  .debug_line    0x00000000      0x2c4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
- .debug_str     0x00000000      0x248 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_str     0x00000000      0x25d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
  .debug_frame   0x00000000       0x74 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
  .ARM.attributes
@@ -1511,7 +1509,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x439 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_atomic/atomic.c.o
  .debug_line    0x00000000     0x2e23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_atomic/atomic.c.o
- .debug_str     0x00000000      0x706 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_atomic/atomic.c.o
+ .debug_str     0x00000000      0x71b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_atomic/atomic.c.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_atomic/atomic.c.o
  .debug_frame   0x00000000      0x3dc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_atomic/atomic.c.o
  .ARM.attributes
@@ -1534,7 +1532,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x31 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
  .debug_line    0x00000000      0x2ad CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
- .debug_str     0x00000000      0x38f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+ .debug_str     0x00000000      0x3a4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
  .comment       0x00000000       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
  .debug_frame   0x00000000       0xa0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
  .ARM.attributes
@@ -1684,6 +1682,8 @@ Discarded input sections
                 0x00000000       0xac CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
  .text.pio_sm_set_pindirs_with_mask64
                 0x00000000       0xac CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+ .text.pio_sm_set_consecutive_pindirs
+                0x00000000       0xb4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
  .text.pio_sm_drain_tx_fifo
                 0x00000000       0x48 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
  .text.pio_claim_free_sm_and_add_program
@@ -2480,7 +2480,7 @@ LOAD /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-non
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x1cf0
+.text           0x10000100     0x1c68
                 0x10000100                        __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
@@ -2547,236 +2547,236 @@ LOAD /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-non
  .text.frame_dummy
                 0x100002b0       0x24 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
  .text.dshot_program_init
-                0x100002d4       0xd0 CMakeFiles/dshot.dir/dshot.c.o
+                0x100002d4       0xd8 CMakeFiles/dshot.dir/dshot.c.o
                 0x100002d4                dshot_program_init
  .text.startup.main
-                0x100003a4       0xec CMakeFiles/dshot.dir/dshot.c.o
-                0x100003a4                main
+                0x100003ac       0xe8 CMakeFiles/dshot.dir/dshot.c.o
+                0x100003ac                main
  .text.gpio_set_function
-                0x10000490       0x34 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
-                0x10000490                gpio_set_function
+                0x10000494       0x34 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x10000494                gpio_set_function
+ .text.gpio_set_pulls
+                0x100004c8       0x28 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x100004c8                gpio_set_pulls
  .text.gpio_init
-                0x100004c4       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
-                0x100004c4                gpio_init
- .text.panic    0x10000504       0x30 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
-                0x10000504                panic
+                0x100004f0       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x100004f0                gpio_init
+ .text.panic    0x10000530       0x30 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+                0x10000530                panic
  .text.hw_claim_lock
-                0x10000534       0x18 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
-                0x10000534                hw_claim_lock
+                0x10000560       0x18 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x10000560                hw_claim_lock
  .text.hw_claim_unlock
-                0x1000054c       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
-                0x1000054c                hw_claim_unlock
+                0x10000578       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x10000578                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x10000560       0x44 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
-                0x10000560                hw_claim_or_assert
+                0x1000058c       0x44 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x1000058c                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x100005a4       0x88 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
-                0x100005a4                hw_claim_unused_from_range
+                0x100005d0       0x88 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x100005d0                hw_claim_unused_from_range
  .text.hw_claim_clear
-                0x1000062c       0x38 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
-                0x1000062c                hw_claim_clear
+                0x10000658       0x38 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x10000658                hw_claim_clear
  .text.next_striped_spin_lock_num
-                0x10000664       0x18 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
-                0x10000664                next_striped_spin_lock_num
+                0x10000690       0x18 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x10000690                next_striped_spin_lock_num
  .text.spin_locks_reset
-                0x1000067c       0x1c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
-                0x1000067c                spin_locks_reset
+                0x100006a8       0x1c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x100006a8                spin_locks_reset
  .text.runtime_init_per_core_irq_priorities
-                0x10000698       0x24 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000698                runtime_init_per_core_irq_priorities
+                0x100006c4       0x24 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x100006c4                runtime_init_per_core_irq_priorities
  .text.irq_set_enabled
-                0x100006bc       0x24 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x100006bc                irq_set_enabled
+                0x100006e8       0x24 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x100006e8                irq_set_enabled
  .text.irq_set_exclusive_handler
-                0x100006e0       0x54 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x100006e0                irq_set_exclusive_handler
+                0x1000070c       0x54 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x1000070c                irq_set_exclusive_handler
  .text.lock_init
-                0x10000734       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
-                0x10000734                lock_init
+                0x10000760       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+                0x10000760                lock_init
  .text.runtime_init_mutex
-                0x10000744       0x50 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
-                0x10000744                runtime_init_mutex
+                0x10000770       0x50 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x10000770                runtime_init_mutex
  .text.sleep_until_callback
-                0x10000794       0x30 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x100007c0       0x30 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .text.alarm_pool_irq_handler
-                0x100007c4      0x300 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x100007f0      0x300 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .text.runtime_init_default_alarm_pool
-                0x10000ac4       0xdc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x10000ac4                runtime_init_default_alarm_pool
+                0x10000af0       0xdc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x10000af0                runtime_init_default_alarm_pool
  .text.alarm_pool_add_alarm_at_force_in_context
-                0x10000ba0       0xb0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x10000ba0                alarm_pool_add_alarm_at_force_in_context
+                0x10000bcc       0xb0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x10000bcc                alarm_pool_add_alarm_at_force_in_context
  .text.alarm_pool_cancel_alarm
-                0x10000c50       0x74 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x10000c50                alarm_pool_cancel_alarm
+                0x10000c7c       0x74 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x10000c7c                alarm_pool_cancel_alarm
  .text.sleep_ms
-                0x10000cc4       0xfc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x10000cc4                sleep_ms
+                0x10000cf0       0xfc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x10000cf0                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x10000dc0      0x10c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x10000dc0                best_effort_wfe_or_timeout
+                0x10000dec      0x10c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x10000dec                best_effort_wfe_or_timeout
  .text.timer_hardware_alarm_claim
-                0x10000ecc       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
-                0x10000ecc                timer_hardware_alarm_claim
+                0x10000ef8       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x10000ef8                timer_hardware_alarm_claim
  .text.timer_time_us_64
-                0x10000ee0       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
-                0x10000ee0                timer_time_us_64
+                0x10000f0c       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x10000f0c                timer_time_us_64
  .text.time_us_64
-                0x10000ef0       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
-                0x10000ef0                time_us_64
+                0x10000f1c       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x10000f1c                time_us_64
  .text.busy_wait_until
-                0x10000f04       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
-                0x10000f04                busy_wait_until
+                0x10000f30       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x10000f30                busy_wait_until
  .text.clock_configure_int_divider
-                0x10000f24       0xf4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
-                0x10000f24                clock_configure_int_divider
+                0x10000f50       0xf4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x10000f50                clock_configure_int_divider
  .text.clock_configure_undivided
-                0x10001018       0xe8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
-                0x10001018                clock_configure_undivided
+                0x10001044       0xe8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x10001044                clock_configure_undivided
  .text.clock_get_hz
-                0x10001100        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
-                0x10001100                clock_get_hz
+                0x1000112c        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x1000112c                clock_get_hz
  .text.pll_init
-                0x1000110c       0xa4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
-                0x1000110c                pll_init
+                0x10001138       0xa4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+                0x10001138                pll_init
  .text.tick_start
-                0x100011b0       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
-                0x100011b0                tick_start
+                0x100011dc       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+                0x100011dc                tick_start
  .text.rom_func_lookup
-                0x100011c0       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
-                0x100011c0                rom_func_lookup
+                0x100011ec       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x100011ec                rom_func_lookup
  .text.rom_data_lookup
-                0x100011d0       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
-                0x100011d0                rom_data_lookup
+                0x100011fc       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x100011fc                rom_data_lookup
  .text.rom_funcs_lookup
-                0x100011e0       0x44 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
-                0x100011e0                rom_funcs_lookup
+                0x1000120c       0x44 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x1000120c                rom_funcs_lookup
  .text.xosc_init
-                0x10001224       0x28 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
-                0x10001224                xosc_init
+                0x10001250       0x28 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+                0x10001250                xosc_init
  .text.first_per_core_initializer
-                0x1000124c        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x10001278        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
  .text.hard_assertion_failure
-                0x10001250        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
-                0x10001250                hard_assertion_failure
+                0x1000127c        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x1000127c                hard_assertion_failure
  .text.runtime_run_initializers
-                0x1000125c       0x28 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
-                0x1000125c                runtime_run_initializers
+                0x10001288       0x28 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x10001288                runtime_run_initializers
  .text.runtime_init_early_resets
-                0x10001284       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001284                runtime_init_early_resets
+                0x100012b0       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100012b0                runtime_init_early_resets
  .text.runtime_init_usb_power_down
-                0x100012b0       0x1c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100012b0                runtime_init_usb_power_down
+                0x100012dc       0x1c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100012dc                runtime_init_usb_power_down
  .text.runtime_init_post_clock_resets
-                0x100012cc       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100012cc                runtime_init_post_clock_resets
+                0x100012f8       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100012f8                runtime_init_post_clock_resets
  .text.runtime_init_rp2040_gpio_ie_disable
-                0x100012ec       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100012ec                runtime_init_rp2040_gpio_ie_disable
+                0x10001318       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001318                runtime_init_rp2040_gpio_ie_disable
  .text.runtime_init_spin_locks_reset
-                0x10001300        0x8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001300                runtime_init_spin_locks_reset
+                0x1000132c        0x8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x1000132c                runtime_init_spin_locks_reset
  .text.runtime_init_install_ram_vector_table
-                0x10001308       0xb4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001308                runtime_init_install_ram_vector_table
+                0x10001334       0xb4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001334                runtime_init_install_ram_vector_table
  .text.runtime_init_clocks
-                0x100013bc       0xd8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
-                0x100013bc                runtime_init_clocks
- .text          0x10001494       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+                0x100013e8       0xd8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x100013e8                runtime_init_clocks
+ .text          0x100014c0       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
  .text.__wrap___aeabi_uidiv
-                0x100014a4       0x4c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
-                0x100014a4                __wrap___aeabi_uidiv
-                0x100014a4                __wrap___aeabi_uidivmod
-                0x100014a4                div_u32u32
-                0x100014a4                divmod_u32u32
-                0x100014ac                divmod_u32u32_unsafe
-                0x100014d4                divmod_u32u32_savestate
+                0x100014d0       0x4c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
+                0x100014d0                __wrap___aeabi_uidiv
+                0x100014d0                __wrap___aeabi_uidivmod
+                0x100014d0                div_u32u32
+                0x100014d0                divmod_u32u32
+                0x100014d8                divmod_u32u32_unsafe
+                0x10001500                divmod_u32u32_savestate
  .text.__aeabi_double_init
-                0x100014f0       0xa4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
-                0x100014f0                __aeabi_double_init
+                0x1000151c       0xa4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+                0x1000151c                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10001594       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
-                0x10001594                double_table_shim_on_use_helper
+                0x100015c0       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+                0x100015c0                double_table_shim_on_use_helper
  .text.__aeabi_lmul
-                0x100015c0       0x32 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
-                0x100015c0                __wrap___aeabi_lmul
- *fill*         0x100015f2        0x2 
+                0x100015ec       0x32 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+                0x100015ec                __wrap___aeabi_lmul
+ *fill*         0x1000161e        0x2 
  .text.__wrap___aeabi_farithmetic
-                0x100015f4       0x48 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
-                0x100015f4                __wrap___aeabi_frsub
-                0x100015fa                __wrap___aeabi_fsub
-                0x10001600                __wrap___aeabi_fadd
-                0x10001606                __wrap___aeabi_fdiv
-                0x1000162e                __wrap___aeabi_fmul
+                0x10001620       0x48 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+                0x10001620                __wrap___aeabi_frsub
+                0x10001626                __wrap___aeabi_fsub
+                0x1000162c                __wrap___aeabi_fadd
+                0x10001632                __wrap___aeabi_fdiv
+                0x1000165a                __wrap___aeabi_fmul
  .text.__wrap___aeabi_ui2f
-                0x1000163c        0xa CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
-                0x1000163c                uint2float
-                0x1000163c                __wrap___aeabi_ui2f
- *fill*         0x10001646        0x2 
+                0x10001668        0xa CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+                0x10001668                uint2float
+                0x10001668                __wrap___aeabi_ui2f
+ *fill*         0x10001672        0x2 
  .text.__wrap___aeabi_i2f
-                0x10001648       0x44 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
-                0x10001648                int2float
-                0x10001648                __wrap___aeabi_i2f
+                0x10001674       0x44 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+                0x10001674                int2float
+                0x10001674                __wrap___aeabi_i2f
  .text.__wrap___aeabi_f2uiz
-                0x1000168c        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
-                0x1000168c                float2uint
-                0x1000168c                float2uint_z
-                0x1000168c                __wrap___aeabi_f2uiz
+                0x100016b8        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+                0x100016b8                float2uint
+                0x100016b8                float2uint_z
+                0x100016b8                __wrap___aeabi_f2uiz
  .text.__aeabi_float_init
-                0x10001698       0x64 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
-                0x10001698                __aeabi_float_init
+                0x100016c4       0x64 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+                0x100016c4                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x100016fc       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
-                0x100016fc                float_table_shim_on_use_helper
- .text          0x10001728       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
-                0x10001728                __aeabi_mem_init
- .text.memcpy   0x10001738        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
-                0x10001738                __wrap___aeabi_memcpy
-                0x10001738                __wrap_memcpy
+                0x10001728       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+                0x10001728                float_table_shim_on_use_helper
+ .text          0x10001754       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x10001754                __aeabi_mem_init
+ .text.memcpy   0x10001764        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x10001764                __wrap___aeabi_memcpy
+                0x10001764                __wrap_memcpy
  .text._out_char
-                0x10001744       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+                0x10001770       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
  .text.weak_raw_vprintf
-                0x10001754       0x30 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
-                0x10001754                weak_raw_vprintf
- .text._exit    0x10001784        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x10001784                _exit
- .text.exit     0x10001788        0x8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x10001788                exit
+                0x10001780       0x30 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+                0x10001780                weak_raw_vprintf
+ .text._exit    0x100017b0        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x100017b0                _exit
+ .text.exit     0x100017b4        0x8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x100017b4                exit
  .text.runtime_init
-                0x10001790       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x10001790                runtime_init
+                0x100017bc       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x100017bc                runtime_init
  .text.stdio_out_chars_no_crlf
-                0x100017bc       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x100017e8       0x10 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .text.stdio_out_chars_crlf
-                0x100017cc       0xb0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x100017f8       0xb0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .text.stdio_put_string
-                0x1000187c       0xfc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
-                0x1000187c                stdio_put_string
+                0x100018a8       0xfc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x100018a8                stdio_put_string
  .text.__wrap_putchar
-                0x10001978       0x94 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
-                0x10001978                stdio_putchar
-                0x10001978                __wrap_putchar
+                0x100019a4       0x94 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x100019a4                stdio_putchar
+                0x100019a4                __wrap_putchar
  .text.__wrap_puts
-                0x10001a0c       0x3c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
-                0x10001a0c                __wrap_puts
-                0x10001a0c                stdio_puts
- .text.pio_sm_set_consecutive_pindirs
-                0x10001a48       0xb4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
-                0x10001a48                pio_sm_set_consecutive_pindirs
+                0x10001a38       0x3c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x10001a38                __wrap_puts
+                0x10001a38                stdio_puts
  .text.pio_sm_init
-                0x10001afc       0x9c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
-                0x10001afc                pio_sm_init
+                0x10001a74       0x9c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+                0x10001a74                pio_sm_init
  .text.pio_claim_free_sm_and_add_program_for_gpio_range
-                0x10001b98      0x184 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
-                0x10001b98                pio_claim_free_sm_and_add_program_for_gpio_range
- .text.strlen   0x10001d1c       0x5c /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
-                0x10001d1c                strlen
+                0x10001b10      0x184 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+                0x10001b10                pio_claim_free_sm_and_add_program_for_gpio_range
+ .text.strlen   0x10001c94       0x5c /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+                0x10001c94                strlen
  *(.fini)
- .fini          0x10001d78        0x4 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crti.o
-                0x10001d78                _fini
- *fill*         0x10001d7c        0x4 
- .fini.__stub   0x10001d80       0x30 linker stubs
+ .fini          0x10001cf0        0x4 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crti.o
+                0x10001cf0                _fini
+ *fill*         0x10001cf4        0x4 
+ .fini.__stub   0x10001cf8       0x30 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2787,154 +2787,153 @@ LOAD /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-non
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x10001db0                        . = ALIGN (0x4)
-                0x10001db0                        PROVIDE (__preinit_array_start = .)
+                0x10001d28                        . = ALIGN (0x4)
+                0x10001d28                        PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00100
-                0x10001db0        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001db0                __pre_init_runtime_init_early_resets
+                0x10001d28        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001d28                __pre_init_runtime_init_early_resets
  .preinit_array.00101
-                0x10001db4        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001db4                __pre_init_runtime_init_usb_power_down
+                0x10001d2c        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001d2c                __pre_init_runtime_init_usb_power_down
  .preinit_array.00275
-                0x10001db8        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+                0x10001d30        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
  .preinit_array.00300
-                0x10001dbc        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x10001d34        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
  .preinit_array.00350
-                0x10001dc0        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+                0x10001d38        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
  .preinit_array.00350
-                0x10001dc4        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+                0x10001d3c        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
  .preinit_array.00500
-                0x10001dc8        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001dc8                __pre_init_runtime_init_clocks
+                0x10001d40        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001d40                __pre_init_runtime_init_clocks
  .preinit_array.00600
-                0x10001dcc        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001dcc                __pre_init_runtime_init_post_clock_resets
+                0x10001d44        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001d44                __pre_init_runtime_init_post_clock_resets
  .preinit_array.00700
-                0x10001dd0        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001dd0                __pre_init_runtime_init_rp2040_gpio_ie_disable
+                0x10001d48        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001d48                __pre_init_runtime_init_rp2040_gpio_ie_disable
  .preinit_array.01000
-                0x10001dd4        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001dd4                __pre_init_runtime_init_spin_locks_reset
+                0x10001d4c        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001d4c                __pre_init_runtime_init_spin_locks_reset
  .preinit_array.01100
-                0x10001dd8        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
-                0x10001dd8                __pre_init_runtime_init_mutex
+                0x10001d50        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x10001d50                __pre_init_runtime_init_mutex
  .preinit_array.10080
-                0x10001ddc        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10001ddc                __pre_init_runtime_init_install_ram_vector_table
+                0x10001d54        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10001d54                __pre_init_runtime_init_install_ram_vector_table
  .preinit_array.11000
-                0x10001de0        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
-                0x10001de0                __pre_init_runtime_init_default_alarm_pool
+                0x10001d58        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x10001d58                __pre_init_runtime_init_default_alarm_pool
  .preinit_array.YYYYY
-                0x10001de4        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
-                0x10001de4                __pre_init_first_per_core_initializer
+                0x10001d5c        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x10001d5c                __pre_init_first_per_core_initializer
  .preinit_array.ZZZZZ.01200
-                0x10001de8        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10001de8                __pre_init_runtime_init_per_core_irq_priorities
+                0x10001d60        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10001d60                __pre_init_runtime_init_per_core_irq_priorities
  *(.preinit_array)
-                0x10001dec                        PROVIDE (__preinit_array_end = .)
-                0x10001dec                        . = ALIGN (0x4)
-                0x10001dec                        PROVIDE (__init_array_start = .)
+                0x10001d64                        PROVIDE (__preinit_array_end = .)
+                0x10001d64                        . = ALIGN (0x4)
+                0x10001d64                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x10001dec        0x4 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10001df0                        PROVIDE (__init_array_end = .)
-                0x10001df0                        . = ALIGN (0x4)
+ .init_array    0x10001d64        0x4 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10001d68                        PROVIDE (__init_array_end = .)
+                0x10001d68                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
                 [!provide]                        PROVIDE (__fini_array_end = .)
  *(.eh_frame*)
- .eh_frame      0x10001df0        0x0 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10001df0                        . = ALIGN (0x4)
+ .eh_frame      0x10001d68        0x0 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10001d68                        . = ALIGN (0x4)
 
-.glue_7         0x10001df0        0x0
- .glue_7        0x10001df0        0x0 linker stubs
+.glue_7         0x10001d68        0x0
+ .glue_7        0x10001d68        0x0 linker stubs
 
-.glue_7t        0x10001df0        0x0
- .glue_7t       0x10001df0        0x0 linker stubs
+.glue_7t        0x10001d68        0x0
+ .glue_7t       0x10001d68        0x0 linker stubs
 
-.vfp11_veneer   0x10001df0        0x0
- .vfp11_veneer  0x10001df0        0x0 linker stubs
+.vfp11_veneer   0x10001d68        0x0
+ .vfp11_veneer  0x10001d68        0x0 linker stubs
 
-.v4_bx          0x10001df0        0x0
- .v4_bx         0x10001df0        0x0 linker stubs
+.v4_bx          0x10001d68        0x0
+ .v4_bx         0x10001d68        0x0 linker stubs
 
-.iplt           0x10001df0        0x0
- .iplt          0x10001df0        0x0 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10001d68        0x0
+ .iplt          0x10001d68        0x0 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10001df0      0x120
+.rodata         0x10001d68      0x134
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.dshot_program
-                0x10001df0        0x8 CMakeFiles/dshot.dir/dshot.c.o
+                0x10001d68        0x8 CMakeFiles/dshot.dir/dshot.c.o
  .rodata.dshot_program_instructions
-                0x10001df8        0xa CMakeFiles/dshot.dir/dshot.c.o
- *fill*         0x10001e02        0x2 
+                0x10001d70       0x20 CMakeFiles/dshot.dir/dshot.c.o
  .rodata.panic.str1.4
-                0x10001e04       0xa8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+                0x10001d90       0xa8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
                                  0x12 (size before relaxing)
  .rodata.timer_hardware_alarm_claim.str1.4
-                0x10001eac       0x22 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x10001e38       0x22 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
  .rodata.hard_assertion_failure.str1.4
-                0x10001eac        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x10001e38        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
  .rodata.str1.4
-                0x10001eac       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e38       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_84
-                0x10001eac        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e38        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_78
-                0x10001eb8        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e44        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_60
-                0x10001ec4        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e50        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_54
-                0x10001ed0        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e5c        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_48
-                0x10001edc        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e68        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_42
-                0x10001ee8        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e74        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_34
-                0x10001ef4        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e80        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_26
-                0x10001f00        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e8c        0xc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.crlf_str.0
-                0x10001f0c        0x2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x10001e98        0x2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .rodata.pio_claim_unused_sm.str1.4
-                0x10001f0e       0x24 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
-                0x10001f34                        . = ALIGN (0x4)
- *fill*         0x10001f0e        0x2 
+                0x10001e9a       0x24 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+                0x10001ec0                        . = ALIGN (0x4)
+ *fill*         0x10001e9a        0x2 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10001f10                        . = ALIGN (0x4)
+                0x10001e9c                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10001f10                        __exidx_start = .
+                0x10001e9c                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10001f10                        __exidx_end = .
-                0x10001f10                        . = ALIGN (0x4)
-                0x10001f10                        __binary_info_start = .
+                0x10001e9c                        __exidx_end = .
+                0x10001e9c                        . = ALIGN (0x4)
+                0x10001e9c                        __binary_info_start = .
 
-.binary_info    0x10001f10       0x20
+.binary_info    0x10001e9c       0x20
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr84
-                0x10001f10        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001e9c        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr78
-                0x10001f14        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001ea0        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr60
-                0x10001f18        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001ea4        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr54
-                0x10001f1c        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001ea8        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr48
-                0x10001f20        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001eac        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr42
-                0x10001f24        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001eb0        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr34
-                0x10001f28        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001eb4        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr26
-                0x10001f2c        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10001eb8        0x4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  *(.binary_info.*)
-                0x10001f30                        __binary_info_end = .
-                0x10001f30                        . = ALIGN (0x4)
+                0x10001ebc                        __binary_info_end = .
+                0x10001ebc                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2948,7 +2947,7 @@ LOAD /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-non
                 0x200000c0                        . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.data           0x200000c0      0x128 load address 0x10001f30
+.data           0x200000c0      0x128 load address 0x10001ebc
                 0x200000c0                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2995,23 +2994,23 @@ LOAD /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-non
                 0x200001e8                        . = ALIGN (0x4)
 
 .tm_clone_table
-                0x200001e8        0x0 load address 0x10002058
+                0x200001e8        0x0 load address 0x10001fe4
  .tm_clone_table
                 0x200001e8        0x0 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x200001e8        0x0 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x200001e8        0x0 load address 0x10002058
+.igot.plt       0x200001e8        0x0 load address 0x10001fe4
  .igot.plt      0x200001e8        0x0 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.tdata          0x200001e8        0x0 load address 0x10002058
+.tdata          0x200001e8        0x0 load address 0x10001fe4
                 0x200001e8                        . = ALIGN (0x4)
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x200001e8                        __tdata_end = .
                 0x200001e8                        PROVIDE (__data_end__ = .)
-                0x10001f30                        __etext = LOADADDR (.data)
+                0x10001ebc                        __etext = LOADADDR (.data)
 
-.tbss           0x200001e8        0x0 load address 0x10002058
+.tbss           0x200001e8        0x0 load address 0x10001fe4
                 0x200001e8                        . = ALIGN (0x4)
                 0x200001e8                        __bss_start__ = .
                 0x200001e8                        __tls_base = .
@@ -3019,7 +3018,7 @@ LOAD /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-non
  *(.tcommon)
                 0x200001e8                        __tls_end = .
 
-.bss            0x200001e8      0x3f4 load address 0x10002058
+.bss            0x200001e8      0x3f4 load address 0x10001fe4
                 0x200001e8                        . = ALIGN (0x4)
                 0x200001e8                        __tbss_end = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
@@ -3052,26 +3051,26 @@ LOAD /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-non
                 0x200005dc                        . = ALIGN (0x4)
                 0x200005dc                        __bss_end__ = .
 
-.heap           0x200005dc      0x800 load address 0x10002058
+.heap           0x200005dc      0x800 load address 0x10001fe4
                 0x200005dc                        __end__ = .
                 0x200005dc                        end = __end__
  *(.heap*)
  .heap          0x200005dc      0x800 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
                 0x20040000                        __HeapLimit = (ORIGIN (RAM) + LENGTH (RAM))
 
-.scratch_x      0x20040000        0x0 load address 0x10002058
+.scratch_x      0x20040000        0x0 load address 0x10001fe4
                 0x20040000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                        . = ALIGN (0x4)
                 0x20040000                        __scratch_x_end__ = .
-                0x10002058                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10001fe4                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10002058
+.scratch_y      0x20041000        0x0 load address 0x10001fe4
                 0x20041000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                        . = ALIGN (0x4)
                 0x20041000                        __scratch_y_end__ = .
-                0x10002058                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10001fe4                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .stack1_dummy
  *(.stack1*)
@@ -3083,9 +3082,9 @@ LOAD /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-non
 .rel.dyn        0x20041800        0x0
  .rel.iplt      0x20041800        0x0 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.flash_end      0x10002058        0x0
+.flash_end      0x10001fe4        0x0
  *(.embedded_end_block*)
-                0x10002058                        PROVIDE (__flash_binary_end = .)
+                0x10001fe4                        PROVIDE (__flash_binary_end = .)
                 0x20040000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -3291,130 +3290,130 @@ LOAD linker stubs
  .comment       0x00000045       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .comment       0x00000045       0x46 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
 
-.debug_info     0x00000000    0x1e51a
- .debug_info    0x00000000     0x184e CMakeFiles/dshot.dir/dshot.c.o
- .debug_info    0x0000184e     0x2421 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_info    0x00003c6f      0x1bf CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_info    0x00003e2e      0x9a1 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_info    0x000047cf      0x45c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_info    0x00004c2b      0x245 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_info    0x00004e70     0x2233 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_info    0x000070a3      0x15f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_info    0x00007202     0x2815 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_info    0x00009a17     0x5065 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_info    0x0000ea7c     0x2b37 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_info    0x000115b3     0x2a05 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_info    0x00013fb8      0x4e5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_info    0x0001449d      0x248 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_info    0x000146e5      0x678 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_info    0x00014d5d      0x1d0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_info    0x00014f2d      0x21a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_info    0x00015147      0x7ea CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_info    0x00015931      0x781 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_info    0x000160b2       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_info    0x000160d5       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_info    0x000160f8       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_info    0x0001611b      0x27e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_info    0x00016399       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_info    0x000163bc       0x24 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_info    0x000163e0       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_info    0x00016403      0x27e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_info    0x00016681       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_info    0x000166a4       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_info    0x000166c7      0x2e2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_info    0x000169a9     0x22f2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_info    0x00018c9b       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
- .debug_info    0x00018cbe      0xbbe CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_info    0x0001987c     0x1c42 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
- .debug_info    0x0001b4be     0x305c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+.debug_info     0x00000000    0x1e659
+ .debug_info    0x00000000     0x198d CMakeFiles/dshot.dir/dshot.c.o
+ .debug_info    0x0000198d     0x2421 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_info    0x00003dae      0x1bf CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_info    0x00003f6d      0x9a1 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_info    0x0000490e      0x45c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_info    0x00004d6a      0x245 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_info    0x00004faf     0x2233 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_info    0x000071e2      0x15f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_info    0x00007341     0x2815 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_info    0x00009b56     0x5065 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_info    0x0000ebbb     0x2b37 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_info    0x000116f2     0x2a05 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_info    0x000140f7      0x4e5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_info    0x000145dc      0x248 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_info    0x00014824      0x678 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_info    0x00014e9c      0x1d0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_info    0x0001506c      0x21a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_info    0x00015286      0x7ea CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_info    0x00015a70      0x781 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_info    0x000161f1       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_info    0x00016214       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_info    0x00016237       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_info    0x0001625a      0x27e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_info    0x000164d8       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_info    0x000164fb       0x24 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_info    0x0001651f       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_info    0x00016542      0x27e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_info    0x000167c0       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_info    0x000167e3       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_info    0x00016806      0x2e2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_info    0x00016ae8     0x22f2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_info    0x00018dda       0x23 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_info    0x00018dfd      0xbbe CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_info    0x000199bb     0x1c42 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_info    0x0001b5fd     0x305c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
 
-.debug_abbrev   0x00000000     0x518f
- .debug_abbrev  0x00000000      0x438 CMakeFiles/dshot.dir/dshot.c.o
- .debug_abbrev  0x00000438      0x4f9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_abbrev  0x00000931      0x12b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_abbrev  0x00000a5c      0x328 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_abbrev  0x00000d84      0x20f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_abbrev  0x00000f93      0x1bb CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_abbrev  0x0000114e      0x614 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_abbrev  0x00001762       0xee CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_abbrev  0x00001850      0x48c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_abbrev  0x00001cdc      0x659 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_abbrev  0x00002335      0x4f2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_abbrev  0x00002827      0x512 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_abbrev  0x00002d39      0x1d2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_abbrev  0x00002f0b      0x145 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_abbrev  0x00003050      0x1bc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_abbrev  0x0000320c      0x11d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_abbrev  0x00003329      0x182 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_abbrev  0x000034ab      0x26b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_abbrev  0x00003716      0x2af CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_abbrev  0x000039c5       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_abbrev  0x000039d7       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_abbrev  0x000039e9       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_abbrev  0x000039fb      0x17a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_abbrev  0x00003b75       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_abbrev  0x00003b87       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_abbrev  0x00003b9b       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_abbrev  0x00003bad      0x173 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_abbrev  0x00003d20       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_abbrev  0x00003d32       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_abbrev  0x00003d44       0xb8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_abbrev  0x00003dfc      0x50c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_abbrev  0x00004308       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
- .debug_abbrev  0x0000431a      0x352 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_abbrev  0x0000466c      0x5d5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
- .debug_abbrev  0x00004c41      0x54e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+.debug_abbrev   0x00000000     0x516d
+ .debug_abbrev  0x00000000      0x416 CMakeFiles/dshot.dir/dshot.c.o
+ .debug_abbrev  0x00000416      0x4f9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_abbrev  0x0000090f      0x12b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_abbrev  0x00000a3a      0x328 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_abbrev  0x00000d62      0x20f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_abbrev  0x00000f71      0x1bb CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_abbrev  0x0000112c      0x614 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_abbrev  0x00001740       0xee CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_abbrev  0x0000182e      0x48c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_abbrev  0x00001cba      0x659 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_abbrev  0x00002313      0x4f2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_abbrev  0x00002805      0x512 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_abbrev  0x00002d17      0x1d2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_abbrev  0x00002ee9      0x145 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_abbrev  0x0000302e      0x1bc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_abbrev  0x000031ea      0x11d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_abbrev  0x00003307      0x182 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_abbrev  0x00003489      0x26b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_abbrev  0x000036f4      0x2af CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_abbrev  0x000039a3       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_abbrev  0x000039b5       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_abbrev  0x000039c7       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_abbrev  0x000039d9      0x17a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_abbrev  0x00003b53       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_abbrev  0x00003b65       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_abbrev  0x00003b79       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_abbrev  0x00003b8b      0x173 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_abbrev  0x00003cfe       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_abbrev  0x00003d10       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_abbrev  0x00003d22       0xb8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_abbrev  0x00003dda      0x50c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_abbrev  0x000042e6       0x12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_abbrev  0x000042f8      0x352 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_abbrev  0x0000464a      0x5d5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_abbrev  0x00004c1f      0x54e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
 
 .debug_loclists
-                0x00000000    0x12075
+                0x00000000    0x120dd
  .debug_loclists
-                0x00000000      0x4d0 CMakeFiles/dshot.dir/dshot.c.o
+                0x00000000      0x538 CMakeFiles/dshot.dir/dshot.c.o
  .debug_loclists
-                0x000004d0     0x1a7f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x00000538     0x1a7f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
  .debug_loclists
-                0x00001f4f      0x349 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x00001fb7      0x349 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
  .debug_loclists
-                0x00002298      0x108 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x00002300      0x108 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
  .debug_loclists
-                0x000023a0       0x7d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x00002408       0x7d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
  .debug_loclists
-                0x0000241d     0x11ed CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x00002485     0x11ed CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
  .debug_loclists
-                0x0000360a       0x41 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+                0x00003672       0x41 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
  .debug_loclists
-                0x0000364b      0xaec CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x000036b3      0xaec CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
  .debug_loclists
-                0x00004137     0x27af CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x0000419f     0x27af CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .debug_loclists
-                0x000068e6     0x19f1 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x0000694e     0x19f1 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
  .debug_loclists
-                0x000082d7     0x2b7c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x0000833f     0x2b7c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
  .debug_loclists
-                0x0000ae53      0x1e0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+                0x0000aebb      0x1e0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
  .debug_loclists
-                0x0000b033       0x47 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+                0x0000b09b       0x47 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
  .debug_loclists
-                0x0000b07a      0x351 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x0000b0e2      0x351 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
  .debug_loclists
-                0x0000b3cb       0x48 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+                0x0000b433       0x48 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
  .debug_loclists
-                0x0000b413       0x7e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x0000b47b       0x7e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
  .debug_loclists
-                0x0000b491      0x139 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x0000b4f9      0x139 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
  .debug_loclists
-                0x0000b5ca       0x74 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x0000b632       0x74 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
  .debug_loclists
-                0x0000b63e       0x3d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+                0x0000b6a6       0x3d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
  .debug_loclists
-                0x0000b67b       0x59 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+                0x0000b6e3       0x59 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
  .debug_loclists
-                0x0000b6d4     0x355f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+                0x0000b73c     0x355f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
  .debug_loclists
-                0x0000ec33      0x44e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x0000ec9b      0x44e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
  .debug_loclists
-                0x0000f081      0xf31 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x0000f0e9      0xf31 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .debug_loclists
-                0x0000ffb2     0x20c3 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+                0x0001001a     0x20c3 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
 
 .debug_aranges  0x00000000      0xf48
  .debug_aranges
@@ -3489,197 +3488,197 @@ LOAD linker stubs
                 0x00000e70       0xd8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
 
 .debug_rnglists
-                0x00000000     0x304c
+                0x00000000     0x3094
  .debug_rnglists
-                0x00000000      0x15e CMakeFiles/dshot.dir/dshot.c.o
+                0x00000000      0x1a6 CMakeFiles/dshot.dir/dshot.c.o
  .debug_rnglists
-                0x0000015e      0x5ca CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x000001a6      0x5ca CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
  .debug_rnglists
-                0x00000728       0x19 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+                0x00000770       0x19 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
  .debug_rnglists
-                0x00000741       0xb6 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x00000789       0xb6 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
  .debug_rnglists
-                0x000007f7       0x58 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x0000083f       0x58 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
  .debug_rnglists
-                0x0000084f       0x3d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x00000897       0x3d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
  .debug_rnglists
-                0x0000088c      0x37d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x000008d4      0x37d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
  .debug_rnglists
-                0x00000c09       0x1f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+                0x00000c51       0x1f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
  .debug_rnglists
-                0x00000c28      0x325 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x00000c70      0x325 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
  .debug_rnglists
-                0x00000f4d      0x7dc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x00000f95      0x7dc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .debug_rnglists
-                0x00001729      0x2c6 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x00001771      0x2c6 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
  .debug_rnglists
-                0x000019ef      0x5be CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x00001a37      0x5be CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
  .debug_rnglists
-                0x00001fad       0x5c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+                0x00001ff5       0x5c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
  .debug_rnglists
-                0x00002009       0x2b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+                0x00002051       0x2b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
  .debug_rnglists
-                0x00002034      0x112 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x0000207c      0x112 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
  .debug_rnglists
-                0x00002146       0x1f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+                0x0000218e       0x1f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
  .debug_rnglists
-                0x00002165       0x3d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x000021ad       0x3d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
  .debug_rnglists
-                0x000021a2       0x4a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x000021ea       0x4a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
  .debug_rnglists
-                0x000021ec       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x00002234       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
  .debug_rnglists
-                0x0000220c       0x43 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+                0x00002254       0x43 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
  .debug_rnglists
-                0x0000224f       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
+                0x00002297       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
  .debug_rnglists
-                0x0000227b       0xf9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+                0x000022c3       0xf9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
  .debug_rnglists
-                0x00002374       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+                0x000023bc       0x14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
  .debug_rnglists
-                0x00002388       0x99 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+                0x000023d0       0x99 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
  .debug_rnglists
-                0x00002421       0xe5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+                0x00002469       0xe5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
  .debug_rnglists
-                0x00002506       0x13 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+                0x0000254e       0x13 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
  .debug_rnglists
-                0x00002519       0x38 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+                0x00002561       0x38 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
  .debug_rnglists
-                0x00002551       0x25 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x00002599       0x25 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
  .debug_rnglists
-                0x00002576      0x2a2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+                0x000025be      0x2a2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
  .debug_rnglists
-                0x00002818       0x1b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+                0x00002860       0x1b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
  .debug_rnglists
-                0x00002833       0x85 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x0000287b       0x85 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
  .debug_rnglists
-                0x000028b8      0x2bb CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x00002900      0x2bb CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
  .debug_rnglists
-                0x00002b73      0x4d9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+                0x00002bbb      0x4d9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
 
-.debug_line     0x00000000    0x184b9
- .debug_line    0x00000000      0xa63 CMakeFiles/dshot.dir/dshot.c.o
- .debug_line    0x00000a63     0x1cc8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_line    0x0000272b      0x2ba CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_line    0x000029e5      0x956 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_line    0x0000333b      0x518 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_line    0x00003853      0x3f2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_line    0x00003c45     0x1847 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_line    0x0000548c      0x31d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_line    0x000057a9     0x1c14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_line    0x000073bd     0x363a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_line    0x0000a9f7     0x1df1 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_line    0x0000c7e8     0x21d2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_line    0x0000e9ba      0x55c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_line    0x0000ef16      0x37c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_line    0x0000f292      0x480 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_line    0x0000f712      0x397 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_line    0x0000faa9      0x349 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_line    0x0000fdf2      0x748 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_line    0x0001053a      0x5db CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_line    0x00010b15      0x108 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_line    0x00010c1d      0x2a9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_line    0x00010ec6      0x452 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_line    0x00011318      0x4d4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_line    0x000117ec      0x66d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_line    0x00011e59       0x61 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_line    0x00011eba      0x3d2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_line    0x0001228c      0x3e9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_line    0x00012675      0x195 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_line    0x0001280a       0x94 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_line    0x0001289e      0x21d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_line    0x00012abb     0x1d50 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_line    0x0001480b       0xa2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
- .debug_line    0x000148ad      0x954 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_line    0x00015201     0x14da CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
- .debug_line    0x000166db     0x1dde CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+.debug_line     0x00000000    0x1855d
+ .debug_line    0x00000000      0xb07 CMakeFiles/dshot.dir/dshot.c.o
+ .debug_line    0x00000b07     0x1cc8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_line    0x000027cf      0x2ba CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_line    0x00002a89      0x956 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_line    0x000033df      0x518 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_line    0x000038f7      0x3f2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_line    0x00003ce9     0x1847 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_line    0x00005530      0x31d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_line    0x0000584d     0x1c14 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_line    0x00007461     0x363a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_line    0x0000aa9b     0x1df1 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_line    0x0000c88c     0x21d2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_line    0x0000ea5e      0x55c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_line    0x0000efba      0x37c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_line    0x0000f336      0x480 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_line    0x0000f7b6      0x397 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_line    0x0000fb4d      0x349 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_line    0x0000fe96      0x748 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_line    0x000105de      0x5db CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_line    0x00010bb9      0x108 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_line    0x00010cc1      0x2a9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_line    0x00010f6a      0x452 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_line    0x000113bc      0x4d4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_line    0x00011890      0x66d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_line    0x00011efd       0x61 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_line    0x00011f5e      0x3d2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_line    0x00012330      0x3e9 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_line    0x00012719      0x195 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_line    0x000128ae       0x94 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_line    0x00012942      0x21d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_line    0x00012b5f     0x1d50 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_line    0x000148af       0xa2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_line    0x00014951      0x954 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_line    0x000152a5     0x14da CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_line    0x0001677f     0x1dde CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
 
-.debug_str      0x00000000     0x4f53
- .debug_str     0x00000000     0x4f53 CMakeFiles/dshot.dir/dshot.c.o
-                                0xeb2 (size before relaxing)
- .debug_str     0x00004f53      0xcd8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_str     0x00004f53      0x210 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_str     0x00004f53      0x393 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_str     0x00004f53      0x33c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_str     0x00004f53      0x24f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_str     0x00004f53      0xacb CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_str     0x00004f53      0x21b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_str     0x00004f53      0x7f6 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_str     0x00004f53     0x11f2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_str     0x00004f53      0xa3e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_str     0x00004f53      0xa21 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_str     0x00004f53      0x46e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_str     0x00004f53      0x29d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_str     0x00004f53      0x362 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_str     0x00004f53      0x252 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_str     0x00004f53      0x2a2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_str     0x00004f53      0x7d5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_str     0x00004f53      0x4aa CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_str     0x00004f53       0x9a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_str     0x00004f53       0x9d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_str     0x00004f53       0x9f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_str     0x00004f53      0x2cb CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_str     0x00004f53       0xa5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_str     0x00004f53       0xa3 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_str     0x00004f53       0x9d CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_str     0x00004f53      0x2b0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_str     0x00004f53       0xa3 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_str     0x00004f53       0x9a CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_str     0x00004f53      0x44b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_str     0x00004f53      0x4f4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_str     0x00004f53       0x8e CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
- .debug_str     0x00004f53      0x78b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_str     0x00004f53      0xb12 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
- .debug_str     0x00004f53     0x10ec CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+.debug_str      0x00000000     0x4fd5
+ .debug_str     0x00000000     0x4fd5 CMakeFiles/dshot.dir/dshot.c.o
+                                0xf2d (size before relaxing)
+ .debug_str     0x00004fd5      0xced CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_str     0x00004fd5      0x225 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_str     0x00004fd5      0x3a8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_str     0x00004fd5      0x351 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_str     0x00004fd5      0x264 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_str     0x00004fd5      0xae0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_str     0x00004fd5      0x230 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_str     0x00004fd5      0x80b CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_str     0x00004fd5     0x1207 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_str     0x00004fd5      0xa53 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_str     0x00004fd5      0xa36 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_str     0x00004fd5      0x483 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_str     0x00004fd5      0x2b2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_str     0x00004fd5      0x377 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_str     0x00004fd5      0x267 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_str     0x00004fd5      0x2b7 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_str     0x00004fd5      0x7ea CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_str     0x00004fd5      0x4bf CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_str     0x00004fd5       0xaf CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_str     0x00004fd5       0xb2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_str     0x00004fd5       0xb4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_str     0x00004fd5      0x2e0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_str     0x00004fd5       0xba CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_str     0x00004fd5       0xb8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_str     0x00004fd5       0xb2 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_str     0x00004fd5      0x2c5 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_str     0x00004fd5       0xb8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_str     0x00004fd5       0xaf CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_str     0x00004fd5      0x460 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_str     0x00004fd5      0x509 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_str     0x00004fd5       0xa3 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_str     0x00004fd5      0x7a0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_str     0x00004fd5      0xb27 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_str     0x00004fd5     0x1101 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
 
-.debug_frame    0x00000000     0x1d0c
- .debug_frame   0x00000000       0x60 CMakeFiles/dshot.dir/dshot.c.o
- .debug_frame   0x00000060      0x320 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_frame   0x00000380       0x44 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_frame   0x000003c4       0xa0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_frame   0x00000464       0xa8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_frame   0x0000050c       0x30 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_frame   0x0000053c      0x1cc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_frame   0x00000708       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_frame   0x00000728      0x1e8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_frame   0x00000910      0x2ec CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_frame   0x00000bfc      0x2c4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_frame   0x00000ec0      0x1f4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_frame   0x000010b4       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_frame   0x000010f4       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_frame   0x00001134       0xa0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_frame   0x000011d4       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_frame   0x00001214       0x70 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_frame   0x00001284       0x88 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_frame   0x0000130c       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_frame   0x00001338       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_frame   0x00001364       0x28 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_frame   0x0000138c      0x1f0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_frame   0x0000157c      0x184 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_frame   0x00001700      0x2a0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
- .debug_frame   0x000019a0      0x344 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
- .debug_frame   0x00001ce4       0x28 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+.debug_frame    0x00000000     0x1d04
+ .debug_frame   0x00000000       0x58 CMakeFiles/dshot.dir/dshot.c.o
+ .debug_frame   0x00000058      0x320 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_frame   0x00000378       0x44 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_frame   0x000003bc       0xa0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_frame   0x0000045c       0xa8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_frame   0x00000504       0x30 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_frame   0x00000534      0x1cc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_frame   0x00000700       0x20 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_frame   0x00000720      0x1e8 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_frame   0x00000908      0x2ec CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_frame   0x00000bf4      0x2c4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_frame   0x00000eb8      0x1f4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_frame   0x000010ac       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_frame   0x000010ec       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_frame   0x0000112c       0xa0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_frame   0x000011cc       0x40 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_frame   0x0000120c       0x70 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_frame   0x0000127c       0x88 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_frame   0x00001304       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_frame   0x00001330       0x2c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_frame   0x0000135c       0x28 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_frame   0x00001384      0x1f0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_frame   0x00001574      0x184 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_frame   0x000016f8      0x2a0 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_frame   0x00001998      0x344 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pio/pio.c.o
+ .debug_frame   0x00001cdc       0x28 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
 
 .debug_line_str
-                0x00000000      0x3a7
+                0x00000000      0x3bc
  .debug_line_str
-                0x00000000      0x3a7 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
-                                 0x8c (size before relaxing)
+                0x00000000      0x3bc CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+                                 0xa1 (size before relaxing)
  .debug_line_str
-                0x000003a7       0x8f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
+                0x000003bc       0xa4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/divider_hardware.S.o
  .debug_line_str
-                0x000003a7       0x91 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+                0x000003bc       0xa6 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
  .debug_line_str
-                0x000003a7       0x97 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+                0x000003bc       0xac CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
  .debug_line_str
-                0x000003a7       0x95 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+                0x000003bc       0xaa CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
  .debug_line_str
-                0x000003a7       0x8f CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+                0x000003bc       0xa4 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
  .debug_line_str
-                0x000003a7       0x95 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+                0x000003bc       0xaa CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
  .debug_line_str
-                0x000003a7       0x8c CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x000003bc       0xa1 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
  .debug_line_str
-                0x000003a7       0x80 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+                0x000003bc       0x95 CMakeFiles/dshot.dir/Users/chaturvasireddy/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
  .debug_line_str
-                0x000003a7       0xd2 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x000003bc       0xd2 /Users/chaturvasireddy/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)

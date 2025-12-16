@@ -13,23 +13,34 @@
 // ----- //
 
 #define dshot_wrap_target 0
-#define dshot_wrap 4
+#define dshot_wrap 15
 #define dshot_pio_version 0
 
 static const uint16_t dshot_program_instructions[] = {
             //     .wrap_target
-    0x6021, //  0: out    x, 1            side 0
-    0x1124, //  1: jmp    !x, 4           side 1 [1]
-    0xb142, //  2: nop                    side 1 [1]
-    0x0000, //  3: jmp    0               side 0
-    0xa242, //  4: nop                    side 0 [2]
+    0xf081, //  0: set    pindirs, 1      side 1
+    0xf050, //  1: set    y, 16           side 1
+    0x1069, //  2: jmp    !y, 9           side 1
+    0x7021, //  3: out    x, 1            side 1
+    0x0127, //  4: jmp    !x, 7           side 0 [1]
+    0xa042, //  5: nop                    side 0
+    0x0082, //  6: jmp    y--, 2          side 0
+    0xb042, //  7: nop                    side 1
+    0x1082, //  8: jmp    y--, 2          side 1
+    0xef80, //  9: set    pindirs, 0      side 0 [15]
+    0xef5f, // 10: set    y, 31           side 0 [15]
+    0x0f8b, // 11: jmp    y--, 11         side 0 [15]
+    0xef5f, // 12: set    y, 31           side 0 [15]
+    0x0f8d, // 13: jmp    y--, 13         side 0 [15]
+    0xef5f, // 14: set    y, 31           side 0 [15]
+    0x0f8f, // 15: jmp    y--, 15         side 0 [15]
             //     .wrap
 };
 
 #if !PICO_NO_HARDWARE
 static const struct pio_program dshot_program = {
     .instructions = dshot_program_instructions,
-    .length = 5,
+    .length = 16,
     .origin = -1,
     .pio_version = dshot_pio_version,
 #if PICO_PIO_VERSION > 0
@@ -47,9 +58,10 @@ static inline pio_sm_config dshot_program_get_default_config(uint offset) {
     #include "hardware/clocks.h"
     void dshot_program_init(PIO pio, uint sm, uint offset, uint pins) {
         pio_gpio_init(pio, pins);
-        pio_sm_set_consecutive_pindirs(pio, sm, pins, 1, true);
+        gpio_set_pulls(pins, true, false);
         pio_sm_config c = dshot_program_get_default_config(offset);
         sm_config_set_sideset_pins(&c, pins); 
+        sm_config_set_set_pins(&c, pins, 1);
         sm_config_set_out_shift(&c, false, true, 16);
         float div = clock_get_hz(clk_sys) / (1800000);
         sm_config_set_clkdiv(&c, div);
