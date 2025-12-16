@@ -1,0 +1,6 @@
+src/build/
+src/install/
+src/log/
+
+.DS_Store
+

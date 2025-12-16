@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="mesh_path" value="file://$(find hydrogen)/meshes/zed2i.stl"/>
+
+  <link name="zed_camera_front_link">
+    <visual><geometry><mesh filename="${mesh_path}"/></geometry></visual>
+    <collision><geometry><mesh filename="${mesh_path}"/></geometry></collision>
+  </link>
+
+  <gazebo reference="zed_camera_front_link">
+    <sensor name="zed_front" type="camera">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <camera>
+        <horizontal_fov>1.91</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+      </camera>
+      <plugin name="camera_controller_front" filename="ignition-gazebo-sensors-system">
+        <render_engine>ogre2</render_engine>
+      </plugin>
+      <topic>zed_front/image_raw</topic>
+    </sensor>
+  </gazebo>
+
+  <joint name="front_camera_frame_joint" type="fixed">
+    <parent link="hydrogen_frame"/>
+    <child link="zed_camera_front_link"/>
+    <origin xyz="0.25 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="zed_camera_front_center"/>
+  <joint name="zed_camera_front_center_joint" type="fixed">
+    <parent link="zed_camera_front_link"/>
+    <child link="zed_camera_front_center"/>
+    <origin xyz="0 0 0.03" rpy="0 0 0"/>
+  </joint>
+
+
+  <link name="down_camera_frame_link">
+    <visual><geometry><mesh filename="${mesh_path}"/></geometry></visual>
+    <collision><geometry><mesh filename="${mesh_path}"/></geometry></collision>
+  </link>
+
+  <gazebo reference="down_camera_frame_link">
+    <sensor name="zed_down" type="camera">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <camera>
+        <horizontal_fov>1.91</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+      </camera>
+      <plugin name="camera_controller_down" filename="ignition-gazebo-sensors-system">
+        <render_engine>ogre2</render_engine>
+      </plugin>
+      <topic>zed_down/image_raw</topic>
+    </sensor>
+  </gazebo>
+
+  <joint name="down_camera_frame_joint" type="fixed">
+    <parent link="hydrogen_frame"/>
+    <child link="down_camera_frame_link"/>
+    <origin xyz="0 0 -0.1" rpy="0 1.5708 0"/>
+  </joint>
+
+</robot>
