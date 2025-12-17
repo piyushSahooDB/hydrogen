@@ -12,8 +12,24 @@ BmsLink::BmsLink(HardwareSerial& serial, uint32_t baud) {
     m_seq = 0;
 }
 
+void BmsLink::begin(uint8_t RX_PIN, uint8_t TX_PIN) {
+    m_serial->begin(
+        m_baud,
+        SERIAL_8N1,
+        RX_PIN,
+        TX_PIN
+    );
+}
+
 void BmsLink::begin() {
-    m_serial->begin(m_baud);
+    if(*m_serial != Serial)
+    {
+        while(1);
+    }
+    m_serial->begin(
+        m_baud,
+        SERIAL_8N1
+    );
 }
 
 void BmsLink::update() {

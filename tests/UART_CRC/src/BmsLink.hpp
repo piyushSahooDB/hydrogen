@@ -44,6 +44,7 @@ public:
     // -------- Public Functions --------
     BmsLink(HardwareSerial& serial, uint32_t baud);
 
+    void begin(uint8_t RX_PIN, uint8_t TX_PIN);
     void begin();
     void update();
     void sendTelemetry();
