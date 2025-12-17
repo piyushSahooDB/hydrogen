@@ -3,3 +3,4 @@
 - Write validation logic
     - Implement actual command functions
 - Write full push error
+- add actual sensors

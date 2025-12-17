@@ -5,7 +5,7 @@
 
 struct TelemetryData {
     uint8_t sequence;
-    int16_t current_mA;
+    int16_t current_centiA; //centi amps
     uint16_t output_mV;
     uint16_t total_mV;
     int16_t temp_centiC;
@@ -37,6 +37,7 @@ private:
     uint8_t m_rxBuffer[32];
     size_t m_rxIndex;
 
+    uint8_t m_seq;
     TelemetryData m_telemetry;
 
 public:
@@ -55,6 +56,7 @@ private:
     void sendAck();
     void sendNack();
     void sendPendingError();
+    void readSensors();
 
     bool execStopElectronics();
     bool execStopThrusters();

@@ -9,6 +9,7 @@ BmsLink::BmsLink(HardwareSerial& serial, uint32_t baud) {
     m_errorPending = false;
     m_rxIndex = 0;
     m_errorByte = 0;
+    m_seq = 0;
 }
 
 void BmsLink::begin() {
@@ -38,16 +39,18 @@ void BmsLink::update() {
                 break;
         }
     }
+
+    readSensors();
 }
 
 void BmsLink::sendTelemetry() {
-    m_telemetry.sequence++;
+    m_seq++;
 
     uint8_t frame[12];   
     frame[0] = 0xAE; 
     frame[1] = m_telemetry.sequence;
-    frame[2] = m_telemetry.current_mA & 0xFF;
-    frame[3] = (m_telemetry.current_mA >> 8) & 0xFF;
+    frame[2] = m_telemetry.current_centiA & 0xFF;
+    frame[3] = (m_telemetry.current_centiA >> 8) & 0xFF;
     frame[4] = m_telemetry.output_mV & 0xFF;
     frame[5] = (m_telemetry.output_mV >> 8) & 0xFF;
     frame[6] = m_telemetry.total_mV & 0xFF;
@@ -149,14 +152,24 @@ void BmsLink::sendPendingError() {
 }
 
 bool BmsLink::execStopElectronics() {
-    return true;
+    return false;
 }
 bool BmsLink::execStopThrusters() {
-    return true;
+    return false;
 }
 bool BmsLink::execStartThrusters() {
-    return true;
+    return false;
 }
 bool BmsLink::execTelemetry() {
-    return true;
+    return false;
+}
+
+void BmsLink::readSensors() {
+    // make real thing
+    m_telemetry.sequence = m_seq;
+    m_telemetry.current_centiA = 300 + 20*tan(45*m_seq);
+    m_telemetry.output_mV = 14000 - 20*cos(50*m_seq);
+    m_telemetry.total_mV = m_telemetry.output_mV + 5*sin(m_seq);
+    m_telemetry.temp_centiC = 7000 - 5*cos(20*m_seq);
+    m_telemetry.error = m_errorByte;
 }
