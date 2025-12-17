@@ -73,25 +73,56 @@ All of the following are little endian
     ACK/NACK is sent immediately after command validation. No response is guaranteed for STOP_ELECTRONICS
 */
 
-String receivedMessage = "";
+#include <Arduino.h>
+#include "BmsLink.hpp"
+
+static constexpr uint32_t BAUD = 115200;
+
+// Use USB serial
+BmsLink bms(Serial, BAUD);
+
+// Timing
+uint32_t lastTelemetryMs = 0;
+uint32_t lastErrorMs     = 0;
 
 void setup() {
-  Serial.begin(115200);
-  
-  Serial.println("ESP32 is ready. Please enter a message:");
+    Serial.begin(BAUD);
+
+    // ESP32 USB serial sometimes needs a moment
+    while (!Serial) {
+        delay(10);
+    }
+
+    Serial.println("BmsLink USB test starting");
+
+    bms.begin();  // no pins
 }
 
 void loop() {
-  while (Serial.available()) {
-    char incomingChar = Serial.read();
-    
-    if (incomingChar == '\n') { 
-      Serial.print("You sent: ");
-      Serial.println(receivedMessage);
-      
-      receivedMessage = "";
-    } else {
-      receivedMessage += incomingChar;
+    // Always service the protocol
+    bms.update();
+
+    uint32_t now = millis();
+
+    // ---- Periodic telemetry (test only) ----
+    if (now - lastTelemetryMs >= 1000) {
+        lastTelemetryMs = now;
+
+        bms.sendTelemetry();
+        Serial.println("Telemetry sent");
     }
-  }
+
+    // ---- Simulate an error every 5s ----
+    if (now - lastErrorMs >= 5000) {
+        lastErrorMs = now;
+
+        // Example: Overcurrent + Comm fault
+        uint8_t errorFlags = (1 << 1) | (1 << 4);
+        bms.pushError(errorFlags);
+
+        Serial.println("Error pushed");
+    }
+
+    // Yield to FreeRTOS
+    delay(1);
 }
