@@ -1,5 +1,5 @@
 - UART IS FULL DUPLEX DUMBASS, but stick to the prompting, sending info EXCEPT FOR ERRORS
-- Write validation logic
-    - Implement actual command functions
-- Write full push error
+
 - add actual sensors
+
+- add code for the other side

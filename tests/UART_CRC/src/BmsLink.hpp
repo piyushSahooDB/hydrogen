@@ -3,6 +3,12 @@
 #include <Arduino.h>
 #include "crc8.hpp"
 
+struct Pins {
+    uint8_t errorPin;
+    uint8_t mosPin;
+    uint8_t killPin;
+};
+
 struct TelemetryData {
     uint8_t sequence;
     int16_t current_centiA; //centi amps
@@ -39,10 +45,11 @@ private:
 
     uint8_t m_seq;
     TelemetryData m_telemetry;
+    Pins m_pins;
 
 public:
     // -------- Public Functions --------
-    BmsLink(HardwareSerial& serial, uint32_t baud);
+    BmsLink(HardwareSerial& serial, uint32_t baud, Pins pins);
 
     void begin(uint8_t RX_PIN, uint8_t TX_PIN);
     void begin();

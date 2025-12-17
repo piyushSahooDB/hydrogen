@@ -1,7 +1,8 @@
 #include "BmsLink.hpp"
 
 // -------- Public Functions --------
-BmsLink::BmsLink(HardwareSerial& serial, uint32_t baud) {
+BmsLink::BmsLink(HardwareSerial& serial, uint32_t baud, Pins pins) {
+    m_pins = pins;
     m_currentCommand = NONE;
     m_serial = &serial;
     m_baud = baud;
@@ -19,6 +20,12 @@ void BmsLink::begin(uint8_t RX_PIN, uint8_t TX_PIN) {
         RX_PIN,
         TX_PIN
     );
+    pinMode(m_pins.errorPin, OUTPUT);
+    digitalWrite(m_pins.errorPin, LOW);
+    pinMode(m_pins.mosPin, OUTPUT);
+    digitalWrite(m_pins.mosPin, HIGH);
+    pinMode(m_pins.killPin, OUTPUT);
+    digitalWrite(m_pins.killPin, LOW);
 }
 
 void BmsLink::begin() {
@@ -85,6 +92,8 @@ void BmsLink::sendTelemetry() {
 void BmsLink::pushError(uint8_t errorFlags) {
     m_errorByte = errorFlags;
     m_errorPending = true;
+
+    digitalWrite(m_pins.errorPin, HIGH);
 }
 
 // -------- Private Functions --------
@@ -168,16 +177,22 @@ void BmsLink::sendPendingError() {
 }
 
 bool BmsLink::execStopElectronics() {
-    return false;
+    digitalWrite(m_pins.killPin, LOW);
+    return true;
 }
 bool BmsLink::execStopThrusters() {
-    return false;
+    digitalWrite(m_pins.mosPin, HIGH);
+    return true;
 }
 bool BmsLink::execStartThrusters() {
-    return false;
+    digitalWrite(m_pins.mosPin, LOW);
+    return true;
 }
 bool BmsLink::execTelemetry() {
-    return false;
+    digitalWrite(m_pins.errorPin, LOW); //clear the interrupt
+    
+    sendTelemetry();
+    return true;
 }
 
 void BmsLink::readSensors() {

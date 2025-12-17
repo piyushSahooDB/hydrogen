@@ -71,6 +71,10 @@ All of the following are little endian
             - START_THRUSTERS while fault is latched 
             - i.e, if the command is perfect, but the logic doesnt work or the command doesnt exist, send NACK. If malformed, let master time out
     ACK/NACK is sent immediately after command validation. No response is guaranteed for STOP_ELECTRONICS
+
+    MOS needs to be driven low to conduct
+    Kill switch needs to be driven high
+    error interrupt is on level, needs to be reset using a telemetry request
 */
 
 #include <Arduino.h>
@@ -78,8 +82,9 @@ All of the following are little endian
 
 static constexpr uint32_t BAUD = 115200;
 
+Pins pins = { 8, 9, 10 };
 // Use USB serial
-BmsLink bms(Serial, BAUD);
+BmsLink bms(Serial, BAUD, pins);
 
 // Timing
 uint32_t lastTelemetryMs = 0;
