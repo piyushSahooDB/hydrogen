@@ -38,14 +38,14 @@
   </gazebo>
   
   <!--
-  <gazebo reference="hydrogen_frame">
-    <sensor name="magnetometer_sensor" type="magnetometer">
-      <always_on>1</always_on>
-      <update_rate>10</update_rate>
-      <visualize>true</visualize>
-      <topic>magnet</topic>
-    </sensor>
-  </gazebo>
+  <gazebo reference="base_link">
+  <plugin
+    filename="libauv_absolute_depth.so"
+    name="auv_absolute_depth">
+    <reference_z>0.0</reference_z>
+    <topic>/altimeter</topic>
+  </plugin>
+</gazebo>
   -->
 
   <xacro:macro name="propeller_link" params="name mesh scale mass ixx iyy izz">
@@ -172,63 +172,25 @@
     </joint>
 
     <gazebo reference="${name}">
-      <sensor name="${name}_sensor" type="rgbd_camera">
-        <always_on>true</always_on>
+      <sensor name="${name}_depth_sensor" type="depth">
+        <pose>0 0 0 0 0 0</pose>
+        <always_on>1</always_on>
         <update_rate>30</update_rate>
         <visualize>true</visualize>
-
-        <!-- IMPORTANT: must match URDF link -->
-        <ignition_frame_id>${name}</ignition_frame_id>
-
-        <topic>${name}</topic>
-
+        <topic>${name}/depth_image</topic>
         <camera>
-          <!-- ZED 2i ~110 deg HFOV -->
-          <horizontal_fov>1.92</horizontal_fov>
-
+          <horizontal_fov>1.91</horizontal_fov>
           <image>
             <width>1280</width>
             <height>720</height>
             <format>R8G8B8</format>
           </image>
-
           <clip>
-            <near>0.2</near>
-            <far>20.0</far>
+            <near>0.1</near>
+            <far>100.0</far>
           </clip>
-
-          <!-- Optional: reduce perfect sharpness -->
-          <noise>
-            <type>gaussian</type>
-            <mean>0.0</mean>
-            <stddev>0.002</stddev>
-          </noise>
         </camera>
-
-        <!-- Depth configuration -->
-        <depth_camera>
-          <clip>
-            <near>0.2</near>
-            <far>20.0</far>
-          </clip>
-        </depth_camera>
-
       </sensor>
-    </gazebo>
-
-
-    <gazebo>
-      <plugin
-        filename="libauv_absolute_depth.so"
-        name="AUVAbsoluteDepth">
-
-        <!-- Reference plane (e.g., water surface) -->
-        <reference_z>0.0</reference_z>
-
-        <!-- Ignition Transport topic -->
-        <topic>/altimeter</topic>
-
-      </plugin>
     </gazebo>
 
   </xacro:macro>

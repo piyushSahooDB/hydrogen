@@ -17,14 +17,14 @@ def generate_launch_description():
     robot_name = 'Hydrogen'
 
     pkg_share = get_package_share_directory(package_name)
-    pkg_share = get_package_share_directory(package_name)
 
-    plugins_path = os.path.join(pkg_share, 'plugins')
+    #plugins_path = os.path.join(pkg_share, 'plugins')
     worlds_path = os.path.join(pkg_share, 'worlds')
     model_path = os.path.join(pkg_share, 'model')
 
     install_dir = os.path.dirname(pkg_share)
 
+    # ---------------- Launch arguments ----------------
     x_pos = LaunchConfiguration('x')
     y_pos = LaunchConfiguration('y')
     z_pos = LaunchConfiguration('z')
@@ -32,16 +32,7 @@ def generate_launch_description():
     pitch = LaunchConfiguration('P')
     yaw = LaunchConfiguration('Y')
 
-    set_ign_plugin_path = AppendEnvironmentVariable(
-    name='IGN_GAZEBO_SYSTEM_PLUGIN_PATH',
-    value=plugins_path
-)
-
-    set_gz_plugin_path = AppendEnvironmentVariable(
-        name='GZ_SIM_SYSTEM_PLUGIN_PATH',
-        value=plugins_path
-    )
-
+    # ---------------- Gazebo resource paths ----------------
     set_ign_resource_path = AppendEnvironmentVariable(
         name='IGN_GAZEBO_RESOURCE_PATH',
         value=os.pathsep.join([worlds_path, install_dir])
@@ -52,6 +43,7 @@ def generate_launch_description():
         value=os.pathsep.join([worlds_path, install_dir])
     )
 
+    # ---------------- Robot description ----------------
     xacro_file = os.path.join(model_path, 'robot.xacro')
 
     robot_description = ParameterValue(
@@ -59,6 +51,7 @@ def generate_launch_description():
         value_type=str
     )
 
+    # ---------------- World ----------------
     world_file = os.path.join(pkg_share, 'worlds', 'buoyant_pool.sdf')
 
     gazebo_launch = IncludeLaunchDescription(
@@ -75,6 +68,7 @@ def generate_launch_description():
         }.items()
     )
 
+    # ---------------- Spawn robot ----------------
     spawn_robot = Node(
         package='ros_gz_sim',
         executable='create',
@@ -91,6 +85,7 @@ def generate_launch_description():
         output='screen'
     )
 
+    # ---------------- Robot State Publisher ----------------
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -101,6 +96,7 @@ def generate_launch_description():
         output='screen'
     )
 
+    # ---------------- ROS <-> Gazebo Bridge ----------------
     bridge_params = os.path.join(
         pkg_share,
         'parameters',
@@ -118,6 +114,16 @@ def generate_launch_description():
         ],
         parameters=[{'use_sim_time': True}]
     )
+    
+    controller_node = Node(
+    	package='hydrogen',
+    	executable='controller_node',
+    	name='controller_node',
+    	output='screen',
+    	parameters=[{'use_sim_time':True}]
+    )
+
+    # ---------------- Launch Description ----------------
     ld = LaunchDescription()
 
     ld.add_action(DeclareLaunchArgument('x', default_value='3.5', description='Spawn X position'))
@@ -129,12 +135,12 @@ def generate_launch_description():
 
     ld.add_action(set_ign_resource_path)
     ld.add_action(set_gz_resource_path)
-    ld.add_action(set_ign_plugin_path)
-    ld.add_action(set_gz_plugin_path)
     ld.add_action(gazebo_launch)
     ld.add_action(robot_state_publisher)
     ld.add_action(spawn_robot)
     ld.add_action(ros_gz_bridge)
+    ld.add_action(controller_node)
+    
 
     return ld
 

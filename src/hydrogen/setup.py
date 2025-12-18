@@ -25,8 +25,7 @@ setup(
 
         # Robot model files
         ('share/' + package_name + '/model', glob('model/*')),
-        #plugins
-        ('share/' + package_name + '/plugins', glob('plugins/*')),
+
 
         # Meshes
         ('share/' + package_name + '/meshes', glob('meshes/*')),
@@ -55,6 +54,7 @@ setup(
     entry_points={
         'console_scripts': [
             'thruster_teleop = hydrogen.thruster_teleop:main',
+            'controller_node = hydrogen.controller_node:main',
         ],
     },
 )
