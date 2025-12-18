@@ -3,5 +3,6 @@
 - add actual sensors
 
 - add code for the other side
-    - impl logic
+    - impl logic -- DONE 
     - impl update in non blocking way with timer ints
+    - impl error interrupt triggering telemetry call

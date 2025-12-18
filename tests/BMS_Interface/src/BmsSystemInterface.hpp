@@ -43,6 +43,7 @@ public:
     void begin();
     void update(); 
 
+    bool sendCommand(Command cmd);
     bool stopElectronics();
     bool stopThrusters();
     bool startThrusters();
