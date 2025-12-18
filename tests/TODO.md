@@ -6,3 +6,10 @@
     - impl logic -- DONE 
     - impl update in non blocking way with timer ints
     - impl error interrupt triggering telemetry call
+    - impl resend older command if ack not recieved IFF HIGHER PRIORITY
+        - use a fifo queue 
+    
+    - impl parsing
+        - telemetry
+        - ack
+        - nack
