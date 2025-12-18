@@ -10,6 +10,6 @@
         - use a fifo queue 
     
     - impl parsing
-        - telemetry
-        - ack
+        - telemetry --DONE
+        - ack -- Have to impl the queue first 
         - nack

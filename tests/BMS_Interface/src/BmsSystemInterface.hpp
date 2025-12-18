@@ -34,6 +34,8 @@ private:
 
     uint8_t m_rxBuffer[32];
     size_t m_rxIndex;
+    bool m_ackReceived;
+    bool m_nackReceived;
 
     Command m_lastCommand;
 
@@ -51,7 +53,7 @@ public:
 
 private:
     void parseRx();
-    void handleTelemetryFrame(const uint8_t* frame, size_t len);
+    void handleTelemetryFrame();
     void handleAck();
     void handleNack();
 };
