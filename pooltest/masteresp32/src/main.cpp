@@ -20,10 +20,10 @@ void setup() {
 }
 
 void send_escframe(uint16_t escframe) {
-  uint8_t hi = (escframe >> 8) & 0xFF;
-  uint8_t lo = escframe & 0xFF;
-  picolink.write(hi);
-  picolink.write(lo);
+  uint8_t dom = (escframe >> 8) & 0xFF;
+  uint8_t sub = escframe & 0xFF;
+  picolink.write(dom);
+  picolink.write(sub);
 }
 
 void loop() {
