@@ -27,10 +27,6 @@
         dodelay2:
             jmp y-- dodelay2     side 0 [15]
 
-        set y, 31       side 0 [15]
-        dodelay3:
-            jmp y-- dodelay3     side 0 [15]
-
 .wrap
 
 % c-sdk {

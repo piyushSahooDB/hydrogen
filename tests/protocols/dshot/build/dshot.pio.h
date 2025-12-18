@@ -13,7 +13,7 @@
 // ----- //
 
 #define dshot_wrap_target 0
-#define dshot_wrap 15
+#define dshot_wrap 13
 #define dshot_pio_version 0
 
 static const uint16_t dshot_program_instructions[] = {
@@ -32,15 +32,13 @@ static const uint16_t dshot_program_instructions[] = {
     0x0f8b, // 11: jmp    y--, 11         side 0 [15]
     0xef5f, // 12: set    y, 31           side 0 [15]
     0x0f8d, // 13: jmp    y--, 13         side 0 [15]
-    0xef5f, // 14: set    y, 31           side 0 [15]
-    0x0f8f, // 15: jmp    y--, 15         side 0 [15]
             //     .wrap
 };
 
 #if !PICO_NO_HARDWARE
 static const struct pio_program dshot_program = {
     .instructions = dshot_program_instructions,
-    .length = 16,
+    .length = 14,
     .origin = -1,
     .pio_version = dshot_pio_version,
 #if PICO_PIO_VERSION > 0

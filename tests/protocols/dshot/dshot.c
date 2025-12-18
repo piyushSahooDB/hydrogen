@@ -19,22 +19,14 @@ int main() {
 
     for (int i = 0;i < 4000;i++) {
         pio_sm_put_blocking(pio, sm, 0x000F << 16);
-        sleep_ms(1);
+        sleep_us(700);
     }
     for (int i = 0;i < 10;i++) {
-        pio_sm_put_blocking(pio, sm, (uint32_t)0x014A << 16);
-        sleep_ms(1);
+        pio_sm_put_blocking(pio, sm, (uint32_t)0xEFF1 << 16);
+        sleep_us(1);
     }
     while (true) {
-        gpio_put(15, 1);
-
-        for (int i = 0;i < 10000;i++) {
-            pio_sm_put_blocking(pio, sm, (uint32_t)0x126A << 16);
-            sleep_ms(1);
-        }
-        // for (int i = 0;i < 10000;i++) {
-        //     pio_sm_put_blocking(pio, sm, (uint32_t)0xA86B << 16);
-        //     sleep_ms(1);
-        // }
+        pio_sm_put_blocking(pio, sm, (uint32_t)0x126A << 16);
+        sleep_us(700);
     }
 }
