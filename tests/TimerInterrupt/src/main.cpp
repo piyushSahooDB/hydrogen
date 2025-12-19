@@ -12,7 +12,7 @@ void setup()
     pinMode(LED, OUTPUT);
     Timer0_Cfg = timerBegin(0, 80, true);
     timerAttachInterrupt(Timer0_Cfg, &Timer0_ISR, true);
-    timerAlarmWrite(Timer0_Cfg, 100000, true);
+    timerAlarmWrite(Timer0_Cfg, 1000, true);
     timerAlarmEnable(Timer0_Cfg);
 }
 void loop()
