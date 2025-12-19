@@ -12,4 +12,4 @@
     - impl parsing
         - telemetry --DONE
         - ack -- Have to impl the queue first 
-        - nack
+        - nack -- ^^
