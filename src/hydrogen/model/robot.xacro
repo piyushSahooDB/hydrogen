@@ -1,19 +1,28 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Hydrogen">
-  
-  <xacro:include filename="robot.gazebo" />
+
+  <xacro:include filename="robot.gazebo"/>
 
   <link name="base_link"/>
 
   <link name="hydrogen_frame">
     <inertial>
-      <origin xyz="0.0 0.0 -0.25" rpy="0 0 0"/>      <mass value="40.0"/>
-      <inertia ixx="0.2276" ixy="-0.004544" ixz="-0.0004496" iyy="0.1921" iyz="-0.0001196" izz="0.3559"/>
+      <origin xyz="0.0 0.0 -0.25" rpy="0 0 0"/>
+      <mass value="40.0"/>
+      <inertia
+        ixx="0.2276"
+        ixy="-0.004544"
+        ixz="-0.0004496"
+        iyy="0.1921"
+        iyz="-0.0001196"
+        izz="0.3559"/>
     </inertial>
 
     <visual>
       <geometry>
-        <mesh filename="package://hydrogen/meshes/auv2.stl" scale="0.001 0.001 0.001"/>
+        <mesh
+          filename="package://hydrogen/meshes/auv2.stl"
+          scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey">
         <color rgba="0.4 0.4 0.4 1"/>
@@ -21,9 +30,9 @@
     </visual>
 
     <collision name="hydrogen_frame_collision">
-      <origin xyz="0.008 0.0 0.0" rpy="0 0 0"/> 
+      <origin xyz="0.008 0.0 0.0" rpy="0 0 0"/>
       <geometry>
-       <box size="0.45 0.45 0.25"/>
+        <box size="0.45 0.45 0.25"/>
       </geometry>
     </collision>
   </link>
@@ -31,21 +40,21 @@
   <gazebo reference="base_link">
     <sensor name="imu_sensor" type="imu">
       <always_on>1</always_on>
-      <update_rate>10</update_rate>
+      <update_rate>200</update_rate>
       <visualize>true</visualize>
       <topic>imu</topic>
     </sensor>
   </gazebo>
-  
+
   <!--
   <gazebo reference="base_link">
-  <plugin
-    filename="libauv_absolute_depth.so"
-    name="auv_absolute_depth">
-    <reference_z>0.0</reference_z>
-    <topic>/altimeter</topic>
-  </plugin>
-</gazebo>
+    <plugin
+      filename="libauv_absolute_depth.so"
+      name="auv_absolute_depth">
+      <reference_z>0.0</reference_z>
+      <topic>/altimeter</topic>
+    </plugin>
+  </gazebo>
   -->
 
   <xacro:macro name="propeller_link" params="name mesh scale mass ixx iyy izz">
@@ -53,12 +62,20 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="${mass}"/>
-        <inertia ixx="${ixx}" ixy="0" ixz="0" iyy="${iyy}" iyz="0" izz="${izz}"/>
+        <inertia
+          ixx="${ixx}"
+          ixy="0"
+          ixz="0"
+          iyy="${iyy}"
+          iyz="0"
+          izz="${izz}"/>
       </inertial>
 
       <visual>
         <geometry>
-          <mesh filename="package://hydrogen/meshes/${mesh}" scale="${scale}"/>
+          <mesh
+            filename="package://hydrogen/meshes/${mesh}"
+            scale="${scale}"/>
         </geometry>
         <material name="black">
           <color rgba="0.1 0.1 0.1 1"/>
@@ -67,47 +84,64 @@
 
       <collision>
         <geometry>
-          <mesh filename="package://hydrogen/meshes/${mesh}" scale="${scale}"/>
+          <mesh
+            filename="package://hydrogen/meshes/${mesh}"
+            scale="${scale}"/>
         </geometry>
       </collision>
     </link>
   </xacro:macro>
 
-  <xacro:propeller_link name="front_propeller"
-                        mesh="propellervertical.stl"
-                        scale="0.0001 0.0001 0.0001"
-                        mass="0.1"
-                        ixx="0.00043333" iyy="0.00043333" izz="0.0008"/>
+  <xacro:propeller_link
+    name="front_propeller"
+    mesh="propellervertical.stl"
+    scale="0.0001 0.0001 0.0001"
+    mass="0.1"
+    ixx="0.00043333"
+    iyy="0.00043333"
+    izz="0.0008"/>
 
-  <xacro:propeller_link name="right_propeller_1"
-                        mesh="propellervertical.stl"
-                        scale="0.0001 0.0001 0.0001"
-                        mass="0.1"
-                        ixx="0.00043333" iyy="0.00043333" izz="0.0008"/>
+  <xacro:propeller_link
+    name="right_propeller_1"
+    mesh="propellervertical.stl"
+    scale="0.0001 0.0001 0.0001"
+    mass="0.1"
+    ixx="0.00043333"
+    iyy="0.00043333"
+    izz="0.0008"/>
 
-  <xacro:propeller_link name="right_propeller_2"
-                        mesh="propellervertical.stl"
-                        scale="0.0001 0.0001 0.0001"
-                        mass="0.1"
-                        ixx="0.00043333" iyy="0.00043333" izz="0.0008"/>
+  <xacro:propeller_link
+    name="right_propeller_2"
+    mesh="propellervertical.stl"
+    scale="0.0001 0.0001 0.0001"
+    mass="0.1"
+    ixx="0.00043333"
+    iyy="0.00043333"
+    izz="0.0008"/>
 
-  <xacro:propeller_link name="left_propeller_1"
-                        mesh="propellervertical.stl"
-                        scale="0.0001 0.0001 0.0001"
-                        mass="0.1"
-                        ixx="0.00043333" iyy="0.00043333" izz="0.0008"/>
+  <xacro:propeller_link
+    name="left_propeller_1"
+    mesh="propellervertical.stl"
+    scale="0.0001 0.0001 0.0001"
+    mass="0.1"
+    ixx="0.00043333"
+    iyy="0.00043333"
+    izz="0.0008"/>
 
-  <xacro:propeller_link name="left_propeller_2"
-                        mesh="propellervertical.stl"
-                        scale="0.0001 0.0001 0.0001"
-                        mass="0.1"
-                        ixx="0.00043333" iyy="0.00043333" izz="0.0008"/>
-       
+  <xacro:propeller_link
+    name="left_propeller_2"
+    mesh="propellervertical.stl"
+    scale="0.0001 0.0001 0.0001"
+    mass="0.1"
+    ixx="0.00043333"
+    iyy="0.00043333"
+    izz="0.0008"/>
+
   <joint name="base_link_joint" type="fixed">
     <parent link="base_link"/>
     <child link="hydrogen_frame"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
-  </joint>                      
+  </joint>
 
   <joint name="front_propeller_joint" type="continuous">
     <parent link="hydrogen_frame"/>
@@ -154,14 +188,22 @@
           <color rgba="0.2 0.2 0.2 1"/>
         </material>
       </visual>
+
       <collision>
         <geometry>
           <mesh filename="package://hydrogen/meshes/zed2i.stl"/>
         </geometry>
       </collision>
+
       <inertial>
         <mass value="0.05"/>
-        <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+        <inertia
+          ixx="0.0001"
+          ixy="0"
+          ixz="0"
+          iyy="0.0001"
+          iyz="0"
+          izz="0.0001"/>
       </inertial>
     </link>
 
@@ -178,6 +220,7 @@
         <update_rate>30</update_rate>
         <visualize>true</visualize>
         <topic>${name}/depth_image</topic>
+
         <camera>
           <horizontal_fov>1.91</horizontal_fov>
           <image>
@@ -192,10 +235,17 @@
         </camera>
       </sensor>
     </gazebo>
-
   </xacro:macro>
-  <xacro:zed_camera name="zed_camera_front_link" xyz="0.162 0 0.016" rpy="0 0 0"/>
 
-  <xacro:zed_camera name="zed_camera_down_link" xyz="0.05 0 -0.08" rpy="0 1.5708 0"/>
+  <xacro:zed_camera
+    name="zed_camera_front_link"
+    xyz="0.162 0 0.016"
+    rpy="0 0 0"/>
+
+  <xacro:zed_camera
+    name="zed_camera_down_link"
+    xyz="0.05 0 -0.08"
+    rpy="0 1.5708 0"/>
 
 </robot>
+

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import rclpy
-import sys, select, tty, termios, time, signal
+import sys, select, tty, termios, signal
 from rclpy.node import Node
 from std_msgs.msg import Float64
 
@@ -17,84 +17,71 @@ class TeleopNode(Node):
     def __init__(self):
         super().__init__("teleop_thrusters")
 
-        # Subscribe to controller outputs
+        # ================= Controller Subscriptions (ONLY 3 thrusters) =================
         self.sub_front = self.create_subscription(
-            Float64, '/hydrogen/front_propeller/cmd_thrust', 
-            self.cb_front, 10
+            Float64, 'new_thrust_front', self.cb_front, 10
         )
-        self.sub_left_1 = self.create_subscription(
-            Float64, '/hydrogen/left_propeller_1/cmd_thrust',
-            self.cb_left_1, 10
+        self.sub_left = self.create_subscription(
+            Float64, 'new_thrust_left', self.cb_left, 10
         )
-        self.sub_right_1 = self.create_subscription(
-            Float64, '/hydrogen/right_propeller_1/cmd_thrust',
-            self.cb_right_1, 10
-        )
-        self.sub_left_2 = self.create_subscription(
-            Float64, '/hydrogen/left_propeller_2/cmd_thrust',
-            self.cb_left_2, 10
-        )
-        self.sub_right_2 = self.create_subscription(
-            Float64, '/hydrogen/right_propeller_2/cmd_thrust',
-            self.cb_right_2, 10
+        self.sub_right = self.create_subscription(
+            Float64, 'new_thrust_right', self.cb_right, 10
         )
 
-        # Publishers (will override controller if teleop is active)
+        # ================= Thruster Command Publishers (ALL 5) =================
         self.pubs = {
-            'front_propeller': self.create_publisher(Float64, '/hydrogen/front_propeller/cmd_thrust', 10),
-            'right_propeller_1': self.create_publisher(Float64, '/hydrogen/right_propeller_1/cmd_thrust', 10),
-            'right_propeller_2': self.create_publisher(Float64, '/hydrogen/right_propeller_2/cmd_thrust', 10),
-            'left_propeller_1':  self.create_publisher(Float64, '/hydrogen/left_propeller_1/cmd_thrust', 10),
-            'left_propeller_2':  self.create_publisher(Float64, '/hydrogen/left_propeller_2/cmd_thrust', 10),
+            'front_propeller': self.create_publisher(
+                Float64, '/hydrogen/front_propeller/cmd_thrust', 10),
+            'right_propeller_1': self.create_publisher(
+                Float64, '/hydrogen/right_propeller_1/cmd_thrust', 10),
+            'right_propeller_2': self.create_publisher(
+                Float64, '/hydrogen/right_propeller_2/cmd_thrust', 10),
+            'left_propeller_1': self.create_publisher(
+                Float64, '/hydrogen/left_propeller_1/cmd_thrust', 10),
+            'left_propeller_2': self.create_publisher(
+                Float64, '/hydrogen/left_propeller_2/cmd_thrust', 10),
         }
 
-        # Controller-provided values (read from subscriptions)
+        # ================= Controller Values (ONLY 3 USED) =================
         self.ctrl_values = {
             'front_propeller': 0.0,
-            'right_propeller_1': 0.0,
-            'right_propeller_2': 0.0,
-            'left_propeller_1': 0.0,
             'left_propeller_2': 0.0,
+            'right_propeller_2': 0.0,
         }
 
-        # Manual offsets (added by teleop)
+        # ================= Manual Offsets (ALL 5) =================
         self.manual_offsets = {k: 0.0 for k in self.pubs.keys()}
-        
-        self.step = 2.0
-        self.scale = 1.0
-        self.max_thrust = 100.0
 
-        # Timer to publish blended values
+        self.step = 2.0
+        self.max_thrust = 40.0
+
         self.timer = self.create_timer(0.1, self.publish_all)
 
-    # ===== Callbacks to read controller values =====
+    # ================= Controller Callbacks =================
     def cb_front(self, msg):
         self.ctrl_values['front_propeller'] = msg.data
 
-    def cb_left_1(self, msg):
-        self.ctrl_values['left_propeller_1'] = msg.data
-
-    def cb_right_1(self, msg):
-        self.ctrl_values['right_propeller_1'] = msg.data
-
-    def cb_left_2(self, msg):
+    def cb_left(self, msg):
         self.ctrl_values['left_propeller_2'] = msg.data
 
-    def cb_right_2(self, msg):
+    def cb_right(self, msg):
         self.ctrl_values['right_propeller_2'] = msg.data
 
+    # ================= Publishing =================
     def publish_all(self):
-        """ Publish blended values: controller + manual offsets """
-        for k in self.pubs.keys():
-            blended = self.ctrl_values[k] + self.manual_offsets[k]
+        for name, pub in self.pubs.items():
+
+            # Controller contributes ONLY to these 3
+            ctrl = self.ctrl_values.get(name, 0.0)
+
+            blended = ctrl + self.manual_offsets[name]
             blended = clamp(blended, -self.max_thrust, self.max_thrust)
-            
+
             msg = Float64()
             msg.data = float(blended)
-            self.pubs[k].publish(msg)
+            pub.publish(msg)
 
     def stop_all(self):
-        """ Reset manual offsets to zero (keep controller running) """
         for k in self.manual_offsets:
             self.manual_offsets[k] = 0.0
         self.publish_all()
@@ -104,10 +91,27 @@ def main(args=None):
     rclpy.init(args=args)
     node = TeleopNode()
 
-    print("Teleop + Controller Blending Active")
-    print("Controller outputs are automatically read and blended with manual inputs")
-    print("Use Arrow Keys + W/S + I/K + J/L for manual offsets")
-    print("Press SPACE to clear manual inputs (keep controller), X to exit\n")
+    print("""
+Teleop + Controller Blending Active
+
+Controller + Keyboard:
+  - front_propeller
+  - left_propeller_2
+  - right_propeller_2
+
+Keyboard ONLY:
+  - left_propeller_1
+  - right_propeller_1
+
+Controls:
+  Arrow Up / Down : Ascend / Descend
+  Arrow Left/Right: Yaw
+  W / S           : Forward / Backward
+  I / K           : Pitch
+  J / L           : Roll
+  SPACE           : Clear manual offsets
+  X               : Exit
+""")
 
     fd = sys.stdin.fileno()
     old_settings = termios.tcgetattr(fd)
@@ -116,7 +120,6 @@ def main(args=None):
     def exit_clean(*_):
         node.stop_all()
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-        print("\nExiting teleop.")
         rclpy.shutdown()
         sys.exit(0)
 
@@ -128,51 +131,52 @@ def main(args=None):
             if is_data():
                 ch = sys.stdin.read(1)
 
+                # ===== Arrow keys =====
                 if ch == '\x1b':
                     seq = sys.stdin.read(2)
 
-                    if seq == '[A':     # UP ARROW (ascend)
+                    if seq == '[A':  # ascend
                         node.manual_offsets['front_propeller'] += node.step
                         node.manual_offsets['left_propeller_2'] += node.step
                         node.manual_offsets['right_propeller_2'] += node.step
 
-                    elif seq == '[B':   # DOWN ARROW (descend)
+                    elif seq == '[B':  # descend
                         node.manual_offsets['front_propeller'] -= node.step
                         node.manual_offsets['left_propeller_2'] -= node.step
                         node.manual_offsets['right_propeller_2'] -= node.step
 
-                    elif seq == '[C':   # RIGHT ARROW → yaw right
+                    elif seq == '[C':  # yaw right (keyboard-only thrusters)
                         node.manual_offsets['left_propeller_1'] -= node.step
                         node.manual_offsets['right_propeller_1'] += node.step
 
-                    elif seq == '[D':   # LEFT ARROW → yaw left
+                    elif seq == '[D':  # yaw left
                         node.manual_offsets['left_propeller_1'] += node.step
                         node.manual_offsets['right_propeller_1'] -= node.step
 
                 else:
                     ch = ch.lower()
 
-                    # Forward / backward surge
-                    if ch == 'w':
+                    if ch == 'w':  # forward (keyboard-only)
                         node.manual_offsets['left_propeller_1'] += node.step
                         node.manual_offsets['right_propeller_1'] += node.step
-                    elif ch == 's':
+
+                    elif ch == 's':  # backward
                         node.manual_offsets['left_propeller_1'] -= node.step
                         node.manual_offsets['right_propeller_1'] -= node.step
 
-                    # Pitch (I/K)
-                    elif ch == 'i':  # nose down
+                    elif ch == 'i':  # pitch down
                         node.manual_offsets['left_propeller_2'] += node.step
                         node.manual_offsets['right_propeller_2'] -= node.step
-                    elif ch == 'k':  # nose up
+
+                    elif ch == 'k':  # pitch up
                         node.manual_offsets['left_propeller_2'] -= node.step
                         node.manual_offsets['right_propeller_2'] += node.step
 
-                    # Roll (J/L)
-                    elif ch == 'j':
+                    elif ch == 'j':  # roll left
                         node.manual_offsets['left_propeller_2'] -= node.step
                         node.manual_offsets['right_propeller_2'] += node.step
-                    elif ch == 'l':
+
+                    elif ch == 'l':  # roll right
                         node.manual_offsets['left_propeller_2'] += node.step
                         node.manual_offsets['right_propeller_2'] -= node.step
 
@@ -182,19 +186,13 @@ def main(args=None):
                     elif ch == 'x':
                         exit_clean()
 
-                # Clamp all manual offsets
+                # Clamp offsets
                 for k in node.manual_offsets:
-                    node.manual_offsets[k] = clamp(node.manual_offsets[k], -node.max_thrust, node.max_thrust)
-
-                # Display: controller value + manual offset = final output
-                sys.stdout.write(
-                    f"\rFront: {node.ctrl_values['front_propeller']:.1f}+{node.manual_offsets['front_propeller']:.1f}={node.ctrl_values['front_propeller']+node.manual_offsets['front_propeller']:.1f}  "
-                    f"L1: {node.ctrl_values['left_propeller_1']:.1f}+{node.manual_offsets['left_propeller_1']:.1f}={node.ctrl_values['left_propeller_1']+node.manual_offsets['left_propeller_1']:.1f}  "
-                    f"R1: {node.ctrl_values['right_propeller_1']:.1f}+{node.manual_offsets['right_propeller_1']:.1f}={node.ctrl_values['right_propeller_1']+node.manual_offsets['right_propeller_1']:.1f}  "
-                    f"L2: {node.ctrl_values['left_propeller_2']:.1f}+{node.manual_offsets['left_propeller_2']:.1f}={node.ctrl_values['left_propeller_2']+node.manual_offsets['left_propeller_2']:.1f}  "
-                    f"R2: {node.ctrl_values['right_propeller_2']:.1f}+{node.manual_offsets['right_propeller_2']:.1f}={node.ctrl_values['right_propeller_2']+node.manual_offsets['right_propeller_2']:.1f}   "
-                )
-                sys.stdout.flush()
+                    node.manual_offsets[k] = clamp(
+                        node.manual_offsets[k],
+                        -node.max_thrust,
+                        node.max_thrust
+                    )
 
             rclpy.spin_once(node, timeout_sec=0.02)
 
@@ -204,3 +202,4 @@ def main(args=None):
 
 if __name__ == "__main__":
     main()
+

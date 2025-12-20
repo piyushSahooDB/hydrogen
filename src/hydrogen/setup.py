@@ -26,7 +26,6 @@ setup(
         # Robot model files
         ('share/' + package_name + '/model', glob('model/*')),
 
-
         # Meshes
         ('share/' + package_name + '/meshes', glob('meshes/*')),
 

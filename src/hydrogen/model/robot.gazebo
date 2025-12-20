@@ -2,71 +2,88 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Hydrogen">
 
   <gazebo>
-      <plugin name='ignition::gazebo::systems::Thruster' filename='ignition-gazebo-thruster-system'>
-        <namespace>Hydrogen</namespace>
-        <joint_name>front_propeller_joint</joint_name>
-        <thrust_coefficient>0.004422</thrust_coefficient>
-        <fluid_density>1000</fluid_density>
-        <propeller_diameter>0.2</propeller_diameter>
-      </plugin>
+    <plugin
+      name="ignition::gazebo::systems::Thruster"
+      filename="ignition-gazebo-thruster-system">
+      <namespace>Hydrogen</namespace>
+      <joint_name>front_propeller_joint</joint_name>
+      <thrust_coefficient>0.004422</thrust_coefficient>
+      <fluid_density>1000</fluid_density>
+      <propeller_diameter>0.2</propeller_diameter>
+    </plugin>
   </gazebo>
+
   <gazebo>
-      <plugin name='ignition::gazebo::systems::Thruster' filename='ignition-gazebo-thruster-system'>
-        <namespace>Hydrogen</namespace>
-        <joint_name>left_propeller_1_joint</joint_name>
-        <thrust_coefficient>0.004422</thrust_coefficient>
-        <fluid_density>1000</fluid_density>
-        <propeller_diameter>0.2</propeller_diameter>
-      </plugin>
+    <plugin
+      name="ignition::gazebo::systems::Thruster"
+      filename="ignition-gazebo-thruster-system">
+      <namespace>Hydrogen</namespace>
+      <joint_name>left_propeller_1_joint</joint_name>
+      <thrust_coefficient>0.004422</thrust_coefficient>
+      <fluid_density>1000</fluid_density>
+      <propeller_diameter>0.2</propeller_diameter>
+    </plugin>
   </gazebo>
+
   <gazebo>
-      <plugin name='ignition::gazebo::systems::Thruster' filename='ignition-gazebo-thruster-system'>
-        <namespace>Hydrogen</namespace>
-        <joint_name>left_propeller_2_joint</joint_name>
-        <thrust_coefficient>0.004422</thrust_coefficient>
-        <fluid_density>1000</fluid_density>
-        <propeller_diameter>0.2</propeller_diameter>
-      </plugin>
+    <plugin
+      name="ignition::gazebo::systems::Thruster"
+      filename="ignition-gazebo-thruster-system">
+      <namespace>Hydrogen</namespace>
+      <joint_name>left_propeller_2_joint</joint_name>
+      <thrust_coefficient>0.004422</thrust_coefficient>
+      <fluid_density>1000</fluid_density>
+      <propeller_diameter>0.2</propeller_diameter>
+    </plugin>
   </gazebo>
+
   <gazebo>
-      <plugin name='ignition::gazebo::systems::Thruster' filename='ignition-gazebo-thruster-system'>
-        <namespace>Hydrogen</namespace>
-        <joint_name>right_propeller_1_joint</joint_name>
-        <thrust_coefficient>0.004422</thrust_coefficient>
-        <fluid_density>1000</fluid_density>
-        <propeller_diameter>0.2</propeller_diameter>
-      </plugin>
+    <plugin
+      name="ignition::gazebo::systems::Thruster"
+      filename="ignition-gazebo-thruster-system">
+      <namespace>Hydrogen</namespace>
+      <joint_name>right_propeller_1_joint</joint_name>
+      <thrust_coefficient>0.004422</thrust_coefficient>
+      <fluid_density>1000</fluid_density>
+      <propeller_diameter>0.2</propeller_diameter>
+    </plugin>
   </gazebo>
+
   <gazebo>
-      <plugin name='ignition::gazebo::systems::Thruster' filename='ignition-gazebo-thruster-system'>
-        <namespace>Hydrogen</namespace>
-        <joint_name>right_propeller_2_joint</joint_name>
-        <thrust_coefficient>0.004422</thrust_coefficient>
-        <fluid_density>1000</fluid_density>
-        <propeller_diameter>0.2</propeller_diameter>
-      </plugin>
+    <plugin
+      name="ignition::gazebo::systems::Thruster"
+      filename="ignition-gazebo-thruster-system">
+      <namespace>Hydrogen</namespace>
+      <joint_name>right_propeller_2_joint</joint_name>
+      <thrust_coefficient>0.004422</thrust_coefficient>
+      <fluid_density>1000</fluid_density>
+      <propeller_diameter>0.2</propeller_diameter>
+    </plugin>
   </gazebo>
+
   <gazebo>
-<plugin
-    filename="ignition-gazebo-imu-system"
-    name="ignition::gazebo::systems::Imu">
-  <topic>imu</topic>
-</plugin>
-</gazebo>
-  
- <gazebo>
-  <plugin filename="ignition-gazebo-sensors-system" name="ignition::gazebo::systems::Sensors">
-    <render_engine>ogre2</render_engine>
-    <min_depth>0.1</min_depth>
-    <max_depth>100.0</max_depth>
-</plugin>
-</gazebo>
+    <plugin
+      name="ignition::gazebo::systems::Imu"
+      filename="ignition-gazebo-imu-system">
+      <topic>imu</topic>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin
+      name="ignition::gazebo::systems::Sensors"
+      filename="ignition-gazebo-sensors-system">
+      <render_engine>ogre2</render_engine>
+      <min_depth>0.1</min_depth>
+      <max_depth>100.0</max_depth>
+    </plugin>
+  </gazebo>
 
   <gazebo>
     <plugin
       name="ignition::gazebo::systems::Hydrodynamics"
       filename="ignition-gazebo-hydrodynamics-system">
-      <link_name>base_link</link_name> 
+      <link_name>base_link</link_name>
 
       <xU>-5</xU>
       <yV>-5</yV>
@@ -86,8 +103,10 @@
     </plugin>
   </gazebo>
 
-    <gazebo>
-    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+  <gazebo>
+    <plugin
+      name="gz::sim::systems::JointStatePublisher"
+      filename="gz-sim-joint-state-publisher-system">
       <topic>joint_states</topic>
       <update_rate>30.0</update_rate>
       <frame_name>base_link</frame_name>
@@ -97,7 +116,7 @@
       <joint_name>right_propeller_1_joint</joint_name>
       <joint_name>right_propeller_2_joint</joint_name>
     </plugin>
-    </gazebo>
+  </gazebo>
 
 </robot>
 
