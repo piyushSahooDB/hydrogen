@@ -39,7 +39,7 @@ setup(
         ('share/' + package_name + '/worlds/white_pole', package_files('worlds/white_pole')),
         ('share/' + package_name + '/worlds/bruvs', package_files('worlds/bruvs')),
         ('share/' + package_name + '/worlds/pool', package_files('worlds/pool')),
-        ('share/' + package_name + '/worlds/camera', package_files('worlds/camera')),
+        ('share/' + package_name + '/worlds/buoy', package_files('worlds/buoy')),
 
         # Parameters
         ('share/' + package_name + '/parameters', ['parameters/bridge_params.yaml']),
