@@ -14,11 +14,11 @@ struct TelemetryData {
 };
 
 enum Command : uint8_t {
-    NONE             = 0x00,
+    NONE = 0x00,
     STOP_ELECTRONICS = 0xC0,
-    STOP_THRUSTERS   = 0xC7,  
-    START_THRUSTERS  = 0xB8,
-    TELEMETRY        = 0xBF
+    STOP_THRUSTERS = 0xC7,
+    START_THRUSTERS = 0xB8,
+    TELEMETRY = 0xBF
 };
 
 class BmsSystemInterface {
@@ -43,7 +43,7 @@ public:
     BmsSystemInterface(HardwareSerial& serial, uint32_t baud, Pins pins);
 
     void begin();
-    void update(); 
+    void update();
 
     bool sendCommand(Command cmd);
     bool stopElectronics();
