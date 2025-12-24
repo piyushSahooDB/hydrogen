@@ -9,7 +9,7 @@
 #define UARTID 2
 
 HardwareSerial picolink(UARTID);
-hw_timer_t *Timer0_Cfg = NULL;
+hw_timer_t* Timer0_Cfg = NULL;
 BNO055_7Semi imu;
 
 bool sendThrusterFrame = false;
@@ -26,12 +26,12 @@ void IRAM_ATTR Timer0_ISR()
     if (imuCalibrated && !sendImuTelemety)
     {
         updateThrusters();
-        
-        if(imu_counter == 10) {
+
+        if (imu_counter == 10) {
             sendImuTelemetry = true;
         }
-    } 
-
+    }
+}
 uint16_t escframegen(uint16_t throttle)
 {
     throttle &= 0x7FF;
@@ -118,9 +118,9 @@ void send_escframe(uint16_t escframe)
 
 void loop()
 {
-    if(sendThrusterFrame)
+    if (sendThrusterFrame)
     {
-        uint16_t throttle[5] = {1347, 1347, 1347, 1347, 1347};
+        uint16_t throttle[5] = { 1347, 1347, 1347, 1347, 1347 };
 
         for (int i = 0; i < 5; i++)
         {
@@ -131,7 +131,7 @@ void loop()
         sendThrusterFrame = false;
     }
 
-    if(sendImuTelemetry)
+    if (sendImuTelemetry)
     {
         float heading, roll, pitch;
         if (imu.readEuler(heading, roll, pitch))
