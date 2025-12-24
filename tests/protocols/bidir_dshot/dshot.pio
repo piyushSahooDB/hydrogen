@@ -2,17 +2,31 @@
 .side_set 1
 
 .wrap_target
-    set pindirs, 1      side 0
+    set pindirs, 1      side 1
+    set y, 16     side 1
 
     bitloop:
-        out x, 1     side 0 [1]
-        jmp !x dozero     side 1 [1]
+        jmp !y doread      side 1
+        out x, 1     side 1 
+        jmp !x dozero     side 0 [1]
     doone:
-        nop     side 1
-        jmp bitloop     side 1
-    dozero:
         nop     side 0
-        jmp bitloop    side 0
+        jmp y-- bitloop     side 0
+    dozero:
+        nop     side 1 
+        jmp y-- bitloop    side 1
+
+    doread:
+        set pindirs, 0      side 0 [15]
+
+        set y, 31       side 0 [15]
+        dodelay1:
+            jmp y-- dodelay1     side 0 [15]
+
+        set y, 31       side 0 [15]
+        dodelay2:
+            jmp y-- dodelay2     side 0 [15]
+
 .wrap
 
 % c-sdk {
@@ -20,6 +34,7 @@
 
     void dshot_program_init(PIO pio, uint sm, uint offset, uint pins) {
         pio_gpio_init(pio, pins);
+        gpio_set_pulls(pins, true, false);
 
         pio_sm_config c = dshot_program_get_default_config(offset);
 

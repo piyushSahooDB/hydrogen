@@ -28,38 +28,38 @@ set(PICO_BOARD pico CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(pico_thruster_driver C CXX ASM)
+project(dshot C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(pico_thruster_driver pico_thruster_driver.cpp )
+add_executable(dshot dshot.c )
 
-pico_set_program_name(pico_thruster_driver "pico_thruster_driver")
-pico_set_program_version(pico_thruster_driver "0.1")
+pico_set_program_name(dshot "dshot")
+pico_set_program_version(dshot "0.1")
 
 # Generate PIO header
-pico_generate_pio_header(pico_thruster_driver ${CMAKE_CURRENT_LIST_DIR}/dshot.pio)
+pico_generate_pio_header(dshot ${CMAKE_CURRENT_LIST_DIR}/dshot.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(pico_thruster_driver 0)
-pico_enable_stdio_usb(pico_thruster_driver 0)
+pico_enable_stdio_uart(dshot 0)
+pico_enable_stdio_usb(dshot 0)
 
 # Add the standard library to the build
-target_link_libraries(pico_thruster_driver
+target_link_libraries(dshot
         pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(pico_thruster_driver PRIVATE
+target_include_directories(dshot PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(pico_thruster_driver 
+target_link_libraries(dshot 
         hardware_pio
         )
 
-pico_add_extra_outputs(pico_thruster_driver)
+pico_add_extra_outputs(dshot)
 

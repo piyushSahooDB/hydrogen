@@ -18,15 +18,15 @@ int main() {
     dshot_program_init(pio, sm, offset, 0);
 
     for (int i = 0;i < 4000;i++) {
-        pio_sm_put_blocking(pio, sm, 0x000F << 16);
+        pio_sm_put_blocking(pio, sm, 0x000F << 16);         //arming sequence
         sleep_us(700);
     }
     for (int i = 0;i < 10;i++) {
-        pio_sm_put_blocking(pio, sm, (uint32_t)0xEFF1 << 16);
+        pio_sm_put_blocking(pio, sm, (uint32_t)0xEFF1 << 16);       //3d mode
         sleep_us(1);
     }
     while (true) {
-        pio_sm_put_blocking(pio, sm, (uint32_t)0x126A << 16);
+        pio_sm_put_blocking(pio, sm, (uint32_t)0x126A << 16);       //throttle
         sleep_us(700);
     }
 }
