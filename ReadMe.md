@@ -9,10 +9,10 @@ We are making the actual competition track plus a side-by-side test track to lea
 
 # NOTE :-
 
-before statring the simulation you need to set the enviorinment variable for ur gazebo plugin directory
+Before statring the simulation you need to set the enviorinment variable for your gazebo plugin directory
 
 
 ```
 echo 'export IGN_GAZEBO_SYSTEM_PLUGIN_PATH=$IGN_GAZEBO_SYSTEM_PLUGIN_PATH:<path to your plugin folder>' >> ~/.bashrc
 ```
-use pwd command to find 
+Open the folder with the '.so' file for the custom plugin, then use pwd command to find the path to replace above.
