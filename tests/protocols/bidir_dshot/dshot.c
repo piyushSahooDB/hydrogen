@@ -28,5 +28,6 @@ int main() {
     while (true) {
         pio_sm_put_blocking(pio, sm, (uint32_t)0x126A << 16);
         sleep_us(700);
+        uint32_t v = pio_sm_get_blocking(pio, sm);
     }
 }

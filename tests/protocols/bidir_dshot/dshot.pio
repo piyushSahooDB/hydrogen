@@ -1,32 +1,25 @@
 .program dshot
-.side_set 1
+.side_set 1 opt
 
 .wrap_target
     set pindirs, 1      side 1
     set y, 16     side 1
-
-    bitloop:
-        jmp !y doread      side 1
-        out x, 1     side 1 
-        jmp !x dozero     side 0 [1]
+    txloop:
+        jmp !y dowait      side 1
+        out x, 1     side 1
+        jmp !x dozero     side 0 [3]
     doone:
-        nop     side 0
-        jmp y-- bitloop     side 0
+        jmp y-- txloop     side 0 [3]
     dozero:
-        nop     side 1 
-        jmp y-- bitloop    side 1
+        jmp y-- txloop    side 1 [3]
 
-    doread:
-        set pindirs, 0      side 0 [15]
-
-        set y, 31       side 0 [15]
-        dodelay1:
-            jmp y-- dodelay1     side 0 [15]
-
-        set y, 31       side 0 [15]
-        dodelay2:
-            jmp y-- dodelay2     side 0 [15]
-
+    dowait:
+        set pindirs, 0
+        set y, 19
+        wait 0 gpio 0 [10]
+    rxloop:
+        in pins, 1
+        jmp y-- rxloop [6]
 .wrap
 
 % c-sdk {
@@ -41,8 +34,10 @@
         sm_config_set_sideset_pins(&c, pins); 
         sm_config_set_set_pins(&c, pins, 1);
         sm_config_set_out_shift(&c, false, true, 16);
+        sm_config_set_in_pins(&c, pins)
+        sm_config_set_in_shift(&c, true, true, 20);
 
-        float div = clock_get_hz(clk_sys) / (1800000);
+        float div = clock_get_hz(clk_sys) / (3000000);
         sm_config_set_clkdiv(&c, div);
 
         pio_sm_init(pio, sm, offset, &c);
