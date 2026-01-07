@@ -16,7 +16,8 @@
     dowait:
         set pindirs, 0
         set y, 19
-        wait 0 gpio 0 [10]
+        wait 0 gpio 0 [7]
+        nop [2]
     rxloop:
         in pins, 1
         jmp y-- rxloop [6]
@@ -34,7 +35,7 @@
         sm_config_set_sideset_pins(&c, pins); 
         sm_config_set_set_pins(&c, pins, 1);
         sm_config_set_out_shift(&c, false, true, 16);
-        sm_config_set_in_pins(&c, pins)
+        sm_config_set_in_pins(&c, pins);
         sm_config_set_in_shift(&c, true, true, 20);
 
         float div = clock_get_hz(clk_sys) / (3000000);
