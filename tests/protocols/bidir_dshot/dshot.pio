@@ -7,11 +7,12 @@
     txloop:
         jmp !y dowait      side 1
         out x, 1     side 1
-        jmp !x dozero     side 0 [3]
+        jmp !x dozero     side 0 [2]
     doone:
-        jmp y-- txloop     side 0 [3]
+        nop     side 0 [3]
+        jmp y-- txloop     side 1
     dozero:
-        jmp y-- txloop    side 1 [3]
+        jmp y-- txloop    side 1 [4]
 
     dowait:
         set pindirs, 0
