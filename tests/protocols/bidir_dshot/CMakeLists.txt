@@ -45,7 +45,7 @@ pico_generate_pio_header(dshot ${CMAKE_CURRENT_LIST_DIR}/dshot.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(dshot 0)
-pico_enable_stdio_usb(dshot 0)
+pico_enable_stdio_usb(dshot 1)
 
 # Add the standard library to the build
 target_link_libraries(dshot

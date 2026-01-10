@@ -5,7 +5,7 @@
     set pindirs, 1      side 1
     set y, 16     side 1
     txloop:
-        jmp !y dowait      side 1
+        jmp !y dorx      side 1
         out x, 1     side 1
         jmp !x dozero     side 0 [2]
     doone:
@@ -14,7 +14,7 @@
     dozero:
         jmp y-- txloop    side 1 [4]
 
-    dowait:
+    dorx:
         set pindirs, 0      side 0 [15]
         nop     side 0 [15]
         nop     side 0 [15]
@@ -22,7 +22,7 @@
         nop     side 0 [15]
         nop     side 0 [15]
         nop     side 0 [4]
-        set y, 19       side 0 [15]
+        set y, 31       side 0 [6]
     rxloop:
         in pins, 1      side 0
         jmp y-- rxloop      side 0 [6]
@@ -38,11 +38,11 @@
 
         pio_sm_config c = dshot_program_get_default_config(offset);
 
-        sm_config_set_sideset_pins(&c, pins); 
+        sm_config_set_sideset_pins(&c, pins);
         sm_config_set_set_pins(&c, pins, 1);
         sm_config_set_out_shift(&c, false, true, 16);
         sm_config_set_in_pins(&c, pins);
-        sm_config_set_in_shift(&c, true, false, 20);
+        sm_config_set_in_shift(&c, false, false, 32);
 
         float div = clock_get_hz(clk_sys) / (3000000);
         sm_config_set_clkdiv(&c, div);
