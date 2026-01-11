@@ -22,7 +22,7 @@
         nop     side 0 [15]
         nop     side 0 [15]
         nop     side 0 [4]
-        set y, 31       side 0 [6]
+        set y, 19       side 0 [4]
     rxloop:
         in pins, 1      side 0
         jmp y-- rxloop      side 0 [6]
@@ -42,7 +42,7 @@
         sm_config_set_set_pins(&c, pins, 1);
         sm_config_set_out_shift(&c, false, true, 16);
         sm_config_set_in_pins(&c, pins);
-        sm_config_set_in_shift(&c, false, false, 32);
+        sm_config_set_in_shift(&c, false, false, 20);
 
         float div = clock_get_hz(clk_sys) / (3000000);
         sm_config_set_clkdiv(&c, div);

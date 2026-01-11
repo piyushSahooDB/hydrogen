@@ -31,7 +31,7 @@ int main() {
         sleep_us(700);
     }
     while (true) {
-        pio_sm_put_blocking(pio, sm, (uint32_t)0x000F << 16);
+        pio_sm_put_blocking(pio, sm, (uint32_t)0x126A << 16);
         uint32_t v = pio_sm_get_blocking(pio, sm);
         for (int i = 31; i >= 0; --i) {
             printf("%"PRIu32, v >> i & 1);
