@@ -7,7 +7,7 @@ void pico_esc::pico_uart_init() {
 }
 
 void pico_esc::arm_thrusters() {
-    Serial1.write(0b10010000);
+    Serial1.write(0b10010000);          //address code so that pico sets esc into arming mode
 }
 
 void pico_esc::send_escframe(uint16_t throttle) {
