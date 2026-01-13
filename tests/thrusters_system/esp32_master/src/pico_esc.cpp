@@ -1,6 +1,6 @@
 #include <Arduino.h>
-#include "config.h"
-#include "pico_esc.h"
+#include "config.hpp"
+#include "pico_esc.hpp"
 
 void pico_esc::pico_uart_init() {
     Serial1.begin(PICO_BAUDRATE, SERIAL_8N1, PICO_RXPIN, PICO_TXPIN);

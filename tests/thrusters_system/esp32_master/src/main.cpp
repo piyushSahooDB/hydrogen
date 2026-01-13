@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "pico_esc.h"
+#include "pico_esc.hpp"
 
 void setup() {
   pico_esc::pico_uart_init();
@@ -9,7 +9,7 @@ void setup() {
 void loop() {
   uint16_t throttle[5] = { 1347,1347,1347,1347,1347 };
   for (int i = 0;i < 5;i++) {
-    Serial1.write(0b00010000 | i);      //address
+    Serial1.write(0b00010000 | i);      //sending address
     pico_esc::send_escframe(throttle[i]);
   }
   delayMicroseconds(800);

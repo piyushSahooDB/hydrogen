@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <Wire.h>
 #include <7Semi_BNO055.h>
 #include <MadgwickAHRS.h>
