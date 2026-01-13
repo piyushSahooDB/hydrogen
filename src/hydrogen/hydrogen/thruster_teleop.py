@@ -1,54 +1,117 @@
 #!/usr/bin/env python3
 import rclpy
-import sys, select, tty, termios, time, signal
+import sys, select, tty, termios, signal
 from rclpy.node import Node
 from std_msgs.msg import Float64
+
 
 def clamp(v, lo, hi):
     return max(lo, min(v, hi))
 
+
 def is_data():
     return select.select([sys.stdin], [], [], 0) == ([sys.stdin], [], [])
+
 
 class TeleopNode(Node):
     def __init__(self):
         super().__init__("teleop_thrusters")
 
-       
+        # ================= Controller Subscriptions (ONLY 3 thrusters) =================
+        self.sub_front = self.create_subscription(
+            Float64, 'new_thrust_front', self.cb_front, 10
+        )
+        self.sub_left = self.create_subscription(
+            Float64, 'new_thrust_left', self.cb_left, 10
+        )
+        self.sub_right = self.create_subscription(
+            Float64, 'new_thrust_right', self.cb_right, 10
+        )
+
+        # ================= Thruster Command Publishers (ALL 5) =================
         self.pubs = {
-            'front_propeller': self.create_publisher(Float64, '/hydrogen/front_propeller/cmd_thrust', 10),
-            'right_propeller_1': self.create_publisher(Float64, '/hydrogen/right_propeller_1/cmd_thrust', 10),
-            'right_propeller_2': self.create_publisher(Float64, '/hydrogen/right_propeller_2/cmd_thrust', 10),
-            'left_propeller_1':  self.create_publisher(Float64, '/hydrogen/left_propeller_1/cmd_thrust', 10),
-            'left_propeller_2':  self.create_publisher(Float64, '/hydrogen/left_propeller_2/cmd_thrust', 10),
+            'front_propeller': self.create_publisher(
+                Float64, '/hydrogen/front_propeller/cmd_thrust', 10),
+            'right_propeller_1': self.create_publisher(
+                Float64, '/hydrogen/right_propeller_1/cmd_thrust', 10),
+            'right_propeller_2': self.create_publisher(
+                Float64, '/hydrogen/right_propeller_2/cmd_thrust', 10),
+            'left_propeller_1': self.create_publisher(
+                Float64, '/hydrogen/left_propeller_1/cmd_thrust', 10),
+            'left_propeller_2': self.create_publisher(
+                Float64, '/hydrogen/left_propeller_2/cmd_thrust', 10),
         }
 
-        self.values = {k: 0.0 for k in self.pubs.keys()}
+        # ================= Controller Values (ONLY 3 USED) =================
+        self.ctrl_values = {
+            'front_propeller': 0.0,
+            'left_propeller_2': 0.0,
+            'right_propeller_2': 0.0,
+        }
+
+        # ================= Manual Offsets (ALL 5) =================
+        self.manual_offsets = {k: 0.0 for k in self.pubs.keys()}
+
         self.step = 2.0
-        self.scale = 1.0
-        self.max_thrust = 100.0
+        self.max_thrust = 40.0
 
         self.timer = self.create_timer(0.1, self.publish_all)
 
+    # ================= Controller Callbacks =================
+    def cb_front(self, msg):
+        self.ctrl_values['front_propeller'] = msg.data
+
+    def cb_left(self, msg):
+        self.ctrl_values['left_propeller_2'] = msg.data
+
+    def cb_right(self, msg):
+        self.ctrl_values['right_propeller_2'] = msg.data
+
+    # ================= Publishing =================
     def publish_all(self):
-        """ Continuously publish all thruster commands """
-        for k, v in self.values.items():
+        for name, pub in self.pubs.items():
+
+            # Controller contributes ONLY to these 3
+            ctrl = self.ctrl_values.get(name, 0.0)
+
+            blended = ctrl + self.manual_offsets[name]
+            blended = clamp(blended, -self.max_thrust, self.max_thrust)
+
             msg = Float64()
-            msg.data = float(v)
-            self.pubs[k].publish(msg)
+            msg.data = float(blended)
+            pub.publish(msg)
 
     def stop_all(self):
-        for k in self.values:
-            self.values[k] = 0.0
+        for k in self.manual_offsets:
+            self.manual_offsets[k] = 0.0
         self.publish_all()
+
 
 def main(args=None):
     rclpy.init(args=args)
     node = TeleopNode()
 
-    print("thruster teleop chal raha hai")
-    print("Use Arrow Keys + W/S + I/K + J/L")
-    print("Press SPACE to stop, X to exit\n")
+    print("""
+Teleop + Controller Blending Active
+
+Controller + Keyboard:
+  - front_propeller
+  - left_propeller_2
+  - right_propeller_2
+
+Keyboard ONLY:
+  - left_propeller_1
+  - right_propeller_1
+
+Controls:
+  Arrow Up / Down : Ascend / Descend
+  Arrow Left/Right: Yaw
+  W / S           : Forward / Backward
+  I / K           : Pitch
+  J / L           : Roll
+  SPACE           : Clear manual offsets
+  X               : Exit
+""")
 
     fd = sys.stdin.fileno()
     old_settings = termios.tcgetattr(fd)
@@ -57,7 +120,6 @@ def main(args=None):
     def exit_clean(*_):
         node.stop_all()
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-        print("Exiting teleop.")
         rclpy.shutdown()
         sys.exit(0)
 
@@ -69,53 +131,54 @@ def main(args=None):
             if is_data():
                 ch = sys.stdin.read(1)
 
+                # ===== Arrow keys =====
                 if ch == '\x1b':
-                    seq = sys.stdin.read(2) 
+                    seq = sys.stdin.read(2)
 
-                    if seq == '[A':     # UP ARROW (ascend)
-                        node.values['front_propeller'] += node.step
-                        node.values['left_propeller_2'] += node.step
-                        node.values['right_propeller_2'] += node.step
+                    if seq == '[A':  # ascend
+                        node.manual_offsets['front_propeller'] += node.step
+                        node.manual_offsets['left_propeller_2'] += node.step
+                        node.manual_offsets['right_propeller_2'] += node.step
 
-                    elif seq == '[B':   # DOWN ARROW (descend)
-                        node.values['front_propeller'] -= node.step
-                        node.values['left_propeller_2'] -= node.step
-                        node.values['right_propeller_2'] -= node.step
+                    elif seq == '[B':  # descend
+                        node.manual_offsets['front_propeller'] -= node.step
+                        node.manual_offsets['left_propeller_2'] -= node.step
+                        node.manual_offsets['right_propeller_2'] -= node.step
 
-                    elif seq == '[C':   # RIGHT ARROW → yaw right
-                        node.values['left_propeller_1'] -= node.step
-                        node.values['right_propeller_1'] += node.step
+                    elif seq == '[C':  # yaw right (keyboard-only thrusters)
+                        node.manual_offsets['left_propeller_1'] -= node.step
+                        node.manual_offsets['right_propeller_1'] += node.step
 
-                    elif seq == '[D':   # LEFT ARROW → yaw left
-                        node.values['left_propeller_1'] += node.step
-                        node.values['right_propeller_1'] -= node.step
+                    elif seq == '[D':  # yaw left
+                        node.manual_offsets['left_propeller_1'] += node.step
+                        node.manual_offsets['right_propeller_1'] -= node.step
 
                 else:
                     ch = ch.lower()
 
-                    # Forward / backward surge
-                    if ch == 'w':
-                        node.values['left_propeller_1'] += node.step
-                        node.values['right_propeller_1'] += node.step
-                    elif ch == 's':
-                        node.values['left_propeller_1'] -= node.step
-                        node.values['right_propeller_1'] -= node.step
+                    if ch == 'w':  # forward (keyboard-only)
+                        node.manual_offsets['left_propeller_1'] += node.step
+                        node.manual_offsets['right_propeller_1'] += node.step
 
-                    # Pitch (I/K)
-                    elif ch == 'i':  # nose down
-                        node.values['left_propeller_2'] += node.step
-                        node.values['right_propeller_2'] -= node.step
-                    elif ch == 'k':  # nose up
-                        node.values['left_propeller_2'] -= node.step
-                        node.values['right_propeller_2'] += node.step
+                    elif ch == 's':  # backward
+                        node.manual_offsets['left_propeller_1'] -= node.step
+                        node.manual_offsets['right_propeller_1'] -= node.step
 
-                    # Roll (J/L)
-                    elif ch == 'j':
-                        node.values['left_propeller_2'] -= node.step
-                        node.values['right_propeller_2'] += node.step
-                    elif ch == 'l':
-                        node.values['left_propeller_2'] += node.step
-                        node.values['right_propeller_2'] -= node.step
+                    elif ch == 'i':  # pitch down
+                        node.manual_offsets['left_propeller_2'] += node.step
+                        node.manual_offsets['right_propeller_2'] -= node.step
+
+                    elif ch == 'k':  # pitch up
+                        node.manual_offsets['left_propeller_2'] -= node.step
+                        node.manual_offsets['right_propeller_2'] += node.step
+
+                    elif ch == 'j':  # roll left
+                        node.manual_offsets['left_propeller_2'] -= node.step
+                        node.manual_offsets['right_propeller_2'] += node.step
+
+                    elif ch == 'l':  # roll right
+                        node.manual_offsets['left_propeller_2'] += node.step
+                        node.manual_offsets['right_propeller_2'] -= node.step
 
                     elif ch == ' ':
                         node.stop_all()
@@ -123,17 +186,13 @@ def main(args=None):
                     elif ch == 'x':
                         exit_clean()
 
-                for k in node.values:
-                    node.values[k] = clamp(node.values[k], -node.max_thrust, node.max_thrust)
-
-                sys.stdout.write(
-                    f"\rfront:{node.values['front_propeller']:.1f}  "
-                    f"L1:{node.values['left_propeller_1']:.1f}  "
-                    f"R1:{node.values['right_propeller_1']:.1f}  "
-                    f"L2:{node.values['left_propeller_2']:.1f}  "
-                    f"R2:{node.values['right_propeller_2']:.1f}   "
-                )
-                sys.stdout.flush()
+                # Clamp offsets
+                for k in node.manual_offsets:
+                    node.manual_offsets[k] = clamp(
+                        node.manual_offsets[k],
+                        -node.max_thrust,
+                        node.max_thrust
+                    )
 
             rclpy.spin_once(node, timeout_sec=0.02)
 

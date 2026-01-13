@@ -181,6 +181,12 @@
       <name>whitepole12</name>
       <pose>6.05 6 -0.52 0 0 0</pose>
     </include>
+    
+        <include>
+      <uri>model://buoy</uri>
+      <name>red_buoy</name>
+      <pose>6.05 6 -0.52 0 0 0</pose>
+    </include>
 
     <model name="water_plane">
       <static>true</static>

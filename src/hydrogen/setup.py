@@ -26,6 +26,9 @@ setup(
         # Robot model files
         ('share/' + package_name + '/model', glob('model/*')),
 
+        #plugins
+        ('share/' + package_name + '/plugins', glob('plugins/*')),
+
         # Meshes
         ('share/' + package_name + '/meshes', glob('meshes/*')),
 
@@ -39,7 +42,7 @@ setup(
         ('share/' + package_name + '/worlds/white_pole', package_files('worlds/white_pole')),
         ('share/' + package_name + '/worlds/bruvs', package_files('worlds/bruvs')),
         ('share/' + package_name + '/worlds/pool', package_files('worlds/pool')),
-        ('share/' + package_name + '/worlds/camera', package_files('worlds/camera')),
+        ('share/' + package_name + '/worlds/buoy', package_files('worlds/buoy')),
 
         # Parameters
         ('share/' + package_name + '/parameters', ['parameters/bridge_params.yaml']),
@@ -53,6 +56,9 @@ setup(
     entry_points={
         'console_scripts': [
             'thruster_teleop = hydrogen.thruster_teleop:main',
+            'controller_node = hydrogen.controller_node:main',
+            'distance_node = hydrogen.distance_node:main',
+            'test_ROI_Publisher = hydrogen.test_ROI_publisher:main',
         ],
     },
 )
