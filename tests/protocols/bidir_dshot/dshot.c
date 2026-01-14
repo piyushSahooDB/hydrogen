@@ -5,9 +5,9 @@
 
 #include "dshot.pio.h"
 
-uint8_t gcr_decode(uint8_t code5)
+uint8_t gcr_decode(uint8_t code)
 {
-    switch (code5) {
+    switch (code) {
     case 0x19: return 0x0;
     case 0x1B: return 0x1;
     case 0x12: return 0x2;
@@ -27,6 +27,12 @@ uint8_t gcr_decode(uint8_t code5)
     default:   return 0xFF;
     }
 }
+
+bool crc_check(uint16_t message, uint8_t crc) {
+    unsigned int calc_crc = (message ^ (message >> 4) ^ (message >> 8)) & 0x0F;
+    return (crc == calc_crc);
+}
+
 int main() {
 
     stdio_init_all();
@@ -54,25 +60,36 @@ int main() {
     }
     while (true) {
         pio_sm_put_blocking(pio, sm, (uint32_t)0x126A << 16);
+
         uint32_t value = pio_sm_get_blocking(pio, sm);
-        for (int i = 31; i >= 0; --i) {
+
+        for (int i = 20; i >= 0; --i) {
             printf("%"PRIu32, value >> i & 1);
         }
         printf("                ");
-        uint16_t n[3];
-        uint16_t p;
+
+        uint8_t crc;
+        uint8_t n[2];
+        uint8_t p;
+
         if (value != 0xFFFFF) {
+
             uint32_t gcr = (value ^ (value >> 1));
-            n[0] = gcr_decode(gcr & 0x1F);
-            n[1] = gcr_decode((gcr >> 5) & 0x1F);
-            n[2] = gcr_decode((gcr >> 10) & 0x1F);
+
+            crc = gcr_decode(gcr & 0x1F);
+            n[0] = gcr_decode((gcr >> 5) & 0x1F);
+            n[1] = gcr_decode((gcr >> 10) & 0x1F);
             p = gcr_decode((gcr >> 15) & 0x1F);
-            if ((p & 0x1) == 1) {
-                uint16_t rpm = (n[0] | (n[1] << 4) | (n[2] << 8) | ((p & 0x1) << 12));
-                // for (int i = 15; i >= 0; --i) {
-                //     printf("%"PRIu16, rpm >> i & 1);
-                // }
-                printf("%d", rpm);
+
+            if (((p & 0x1) == 1)) {
+
+                uint16_t message = ((n[0]) | (n[1] << 4) | (p << 8));
+
+                if (crc_check(message, crc)) {
+                    uint16_t erpm = ((n[0]) | (n[1] << 4) | ((p & 0x1) << 8));
+                    erpm = (erpm >> (p >> 1));
+                    printf("%d", erpm);
+                }
             }
         }
         printf("\n");

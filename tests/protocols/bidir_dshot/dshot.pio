@@ -21,8 +21,8 @@
         nop     side 0 [15]
         nop     side 0 [15]
         nop     side 0 [15]
-        nop     side 0 [4]
-        set y, 19       side 0 [4]
+        nop     side 0 [8]
+        set y, 19       side 0
     rxloop:
         in pins, 1      side 0
         jmp y-- rxloop      side 0 [6]

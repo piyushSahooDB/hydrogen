@@ -44,7 +44,7 @@ pico_set_program_version(esccontroller "0.1")
 pico_generate_pio_header(esccontroller ${CMAKE_CURRENT_LIST_DIR}/dshot.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(esccontroller 0)
+pico_enable_stdio_uart(esccontroller 1)
 pico_enable_stdio_usb(esccontroller 0)
 
 # Add the standard library to the build
