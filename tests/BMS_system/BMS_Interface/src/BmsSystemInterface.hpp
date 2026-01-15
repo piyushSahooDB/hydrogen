@@ -4,6 +4,9 @@
 #include "crc8.hpp"
 #include "Pins.hpp"
 
+#define RX_BUF_LEN 128
+#define CMD_BUF_LEN 16
+
 struct TelemetryData {
     uint8_t sequence;
     int16_t current_centiA;
@@ -32,12 +35,15 @@ private:
     uint32_t m_baud;
     Pins m_pins;
 
-    uint8_t m_rxBuffer[32];
+    uint8_t m_rxBuffer[RX_BUF_LEN];
     size_t m_rxIndex;
     bool m_ackReceived;
     bool m_nackReceived;
 
     Command m_lastCommand;
+    Command commandList[CMD_BUF_LEN];
+    uint8_t commandListLen;
+    bool sendCommand;
 
 public:
     BmsSystemInterface(HardwareSerial& serial, uint32_t baud, Pins pins);
@@ -45,7 +51,8 @@ public:
     void begin();
     void update();
 
-    bool sendCommand(Command cmd);
+    bool commandSend(Command cmd);
+
     bool stopElectronics();
     bool stopThrusters();
     bool startThrusters();
@@ -53,7 +60,10 @@ public:
 
 private:
     void parseRx();
+
     void handleTelemetryFrame();
     void handleAck();
-    void handleNack();
+
+    void commandPush(Command cmd);
+    void commandPop();
 };

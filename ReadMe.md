@@ -43,7 +43,7 @@ Command structure:
     bit 6   = safety-critical (STOP_SYSTEM, STOP_THRUSTERS)
     bit 5-0 = command ID
 
-Commands: (All have minimum distance of 3)
+Commands in priority order (lower is better): (All have minimum distance of 3)
 1. STOP_ELECTRONICS: No ACK, just shut down -- does not require crc match 
     11 000000
 2. STOP_THRUSTERS: ACK -- does not require crc match
