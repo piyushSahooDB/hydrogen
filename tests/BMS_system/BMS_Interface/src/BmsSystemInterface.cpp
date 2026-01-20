@@ -11,7 +11,7 @@ static uint8_t getPriority(Command cmd)
         case START_THRUSTERS:
             return 2;
         case TELEMETRY:
-            return 3
+            return 3;
         default:
             return 0xFF;
     }
@@ -48,7 +48,54 @@ void BmsSystemInterface::begin()
 
 void BmsSystemInterface::update()
 {
+    parseRx();
+    handleAck();
+
+    // --- ACK received ---
+    if (m_ackReceived)
+    {
+        sendCommand = true;
+        delay_step = 0;
+        retries = 0;
+        m_ackReceived = false;
+    }
+
+    // --- NACK received ---
+    if (m_nackReceived)
+    {
+        sendCommand = true;
+        delay_step = 0;
+        retries++;
+        m_nackReceived = false;
+    }
+
+    if (!sendCommand && commandListLen != 0)
+    {
+        delay_step++;
+
+        if (delay_step >= TIMEOUT_STEPS) // timeout
+        {
+            sendCommand = true;
+            delay_step = 0;
+            retries++;
+        }
+        return;
+    }
+
+    if (retries >= MAX_RETRIES)
+    {
+        commandPush(STOP_ELECTRONICS);
+        retries = 0;
+        return;
+    }
+
+    if (commandListLen > 0)
+    {
+        commandSend();
+        delay_step = 0;
+    }
 }
+
 
 bool BmsSystemInterface::commandSend()
 {
@@ -66,7 +113,11 @@ bool BmsSystemInterface::commandSend()
     sendCommand = false;
 
     if (cmd == STOP_ELECTRONICS)
+    {
+        commandListLen = 0;
+        commandList[0] = NONE;
         return true;
+    }
 
     return written == sizeof(frame);
 }
@@ -174,8 +225,9 @@ void BmsSystemInterface::handleTelemetryFrame()
 void BmsSystemInterface::handleAck()
 {
     static int retries = 0;
-    if (m_ackReceived)
+    if (m_ackReceived || retries >= MAX_RETRIES)
     {
+        if(commandList[0] == STOP_ELECTRONICS) return;
         commandPop();
         retries = 0;
     }
@@ -185,28 +237,33 @@ void BmsSystemInterface::handleAck()
     }
 }
 
-void BmsSystemInterface::commandPush(Command cmd)
+bool BmsSystemInterface::commandPush(Command cmd)
 {
     uint8_t priority = getPriority(cmd);
 
     if(commandListLen == 0)
     {
         commandList[0] = cmd;
-        commandListLen++
-        return;
+        commandListLen++;
+        return true;
     }
 
-    for(int i = 0; i < commandListLen; i++)
+    for (int i = 0; i < commandListLen; i++)
     {
-        if(priority < getPriority(commandList[i]))
+        if (priority < getPriority(commandList[i]))
         {
-            for(int j = commandListLen - 1; j > i; j--)
+            int maxIdx = commandListLen;
+            if (commandListLen == CMD_BUF_LEN)
+                maxIdx = CMD_BUF_LEN - 1;
+
+            for (int j = maxIdx; j > i; j--)
             {
-                commandList[j] = commandList[j-1]; 
+                commandList[j] = commandList[j - 1];
             }
+
             commandList[i] = cmd;
 
-            if(commandListLen < CMD_BUF_LEN)
+            if (commandListLen < CMD_BUF_LEN)
                 commandListLen++;
 
             return;
