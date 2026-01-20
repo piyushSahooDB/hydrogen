@@ -66,7 +66,7 @@ int main() {
         for (int i = 20; i >= 0; --i) {
             printf("%"PRIu32, value >> i & 1);
         }
-        printf("                ");
+        printf("        ");
 
         uint8_t crc;
         uint8_t n[2];
@@ -75,6 +75,11 @@ int main() {
         if (value != 0xFFFFF) {
 
             uint32_t gcr = (value ^ (value >> 1));
+
+            for (int i = 20; i >= 0; --i) {
+                printf("%"PRIu32, gcr >> i & 1);
+            }
+            printf("        ");
 
             crc = gcr_decode(gcr & 0x1F);
             n[0] = gcr_decode((gcr >> 5) & 0x1F);
@@ -85,11 +90,34 @@ int main() {
 
                 uint16_t message = ((n[0]) | (n[1] << 4) | (p << 8));
 
-                if (crc_check(message, crc)) {
-                    uint16_t erpm = ((n[0]) | (n[1] << 4) | ((p & 0x1) << 8));
-                    erpm = (erpm >> (p >> 1));
-                    printf("%d", erpm);
+                for (int i = 12; i >= 0; --i) {
+                    printf("%"PRIu32, message >> i & 1);
                 }
+                printf("        ");
+
+
+                printf("%X ", ((gcr >> 15) & 0x1F));
+                printf("%X ", ((gcr >> 10) & 0x1F));
+                printf("%X ", ((gcr >> 5) & 0x1F));
+                printf("%X      ", (gcr & 0x1F));
+
+
+                printf("%X ", gcr_decode(((gcr >> 15) & 0x1F)));
+                printf("%X ", gcr_decode(((gcr >> 10) & 0x1F)));
+                printf("%X ", gcr_decode(((gcr >> 5) & 0x1F)));
+                printf("%X      ", gcr_decode((gcr & 0x1F)));
+
+
+                printf("%d", crc_check(message, crc));
+
+                // if (crc_check(message, crc)) {
+                //     uint16_t erpm = ((n[0]) | (n[1] << 4) | ((p & 0x1) << 8));
+                //     erpm = (erpm << (p >> 1));
+                //     printf("%d", erpm);
+                //     printf("        ");
+                //     printf("%d", erpm / 7);
+                // }
+
             }
         }
         printf("\n");

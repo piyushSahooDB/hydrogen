@@ -3,6 +3,8 @@
 #include "hardware/uart.h"
 #include "hardware/gpio.h"
 #include <stdint.h>
+#include <inttypes.h>
+#include <stdio.h>
 
 #include "dshot.pio.h"
 
@@ -63,9 +65,13 @@ int main() {
 
     while (true) {
 
-        uint8_t address, dom, sub;
+        uint8_t address;
 
         address = uart_getc(UARTID);
+        // for (int i = 7; i >= 0; --i) {
+        //     printf("%"PRIu32, address >> i & 1);
+        // }
+        // printf("\n");
 
         if (address == (0b10010000))
             arm_thrusters();

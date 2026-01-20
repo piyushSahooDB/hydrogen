@@ -71,6 +71,8 @@ float angleError(float angle, float reference) {
 }
 
 void setup() {
+
+  delay(300000);
   Serial.begin(115200);
   delay(1000);
 
@@ -90,11 +92,13 @@ void setup() {
   delay(5000);
 
   if (imu.readEuler(heading, roll, pitch)) {
-    roll0  = roll;
+    roll0 = roll;
     pitch0 = pitch;
   }
 
   Serial.println(" Roll & Pitch locked");
+
+  delay(60000);
 
   /* ================= ATTACH THRUSTERS ================= */
   T1.attach(PIN_T1);
@@ -126,45 +130,45 @@ void loop() {
   imu.readGyro(gx, gy, gz);   // deg/s
 
   /* ================= ANGLE ERRORS ================= */
-  rollError  = angleError(roll, roll0);
+  rollError = angleError(roll, roll0);
   pitchError = angleError(pitch, pitch0);
 
   /* ================= YAW RATE ERROR ================= */
   yawRateError = -gz;   // want yaw rate = 0 deg/s
 
   /* ================= INTEGRALS ================= */
-  rollIntegral  += rollError * dt;
+  rollIntegral += rollError * dt;
   pitchIntegral += pitchError * dt;
-  yawIntegral   += yawRateError * dt;
+  yawIntegral += yawRateError * dt;
 
-  rollIntegral  = constrain(rollIntegral,  -I_MAX, I_MAX);
+  rollIntegral = constrain(rollIntegral, -I_MAX, I_MAX);
   pitchIntegral = constrain(pitchIntegral, -I_MAX, I_MAX);
-  yawIntegral   = constrain(yawIntegral,   -I_MAX, I_MAX);
+  yawIntegral = constrain(yawIntegral, -I_MAX, I_MAX);
 
   /* ================= DERIVATIVES ================= */
-  float rollD  = (rollError  - rollLastError)  / dt;
+  float rollD = (rollError - rollLastError) / dt;
   float pitchD = (pitchError - pitchLastError) / dt;
-  float yawD   = (yawRateError - yawLastError) / dt;
+  float yawD = (yawRateError - yawLastError) / dt;
 
-  rollLastError  = rollError;
+  rollLastError = rollError;
   pitchLastError = pitchError;
-  yawLastError   = yawRateError;
+  yawLastError = yawRateError;
 
   /* ================= PID OUTPUTS ================= */
   float rollPID =
-      Kp_roll * rollError +
-      Ki_roll * rollIntegral +
-      Kd_roll * rollD;
+    Kp_roll * rollError +
+    Ki_roll * rollIntegral +
+    Kd_roll * rollD;
 
   float pitchPID =
-      Kp_pitch * pitchError +
-      Ki_pitch * pitchIntegral +
-      Kd_pitch * pitchD;
+    Kp_pitch * pitchError +
+    Ki_pitch * pitchIntegral +
+    Kd_pitch * pitchD;
 
   float yawPID =
-      Kp_yaw * yawRateError +
-      Ki_yaw * yawIntegral +
-      Kd_yaw * yawD;
+    Kp_yaw * yawRateError +
+    Ki_yaw * yawIntegral +
+    Kd_yaw * yawD;
 
   /* ================= VERTICAL MIXING ================= */
   int pwm_T1 = PWM_NEUTRAL + rollPID - pitchPID;
@@ -189,11 +193,11 @@ void loop() {
   HR.writeMicroseconds(pwm_HR);
 
   /* ================= DEBUG ================= */
-  Serial.print(roll,1); Serial.print(" ");
-  Serial.print(pitch,1); Serial.print(" | ");
-  Serial.print(rollPID,1); Serial.print(" ");
-  Serial.print(pitchPID,1); Serial.print(" ");
-  Serial.print(yawPID,1); Serial.print(" | ");
+  Serial.print(roll, 1); Serial.print(" ");
+  Serial.print(pitch, 1); Serial.print(" | ");
+  Serial.print(rollPID, 1); Serial.print(" ");
+  Serial.print(pitchPID, 1); Serial.print(" ");
+  Serial.print(yawPID, 1); Serial.print(" | ");
   Serial.print(pwm_T1); Serial.print(" ");
   Serial.print(pwm_T2); Serial.print(" ");
   Serial.print(pwm_FM); Serial.print(" ");
