@@ -8,15 +8,15 @@
 
 #include "dshot.pio.h"
 
-#define TXPIN   17
-#define RXPIN   16
+#define TXPIN   29
+#define RXPIN   28
 #define BAUDRATE  115200
 #define UARTID  uart0
 
 PIO pio[5];
 uint sm[5];
 uint offset[5];
-static const uint thruster[5] = { 0, 1, 2, 3, 4 };
+static const uint thruster[5] = { 5, 6, 7, 8, 9 };
 
 
 void allthrusters_init() {
@@ -68,10 +68,10 @@ int main() {
         uint8_t address;
 
         address = uart_getc(UARTID);
-        // for (int i = 7; i >= 0; --i) {
-        //     printf("%"PRIu32, address >> i & 1);
-        // }
-        // printf("\n");
+        for (int i = 7; i >= 0; --i) {
+            printf("%"PRIu32, address >> i & 1);
+        }
+        printf("\n");
 
         if (address == (0b10010000))
             arm_thrusters();
@@ -79,36 +79,46 @@ int main() {
             uint8_t hi = uart_getc(UARTID);
             uint8_t lo = uart_getc(UARTID);
             uint16_t throttle = ((uint16_t)hi << 8) | lo;
-            if (crc_check(throttle))
+            if (crc_check(throttle)) {
                 pio_sm_put_blocking(pio[0], sm[0], (uint32_t)throttle << 16);
+                printf("check\n");
+            }
         }
         else if (address == (0x11)) {
             uint8_t hi = uart_getc(UARTID);
             uint8_t lo = uart_getc(UARTID);
             uint16_t throttle = ((uint16_t)hi << 8) | lo;
-            if (crc_check(throttle))
+            if (crc_check(throttle)) {
                 pio_sm_put_blocking(pio[1], sm[1], (uint32_t)throttle << 16);
+                printf("check\n");
+            }
         }
         else if (address == (0x12)) {
             uint8_t hi = uart_getc(UARTID);
             uint8_t lo = uart_getc(UARTID);
             uint16_t throttle = ((uint16_t)hi << 8) | lo;
-            if (crc_check(throttle))
+            if (crc_check(throttle)) {
                 pio_sm_put_blocking(pio[2], sm[2], (uint32_t)throttle << 16);
+                printf("check\n");
+            }
         }
         else if (address == (0x13)) {
             uint8_t hi = uart_getc(UARTID);
             uint8_t lo = uart_getc(UARTID);
             uint16_t throttle = ((uint16_t)hi << 8) | lo;
-            if (crc_check(throttle))
+            if (crc_check(throttle)) {
                 pio_sm_put_blocking(pio[3], sm[3], (uint32_t)throttle << 16);
+                printf("check\n");
+            }
         }
         else if (address == (0x14)) {
             uint8_t hi = uart_getc(UARTID);
             uint8_t lo = uart_getc(UARTID);
             uint16_t throttle = ((uint16_t)hi << 8) | lo;
-            if (crc_check(throttle))
+            if (crc_check(throttle)) {
                 pio_sm_put_blocking(pio[4], sm[4], (uint32_t)throttle << 16);
+                printf("check\n");
+            }
         }
     }
 }
