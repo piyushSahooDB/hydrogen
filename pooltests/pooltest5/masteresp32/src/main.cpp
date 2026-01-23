@@ -4,6 +4,10 @@
 
 BNO055_7Semi imu;
 
+#define RP_TXPIN   17
+#define RP_RXPIN   16
+#define RP_BAUDRATE  115200
+
 /* ================= TIMING ================= */
 unsigned long lastTime = 0;
 const float dt = 0.1;   // 100 ms control loop
@@ -23,7 +27,7 @@ float wx_filt_last = 0, wy_filt_last = 0, wz_filt_last = 0;
 const float alpha = 0.1; // low-pass filter coefficient
 
 /* ================= YAW PID ================= */
-float Kp_yaw = 1.2;
+float Kp_yaw = 5;
 float Ki_yaw = 0.01;
 float Kd_yaw = 0.05;
 float yawIntegral = 0;
@@ -48,12 +52,13 @@ const float beta = 0.2; // LQR output smoothing factor
 
 /* ================= PWM ================= */
 const int PWM_NEUTRAL = 1500;
-const int PWM_MIN = 1100;
-const int PWM_MAX = 1900;
 
 /* ================= FUNCTIONS ================= */
-int clampPWM(int pwm) {
-  return constrain(pwm, PWM_MIN, PWM_MAX);
+int clampPWM(int value) {
+  if (value >= 0)
+    return constrain(value + 48, 0, 1000);
+  else if (value <= 0)
+    return constrain(-value + 1049, 1001, 2000);
 }
 
 float wrapAngle(float angle) {
@@ -62,9 +67,13 @@ float wrapAngle(float angle) {
   return angle;
 }
 
+int pwm_HL = 0, pwm_HR = 0;
+
 void setup() {
   Serial.begin(115200);
-  delay(1000);
+  delay(500);
+  Serial2.begin(RP_BAUDRATE, SERIAL_8N1, RP_RXPIN, RP_TXPIN);
+  delay(500);
 
   Wire.begin(21, 22, 100000);
 
@@ -94,6 +103,38 @@ void setup() {
 }
 
 void loop() {
+
+  if (Serial2.available() > 0) {
+    uint8_t rec = Serial2.read();
+    while (Serial2.available() > 0) {
+      Serial2.read();
+    }
+    if (rec >= 0 && rec <= 6) {
+      Serial.print("rec");
+      Serial.print(rec, HEX);
+      if (rec == 1) {
+        pwm_HL = 300;
+        pwm_HR = 300;
+      }
+      else if (rec == 2) {
+        pwm_HL = 1300;
+        pwm_HR = 1300;
+      }
+      else if (rec == 3) {
+        pwm_HL = 1300;
+        pwm_HR = 300;
+      }
+      else if (rec == 4) {
+        pwm_HL = 300;
+        pwm_HR = 1300;
+      }
+    }
+    else {
+      Serial.print("transmission error");
+      Serial.println(rec);
+    }
+  }
+
   if (millis() - lastTime < dt * 1000) return;
   lastTime = millis();
 
@@ -173,16 +214,16 @@ void loop() {
 
   // ================= THRUSTER MIXING =================
   // Vertical thrusters: LQR only
-  int pwm_T1 = clampPWM(PWM_NEUTRAL + u_smooth[0] * 100);
-  int pwm_T2 = clampPWM(PWM_NEUTRAL + u_smooth[1] * 100);
-  int pwm_T3 = clampPWM(PWM_NEUTRAL + u_smooth[2] * 100);
+  int pwm_T1 = clampPWM(u_smooth[0] * 150);
+  int pwm_T2 = clampPWM(u_smooth[1] * 150);
+  int pwm_T3 = clampPWM(u_smooth[2] * 150);
 
   // Horizontal thrusters: yaw only
-  int pwm_HL = clampPWM(PWM_NEUTRAL + yaw_u);
-  int pwm_HR = clampPWM(PWM_NEUTRAL - yaw_u);
+  // int pwm_HL = clampPWM(+yaw_u * 5);
+  // int pwm_HR = clampPWM(-yaw_u * 5);
 
   // Write to servos
-  uint16_t throttle[5] = { pwm_T1,pwm_T2,pwm_T3,pwm_HL,pwm_HR };
+  uint16_t throttle[5] = { pwm_T1,pwm_T2,pwm_T3,pwm_HR,pwm_HL };
   for (int i = 0;i < 5;i++) {
     Serial1.write(0b00010000 | i);      //sending address
     pico_esc::send_escframe(throttle[i]);
@@ -201,4 +242,6 @@ void loop() {
     Serial.print(" HL:"); Serial.print(pwm_HL);
     Serial.print(" HR:"); Serial.println(pwm_HR);
   }
+  pwm_HL = 0;
+  pwm_HR = 0;
 }
