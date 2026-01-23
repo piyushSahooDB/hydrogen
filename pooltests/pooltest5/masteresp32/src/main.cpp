@@ -46,13 +46,6 @@ const float U_MAX = 1.0;
 float u_smooth[3] = { 0, 0, 0 };
 const float beta = 0.2; // LQR output smoothing factor
 
-/* ================= PINS ================= */
-const int PIN_T1 = 18;
-const int PIN_T2 = 19;
-const int PIN_T3 = 26;
-const int PIN_HL = 27;
-const int PIN_HR = 14;
-
 /* ================= PWM ================= */
 const int PWM_NEUTRAL = 1500;
 const int PWM_MIN = 1100;
