@@ -67,7 +67,7 @@ float wrapAngle(float angle) {
   return angle;
 }
 
-int pwm_HL = 0, pwm_HR = 0;
+int pwm_HL = 0, pwm_HR = 0, zoffset = 0;
 
 void setup() {
   Serial.begin(115200);
@@ -127,6 +127,14 @@ void loop() {
       else if (rec == 4) {
         pwm_HL = 300;
         pwm_HR = 1300;
+      }
+      else if (rec == 5) {
+        zoffset += 5;
+        zoffset = constrain(zoffset, 0, 500);
+      }
+      else if (rec == 6) {
+        zoffset -= 5;
+        zoffset = constrain(zoffset, 0, 500);
       }
     }
     else {
@@ -214,9 +222,9 @@ void loop() {
 
   // ================= THRUSTER MIXING =================
   // Vertical thrusters: LQR only
-  int pwm_T1 = clampPWM(u_smooth[0] * 150);
-  int pwm_T2 = clampPWM(u_smooth[1] * 150);
-  int pwm_T3 = clampPWM(u_smooth[2] * 150);
+  int pwm_T1 = clampPWM(u_smooth[0] * 150 + zoffset);
+  int pwm_T2 = clampPWM(u_smooth[1] * 150 + zoffset);
+  int pwm_T3 = clampPWM(u_smooth[2] * 150 + zoffset);
 
   // Horizontal thrusters: yaw only
   // int pwm_HL = clampPWM(+yaw_u * 5);
