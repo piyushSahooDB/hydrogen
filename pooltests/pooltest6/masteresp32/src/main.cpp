@@ -23,8 +23,6 @@ void setup() {
 
 void loop() {
 
-
-
   if (Serial2.available() > 0) {
     uint8_t rec = Serial2.read();
     while (Serial2.available() > 0) {
@@ -67,7 +65,6 @@ void loop() {
   imu::update();
   control::update();
 
-  // Write to servos
   uint16_t throttleesc[5] = { throttle.VB,throttle.VR,throttle.VL,throttle.HR,throttle.HL };
   for (int i = 0;i < 5;i++) {
     Serial1.write(0b00010000 | i);      //sending address

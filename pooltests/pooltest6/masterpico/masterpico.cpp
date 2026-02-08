@@ -1,115 +1,99 @@
-#include "pico/stdlib.h"
-#include "hardware/pio.h"
-#include "hardware/uart.h"
-#include "hardware/i2c.h"
-#include "hardware/gpio.h"
-#include <stdint.h>
-#include <inttypes.h>
 #include <stdio.h>
+#include "pico/stdlib.h"
+#include "hardware/i2c.h"
 
-#include "dshot.pio.h"
+#define I2C_PORT i2c1
 
-#define TXPIN   29
-#define RXPIN   28
-#define BAUDRATE  115200
-#define UARTID  uart0
+static int addr = 0x28;
 
-PIO pio[5];
-uint sm[5];
-uint offset[5];
-static const uint thruster[5] = { 5, 6, 7, 8, 9 };
+// Initialise Accelerometer Function
+void accel_init(void) {
+    // Check to see if connection is correct
+    uint8_t reg = 0x00;
+    uint8_t chipID[1];
+    i2c_write_blocking(I2C_PORT, addr, &reg, 1, true);
+    i2c_read_blocking(I2C_PORT, addr, chipID, 1, false);
 
-
-void allthrusters_init() {
-    for (int i = 0;i < 5;i++) {
-        bool success = pio_claim_free_sm_and_add_program_for_gpio_range(&dshot_program, &pio[i],
-            &sm[i], &offset[i], thruster[i], 1, true);
-        hard_assert(success);
-        dshot_program_init(pio[i], sm[i], offset[i], thruster[i]);
-    }
-}
-
-bool crc_check(uint16_t throttle) {
-    uint16_t rx_crc = throttle & 0x0F;
-    uint16_t packet = throttle >> 4;
-    unsigned int calc_crc = (packet ^ (packet >> 4) ^ (packet >> 8)) & 0x0F;
-    return (rx_crc == calc_crc);
-}
-
-void arm_thrusters() {
-    for (int i = 0;i < 500;i++) {
-        for (int j = 0;j < 5;j++) {
-            pio_sm_put_blocking(pio[j], sm[j], 0x00000000 << 16);
-            sleep_us(700);
+    if (chipID[0] != 0xA0) {
+        while (1) {
+            printf("Chip ID Not Correct - Check Connection!");
+            sleep_ms(10);
         }
     }
-    for (int i = 0;i < 10;i++) {
-        for (int j = 0;j < 5;j++) {
-            pio_sm_put_blocking(pio[j], sm[j], (uint32_t)0x0145 << 16);
-            sleep_us(700);
-        }
-    }
+
+    // Use internal oscillator
+    uint8_t data[2];
+    data[0] = 0x3F;
+    data[1] = 0x40;
+    i2c_write_blocking(I2C_PORT, addr, data, 2, true);
+
+    // Reset all interrupt status bits
+    data[0] = 0x3F;
+    data[1] = 0x01;
+    i2c_write_blocking(I2C_PORT, addr, data, 2, true);
+
+    // Configure Power Mode
+    data[0] = 0x3E;
+    data[1] = 0x00;
+    i2c_write_blocking(I2C_PORT, addr, data, 2, true);
+    sleep_ms(50);
+
+    // Defaul Axis Configuration
+    data[0] = 0x41;
+    data[1] = 0x24;
+    i2c_write_blocking(I2C_PORT, addr, data, 2, true);
+
+    // Default Axis Signs
+    data[0] = 0x42;
+    data[1] = 0x00;
+    i2c_write_blocking(I2C_PORT, addr, data, 2, true);
+
+    // Set units to m/s^2
+    data[0] = 0x3B;
+    data[1] = 0b0001000;
+    i2c_write_blocking(I2C_PORT, addr, data, 2, true);
+    sleep_ms(30);
+
+    // Set operation to acceleration only
+    data[0] = 0x3D;
+    data[1] = 0x0C;
+    i2c_write_blocking(I2C_PORT, addr, data, 2, true);
+    sleep_ms(100);
 }
 
-int main() {
-    stdio_init_all();
-    uart_init(UARTID, BAUDRATE);
-    gpio_set_function(TXPIN, GPIO_FUNC_UART);
-    gpio_set_function(RXPIN, GPIO_FUNC_UART);
+int main(void) {
+    stdio_init_all(); // Initialise STD I/O for printing over serial
 
-    gpio_init(15);
-    gpio_set_dir(15, GPIO_OUT);
-    gpio_put(15, 0);
+    // Configure the I2C Communication
+    i2c_init(I2C_PORT, 400 * 1000);
+    gpio_set_function(27, GPIO_FUNC_I2C);
+    gpio_set_function(26, GPIO_FUNC_I2C);
+    gpio_pull_up(27);
+    gpio_pull_up(26);
 
-    allthrusters_init();
-    arm_thrusters();
+    // Call accelerometer initialisation function
+    accel_init();
 
-    while (true) {
+    uint8_t accel[6]; // Store data from the 6 acceleration registers
+    int16_t accelX, accelY, accelZ; // Combined 3 axis data
+    float f_accelX, f_accelY, f_accelZ; // Float type of acceleration data
+    uint8_t val = 0x08; // Start register address
 
-        // uint8_t address;
+    // Infinite Loop
+    while (1) {
+        i2c_write_blocking(I2C_PORT, addr, &val, 1, true);
+        i2c_read_blocking(I2C_PORT, addr, accel, 6, false);
 
-        // address = uart_getc(UARTID);
-        // // for (int i = 7; i >= 0; --i) {
-        // //     printf("%"PRIu32, address >> i & 1);
-        // // }
-        // // printf("\n");
+        accelX = ((accel[1] << 8) | accel[0]);
+        accelY = ((accel[3] << 8) | accel[2]);
+        accelZ = ((accel[5] << 8) | accel[4]);
 
-        // if (address == (0b10010000))
-        //     arm_thrusters();
-        // else if (address == (0x10)) {
-        //     uint8_t hi = uart_getc(UARTID);
-        //     uint8_t lo = uart_getc(UARTID);
-        //     uint16_t throttle = ((uint16_t)hi << 8) | lo;
-        //     if (crc_check(throttle))
-        //         pio_sm_put_blocking(pio[0], sm[0], (uint32_t)throttle << 16);
-        // }
-        // else if (address == (0x11)) {
-        //     uint8_t hi = uart_getc(UARTID);
-        //     uint8_t lo = uart_getc(UARTID);
-        //     uint16_t throttle = ((uint16_t)hi << 8) | lo;
-        //     if (crc_check(throttle))
-        //         pio_sm_put_blocking(pio[1], sm[1], (uint32_t)throttle << 16);
-        // }
-        // else if (address == (0x12)) {
-        //     uint8_t hi = uart_getc(UARTID);
-        //     uint8_t lo = uart_getc(UARTID);
-        //     uint16_t throttle = ((uint16_t)hi << 8) | lo;
-        //     if (crc_check(throttle))
-        //         pio_sm_put_blocking(pio[2], sm[2], (uint32_t)throttle << 16);
-        // }
-        // else if (address == (0x13)) {
-        //     uint8_t hi = uart_getc(UARTID);
-        //     uint8_t lo = uart_getc(UARTID);
-        //     uint16_t throttle = ((uint16_t)hi << 8) | lo;
-        //     if (crc_check(throttle))
-        //         pio_sm_put_blocking(pio[3], sm[3], (uint32_t)throttle << 16);
-        // }
-        // else if (address == (0x14)) {
-        //     uint8_t hi = uart_getc(UARTID);
-        //     uint8_t lo = uart_getc(UARTID);
-        //     uint16_t throttle = ((uint16_t)hi << 8) | lo;
-        //     if (crc_check(throttle))
-        //         pio_sm_put_blocking(pio[4], sm[4], (uint32_t)throttle << 16);
-        // }
+        f_accelX = accelX / 100.00;
+        f_accelY = accelY / 100.00;
+        f_accelZ = accelZ / 100.00;
+
+        // Print to serial monitor
+        printf("X: %6.2f    Y: %6.2f    Z: %6.2f\n", f_accelX, f_accelY, f_accelZ);
+        sleep_ms(300);
     }
 }
