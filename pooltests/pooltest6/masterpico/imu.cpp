@@ -23,6 +23,8 @@ float wrapAngle(float angle) {
     return angle;
 }
 
+uint8_t buffer[6];
+
 void imu::init() {
 
     i2c_init(I2C_PORT, 400 * 1000);
@@ -31,19 +33,15 @@ void imu::init() {
     gpio_pull_up(27);
     gpio_pull_up(26);
 
-    uint8_t buffer[6];
-
     uint8_t reg = 0x00;
-    uint8_t chipID[1];
-    i2c_write_blocking(I2C_PORT, addr, &reg, 1, true);
-    i2c_read_blocking(I2C_PORT, addr, chipID, 1, false);
+    uint8_t chipID = 0;
 
-    while (1) {
-        if (chipID[0] != 0xA0) {
-            printf("Chip ID Not Correct\n");
-            sleep_ms(100);
-        }
+    while (chipID != 0xA0) {
+        i2c_write_blocking(I2C_PORT, addr, &reg, 1, true);
+        i2c_read_blocking(I2C_PORT, addr, &chipID, 1, false);
+        sleep_ms(100);
     }
+
 
     printf("BNO055 connected\n");
     sleep_ms(1000);
@@ -68,7 +66,7 @@ void imu::init() {
     roll0 = ((buffer[3] << 8) | buffer[2]) / 0.27925;
     pitch0 = ((buffer[5] << 8) | buffer[4]) / 0.27925;
 
-    printf("Roll, Pitch, Yaw locked\n")
+    printf("Roll, Pitch, Yaw locked\n");
 }
 
 void imu::update() {
@@ -82,8 +80,8 @@ void imu::update() {
     state.roll = wrapAngle((state.roll / 0.27925) - roll0);  // rad/s
     state.pitch = wrapAngle((state.pitch / 0.27925) - pitch0);
     // Deadband for small angles
-    if (abs(state.roll) < 0.02) state.roll = 0;
-    if (abs(state.pitch) < 0.02) state.pitch = 0;
+    if (std::abs(state.roll) < 0.02f) state.roll = 0;
+    if (std::abs(state.pitch) < 0.02f) state.pitch = 0;
 
     uint8_t reg_gyro = 0x14;
     i2c_write_blocking(I2C_PORT, addr, &reg_gyro, 1, true);
@@ -98,6 +96,8 @@ void imu::update() {
     wx_filt_last = state.wx;
     wy_filt_last = state.wy;
     wz_filt_last = state.wz;
+
+    printf("%f      %f      %f      ", state.yaw, state.roll, state.pitch);
 
     // if (!bno055.readEuler(state.heading, state.roll, state.pitch)) return;
     // state.roll = wrapAngle(state.roll - roll0);

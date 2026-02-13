@@ -35,7 +35,11 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(masterpico masterpico.cpp )
+add_executable(masterpico 
+    masterpico.cpp     
+    imu.cpp
+    control.cpp
+    )
 
 pico_set_program_name(masterpico "masterpico")
 pico_set_program_version(masterpico "0.1")
@@ -44,7 +48,7 @@ pico_set_program_version(masterpico "0.1")
 pico_generate_pio_header(masterpico ${CMAKE_CURRENT_LIST_DIR}/dshot.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(masterpico 0)
+pico_enable_stdio_uart(masterpico 1)
 pico_enable_stdio_usb(masterpico 1)
 
 # Add the standard library to the build

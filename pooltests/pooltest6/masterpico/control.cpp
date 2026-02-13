@@ -23,9 +23,11 @@ float u_smooth[3] = { 0, 0, 0 };
 const float beta = 0.2; // LQR output smoothing factor
 
 
-
-
 /* ================= FUNCTIONS ================= */
+static inline int constrain(int v, int lo, int hi) {
+    return (v < lo) ? lo : (v > hi) ? hi : v;
+}
+
 int clampPWM(int value) {
     if (value >= 0)
         return constrain(value + 48, 0, 1000);
@@ -33,23 +35,17 @@ int clampPWM(int value) {
         return constrain(-value + 1049, 1001, 2000);
 }
 
-
 void control::update() {
 
-
-    // ================= OUTER LOOP PI =================
-    float roll_rad = state.roll * DEG_TO_RAD;
-    float pitch_rad = state.pitch * DEG_TO_RAD;
-
-    rollInt += roll_rad * dt;
-    pitchInt += pitch_rad * dt;
+    rollInt += state.roll * dt;
+    pitchInt += state.pitch * dt;
 
     // Limit integrator to prevent windup
     rollInt = constrain(rollInt, -0.02, 0.02);
     pitchInt = constrain(pitchInt, -0.02, 0.02);
 
-    float wx_ref = Kp_ang * roll_rad + Ki_ang * rollInt;
-    float wy_ref = Kp_ang * pitch_rad + Ki_ang * pitchInt;
+    float wx_ref = Kp_ang * state.roll + Ki_ang * rollInt;
+    float wy_ref = Kp_ang * state.pitch + Ki_ang * pitchInt;
 
     // ================= INNER LOOP LQR =================
     float omega_err[2] = { state.wx - wx_ref, state.wy - wy_ref };
@@ -65,7 +61,7 @@ void control::update() {
     u[2] = -(K_lqr[2][0] * omega_err[0] + K_lqr[2][1] * omega_err[1]);
 
     // Normalize LQR outputs
-    float umax = max(max(abs(u[0]), abs(u[1])), abs(u[2]));
+    float umax = std::max(std::max(abs(u[0]), abs(u[1])), abs(u[2]));
     if (umax > U_MAX) {
         u[0] *= U_MAX / umax;
         u[1] *= U_MAX / umax;
