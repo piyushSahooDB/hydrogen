@@ -10,7 +10,7 @@
 
 #define TXPIN   29
 #define RXPIN   28
-#define BAUDRATE  115200
+#define BAUDRATE  115200 
 #define UARTID  uart0
 
 PIO pio[5];
@@ -71,6 +71,7 @@ int main() {
         for (int i = 7; i >= 0; --i) {
             printf("%"PRIu32, address >> i & 1);
         }
+
         printf("\n");
 
         if (address == (0b10010000))

@@ -87,9 +87,6 @@ void setup() {
   imu.setMode(Mode::IMUPLUS); // use IMUPLUS for fast rate feedback
   delay(50);
 
-  Serial.println("Hold ROV still for 5 seconds...");
-  delay(5000);
-
   imu.readEuler(heading, roll, pitch);
   roll0 = roll;
   pitch0 = pitch;
@@ -143,6 +140,9 @@ void loop() {
     }
   }
 
+  pwm_HL = 300;
+  pwm_HR = 300;
+
   if (millis() - lastTime < dt * 1000) return;
   lastTime = millis();
 
@@ -190,7 +190,7 @@ void loop() {
 
   // Deadband for gyro errors
   for (int i = 0; i < 2; i++) {
-    if (abs(omega_err[i]) < 0.01) omega_err[i] = 0;
+    if (abs(omega_err[i]) < 0.1) omega_err[i] = 0;
   }
 
   float u[3];
@@ -222,9 +222,9 @@ void loop() {
 
   // ================= THRUSTER MIXING =================
   // Vertical thrusters: LQR only
-  int pwm_T1 = clampPWM(u_smooth[0] * 150 + zoffset);
-  int pwm_T2 = clampPWM(u_smooth[1] * 150 + zoffset);
-  int pwm_T3 = clampPWM(u_smooth[2] * 150 + zoffset);
+  int pwm_T1 = clampPWM(u_smooth[0] * 0 + zoffset);
+  int pwm_T2 = clampPWM(u_smooth[1] * 0 + zoffset);
+  int pwm_T3 = clampPWM(u_smooth[2] * 0 + zoffset);
 
   // Horizontal thrusters: yaw only
   // int pwm_HL = clampPWM(+yaw_u * 5);
