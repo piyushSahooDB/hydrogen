@@ -17,11 +17,11 @@ static float wy_filt_last = 0;
 static float wz_filt_last = 0;
 
 
-float wrapAngle(float angle) {
-    while (angle > 180) angle -= 360;
-    while (angle < -180) angle += 360;
-    return angle;
-}
+// float wrapAngle(float angle) {
+//     while (angle > 180) angle -= 360;
+//     while (angle < -180) angle += 360;
+//     return angle;
+// }
 
 uint8_t buffer[6];
 
@@ -54,17 +54,17 @@ void imu::init() {
 
     // Set operation to NDOF (Absolute Orientation) to enable all sensors + fusion
     data[0] = 0x3D;
-    data[1] = 0x0C;
+    data[1] = 0x08;
     i2c_write_blocking(I2C_PORT, addr, data, 2, true);
-    sleep_ms(100);
+    sleep_ms(5000);
 
     // read roll and pitch for lock values
     uint8_t reg_euler = 0x1A;
     i2c_write_blocking(I2C_PORT, addr, &reg_euler, 1, true);
     i2c_read_blocking(I2C_PORT, addr, buffer, 6, false);
-    yaw0 = ((buffer[1] << 8) | buffer[0]) / 0.27925;  // rad/s
-    roll0 = ((buffer[3] << 8) | buffer[2]) / 0.27925;
-    pitch0 = ((buffer[5] << 8) | buffer[4]) / 0.27925;
+    yaw0 = ((buffer[1] << 8) | buffer[0]) / 16.00;  // rad/s
+    roll0 = ((buffer[3] << 8) | buffer[2]) / 16.00;
+    pitch0 = ((buffer[5] << 8) | buffer[4]) / 16.00;
 
     printf("Roll, Pitch, Yaw locked\n");
 }
@@ -74,11 +74,11 @@ void imu::update() {
     uint8_t reg_euler = 0x1A;
     i2c_write_blocking(I2C_PORT, addr, &reg_euler, 1, true);
     i2c_read_blocking(I2C_PORT, addr, buffer, 6, false);
-    state.yaw = ((buffer[1] << 8) | buffer[0]);
-    state.roll = ((buffer[3] << 8) | buffer[2]);
-    state.pitch = ((buffer[5] << 8) | buffer[4]);
-    state.roll = wrapAngle((state.roll / 0.27925) - roll0);  // rad/s
-    state.pitch = wrapAngle((state.pitch / 0.27925) - pitch0);
+    int16_t raw_roll = (int16_t)((buffer[3] << 8) | buffer[2]);
+    int16_t raw_pitch = (int16_t)((buffer[5] << 8) | buffer[4]);
+    int16_t raw_yaw = (int16_t)((buffer[1] << 8) | buffer[0]);
+    state.roll = ((raw_roll / 16.00) - roll0);  // rad/s
+    state.pitch = ((raw_pitch / 16.00) - pitch0);
     // Deadband for small angles
     if (std::abs(state.roll) < 0.02f) state.roll = 0;
     if (std::abs(state.pitch) < 0.02f) state.pitch = 0;
@@ -86,9 +86,9 @@ void imu::update() {
     uint8_t reg_gyro = 0x14;
     i2c_write_blocking(I2C_PORT, addr, &reg_gyro, 1, true);
     i2c_read_blocking(I2C_PORT, addr, buffer, 6, false);
-    state.wx = ((buffer[1] << 8) | buffer[0]) / 0.27925;  // rad/s
-    state.wy = ((buffer[3] << 8) | buffer[2]) / 0.27925;
-    state.wz = ((buffer[5] << 8) | buffer[4]) / 0.27925;
+    state.wx = ((buffer[1] << 8) | buffer[0]) / 16.00;  // rad/s
+    state.wy = ((buffer[3] << 8) | buffer[2]) / 16.00;
+    state.wz = ((buffer[5] << 8) | buffer[4]) / 16.00;
     //low pass filter
     state.wx = alpha * state.wx + (1 - alpha) * wx_filt_last;
     state.wy = alpha * state.wy + (1 - alpha) * wy_filt_last;
@@ -97,7 +97,7 @@ void imu::update() {
     wy_filt_last = state.wy;
     wz_filt_last = state.wz;
 
-    printf("%f      %f      %f      ", state.yaw, state.roll, state.pitch);
+    printf("%f      %f      \n", state.roll, state.pitch);
 
     // if (!bno055.readEuler(state.heading, state.roll, state.pitch)) return;
     // state.roll = wrapAngle(state.roll - roll0);

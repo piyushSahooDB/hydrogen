@@ -63,7 +63,7 @@ int main(void) {
         imu::update();
         control::update();
 
-        printf("%d      %d      %d\n", throttle.VB, throttle.VR, throttle.VL);
+        // printf("%d      %d      %d\n", throttle.VB, throttle.VR, throttle.VL);
 
         uint16_t throttleesc[5] = { throttle.VB,throttle.VR,throttle.VL,throttle.HR,throttle.HL };
         for (int j = 0;j < 5;j++) {
@@ -73,7 +73,7 @@ int main(void) {
             uint16_t escframe = (packet << 4) | crc;        //final 16bit frame that needs to be sent
             pio_sm_put_blocking(pio[j], sm[j], escframe);
         }
-        sleep_us(700);
+        sleep_ms(100);
     }
 
 
