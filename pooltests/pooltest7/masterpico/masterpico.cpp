@@ -4,6 +4,8 @@
 #include "hardware/pio.h"
 #include "hardware/uart.h"
 #include "hardware/gpio.h"
+#include "pico/time.h"
+
 #include <stdint.h>
 #include <inttypes.h>
 
@@ -12,6 +14,15 @@
 #include "structs.hpp"
 #include "imu.hpp"
 #include "control.hpp"
+
+// volatile bool control_flag = false;
+// struct repeating_timer control_timer;
+
+// bool control_timer_cb(struct repeating_timer* t)
+// {
+//     control_flag = true;   // ISR only sets flag
+//     return true;
+// }
 
 State state;
 Throttle throttle = { 0, 0, 0, 0, 0, 0 };
@@ -33,13 +44,13 @@ void allthrusters_init() {
 void arm_thrusters() {
     for (int i = 0;i < 500;i++) {
         for (int j = 0;j < 5;j++) {
-            pio_sm_put_blocking(pio[j], sm[j], 0x00000000 << 16);
+            pio_sm_put_blocking(pio[j], sm[j], 0x00000000 << 16); //arming
             sleep_us(700);
         }
     }
     for (int i = 0;i < 10;i++) {
         for (int j = 0;j < 5;j++) {
-            pio_sm_put_blocking(pio[j], sm[j], (uint32_t)0x0145 << 16);
+            pio_sm_put_blocking(pio[j], sm[j], (uint32_t)0x0145 << 16); //3dmode
             sleep_us(700);
         }
     }
@@ -49,12 +60,13 @@ int main(void) {
 
     stdio_init_all();
 
-    sleep_ms(5000);
+    sleep_ms(1000);
     printf("program initiating\n");
 
     imu::init();
     allthrusters_init();
     arm_thrusters();
+
 
     printf("program initialised\n");
 
@@ -65,17 +77,18 @@ int main(void) {
 
         // printf("%d      %d      %d\n", throttle.VB, throttle.VR, throttle.VL);
 
-        uint16_t throttleesc[5] = { throttle.VB,throttle.VR,throttle.VL,throttle.HR,throttle.HL };
+        uint16_t throttleesc[5] = { 48,throttle.VR,throttle.VL,throttle.HR,throttle.HL };
         for (int j = 0;j < 5;j++) {
             throttleesc[j] &= 0x7FF;
+            printf("%d      ", throttleesc[j]);
             uint16_t packet = (throttleesc[j] << 1) | 0;
-            unsigned int crc = (packet ^ (packet >> 4) ^ (packet >> 8)) & 0x0F;         //calulating 4bit CRC
+            uint16_t crc = (packet ^ (packet >> 4) ^ (packet >> 8)) & 0x0F;         //calulating 4bit CRC
             uint16_t escframe = (packet << 4) | crc;        //final 16bit frame that needs to be sent
-            pio_sm_put_blocking(pio[j], sm[j], escframe);
+            pio_sm_put_blocking(pio[j], sm[j], (uint32_t)escframe << 16);
         }
-        sleep_ms(100);
+        printf("\n");
+
+        sleep_ms(70);
     }
-
-
 
 }

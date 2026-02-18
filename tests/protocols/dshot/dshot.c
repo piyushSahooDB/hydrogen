@@ -12,10 +12,10 @@ int main() {
     uint sm;
     uint offset;
     bool success = pio_claim_free_sm_and_add_program_for_gpio_range(&dshot_program, &pio,
-        &sm, &offset, 0, 1, true);
+        &sm, &offset, 6, 1, true);
     hard_assert(success);
 
-    dshot_program_init(pio, sm, offset, 0);
+    dshot_program_init(pio, sm, offset, 6);
 
     for (int i = 0;i < 4000;i++) {
         pio_sm_put_blocking(pio, sm, 0x000F << 16);         //arming sequence

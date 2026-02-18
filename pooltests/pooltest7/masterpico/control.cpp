@@ -14,8 +14,8 @@ float pitchInt = 0;
 
 /* ================= INNER LOOP LQR (RATES) ================= */
 float K_lqr[3][2] = {
-  { 1.5, -0.1},
-  { -1.5, -0.1 },
+  { 1.5, -1},
+  { -1.5, -1 },
   { 0.0, 2.0 }
 };
 const float U_MAX = 1.0;
@@ -24,12 +24,12 @@ const float beta = 0.2; // LQR output smoothing factor
 
 
 /* ================= FUNCTIONS ================= */
-static inline int constrain(int v, int lo, int hi) {
+static inline float constrain(float v, float lo, float hi) {
     return (v < lo) ? lo : (v > hi) ? hi : v;
 }
 
-int clampPWM(int value) {
-    if (value >= 0)
+int clampDSHOT(int value) {
+    if (value > 0)
         return constrain(value + 48, 0, 1000);
     else if (value <= 0)
         return constrain(-value + 1049, 1001, 2000);
@@ -52,7 +52,7 @@ void control::update() {
 
     // Deadband for gyro errors
     for (int i = 0; i < 2; i++) {
-        if (abs(omega_err[i]) < 0.01) omega_err[i] = 0;
+        if (std::fabs(omega_err[i]) < 0.01) omega_err[i] = 0;
     }
 
     float u[3];
@@ -61,7 +61,7 @@ void control::update() {
     u[2] = -(K_lqr[2][0] * omega_err[0] + K_lqr[2][1] * omega_err[1]);
 
     // Normalize LQR outputs
-    float umax = std::max(std::max(abs(u[0]), abs(u[1])), abs(u[2]));
+    float umax = std::max(std::max(std::fabs(u[0]), std::fabs(u[1])), std::fabs(u[2]));
     if (umax > U_MAX) {
         u[0] *= U_MAX / umax;
         u[1] *= U_MAX / umax;
@@ -74,8 +74,8 @@ void control::update() {
     }
     // ================= THRUSTER MIXING =================
     // Vertical thrusters: LQR only
-    throttle.VB = clampPWM(u_smooth[0] * 150 + throttle.zoffset);
-    throttle.VR = clampPWM(u_smooth[1] * 150 + throttle.zoffset);
-    throttle.VL = clampPWM(u_smooth[2] * 150 + throttle.zoffset);
-
+    throttle.VL = clampDSHOT(u_smooth[0] * 150);
+    throttle.VR = clampDSHOT(u_smooth[1] * 150);
+    throttle.VB = clampDSHOT(u_smooth[2] * 150);
+    // printf("%d      %d      %d\n", throttle.VL, throttle.VR, throttle.VB);
 }
