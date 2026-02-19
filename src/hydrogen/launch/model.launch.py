@@ -51,7 +51,7 @@ def generate_launch_description():
     )
 
     # ---------------- World ----------------
-    world_file = os.path.join(pkg_share, 'worlds', 'buoyant_pool.sdf')
+    world_file = os.path.join( worlds_path, 'buoyant_pool.sdf')
 
     gazebo_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -121,6 +121,14 @@ def generate_launch_description():
     	output='screen',
     	parameters=[{'use_sim_time':True}]
     )
+    
+    distance_calc_node = Node(
+        package='hydrogen',
+        executable='distance_calc_node', 
+        name='distance_calc_node',
+        output='screen',
+        parameters=[{'use_sim_time': True}]
+    )
 
     # ---------------- Launch Description ----------------
     ld = LaunchDescription()
@@ -139,6 +147,7 @@ def generate_launch_description():
     ld.add_action(spawn_robot)
     ld.add_action(ros_gz_bridge)
     ld.add_action(controller_node)
+    ld.add_action(distance_calc_node)
     
 
     return ld
