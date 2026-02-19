@@ -37,36 +37,32 @@ void imu::init() {
     uint8_t chipID = 0;
 
     while (chipID != 0xA0) {
+        printf("BNO055 not connected\n");
         i2c_write_blocking(I2C_PORT, addr, &reg, 1, true);
         i2c_read_blocking(I2C_PORT, addr, &chipID, 1, false);
-        sleep_ms(100);
+        sleep_ms(500);
     }
-
 
     printf("BNO055 connected\n");
     sleep_ms(1000);
 
     uint8_t data[2];
 
-    // Force CONFIG mode first
     data[0] = 0x3D;     // OPR_MODE register
     data[1] = 0x00;     // CONFIG mode
     i2c_write_blocking(I2C_PORT, addr, data, 2, false);
     sleep_ms(50);
 
-    // Now safe to configure registers
     data[0] = 0x3F;     // SYS_TRIGGER
     data[1] = 0x40;     // internal oscillator
     i2c_write_blocking(I2C_PORT, addr, data, 2, false);
-    sleep_ms(10);
+    sleep_ms(50);
 
-    // 3) Set UNIT_SEL
     data[0] = 0x3B;     // UNIT_SEL
     data[1] = 0x06;     // gyro in rad/s
     i2c_write_blocking(I2C_PORT, addr, data, 2, false);
-    sleep_ms(10);
+    sleep_ms(50);
 
-    // Now set fusion mode LAST
     data[0] = 0x3D;
     data[1] = 0x08;     // IMU
     i2c_write_blocking(I2C_PORT, addr, data, 2, false);
