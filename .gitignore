@@ -6,4 +6,6 @@ install/
 log/
 
 .DS_Store
+.vscode/
+*.db
 

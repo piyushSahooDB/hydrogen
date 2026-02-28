@@ -64,6 +64,7 @@ setup(
             'dataset_collector = hydrogen.dataset_collector:main',
             'imu_node = hydrogen.imu_publisher:main',
             'dshot_node = hydrogen.thruster_Dshot_publisher:main',
+            'thruster_teleop_trial=hydrogen.teleop_trial:main',
         ],
     },
 )

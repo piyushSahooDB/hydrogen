@@ -24,12 +24,24 @@
 
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
-    <atmosphere type="adiabatic"/>
-
+    <!--<atmosphere type="adiabatic"/>-->
+  <!--
     <scene>
-      <ambient>0.4 0.4 0.4 1</ambient>
-      <background>0.7 0.7 0.7 1</background>
+      <ambient>0.08 0.10 0.15 1</ambient>
+      <background>0.02 0.03 0.05 1</background>
       <shadows>true</shadows>
+      <sky>
+        <clouds>false</clouds>
+      </sky>
+    </scene>
+    -->
+    <scene>
+      <ambient>0.06 0.08 0.12 1</ambient>
+      <background>0.02 0.03 0.05 1</background>
+      <shadows>true</shadows>
+      <sky>
+        <enable>false</enable>
+      </sky>
     </scene>
 
     <include>

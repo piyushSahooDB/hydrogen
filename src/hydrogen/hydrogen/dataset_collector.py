@@ -22,7 +22,7 @@ class ImageCollector(Node):
         # --- CONFIGURATION ---
         # subscribing to camera topic
         self.topic_name = '/camera/RGB_image_raw/front'
-        self.save_path = os.path.expanduser('~/auv_dataset/images')
+        self.save_path = os.path.expanduser('~/test_for_yolo/images')
         # ---------------------
 
         self.subscription = self.create_subscription(
@@ -37,7 +37,7 @@ class ImageCollector(Node):
             os.makedirs(self.save_path)
             self.get_logger().info(f"Created folder: {self.save_path}")
             
-        self.counter = 0
+        self.counter = 1
         self.get_logger().info(f"Subscribed to {self.topic_name}. Ready to save images...")
 
     def listener_callback(self, msg):

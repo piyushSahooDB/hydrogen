@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="trash">
+    <static>true</static>
+
+
+    <!--Ladle-->
+    <link name="ladle_link">
+        <pose>0 0.02 -1.37 0 0 0</pose>
+        <collision name="ladle_collision">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/ladle.stl</uri>
+                    <scale>0.003 0.003 0.003</scale>
+                </mesh>
+            </geometry>
+        </collision>
+
+        <visual name="ladle_visual">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/ladle.stl</uri>
+                    <scale>0.003 0.003 0.003</scale>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0 1 0 1</ambient> 
+                <diffuse>0 1 0 1</diffuse>
+            </material>
+        </visual>
+    </link>
+
+    <!--Leftmost Ladle-->
+    <link name="ladle_link_2">
+        <pose>0 0.12 -1.37 0 0 0</pose>
+        <collision name="ladle_collision_2">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/ladle.stl</uri>
+                    <scale>0.003 0.003 0.003</scale>
+                </mesh>
+            </geometry>
+        </collision>
+
+        <visual name="ladle_visual_2">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/ladle.stl</uri>
+                    <scale>0.003 0.003 0.003</scale>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0 1 0 1</ambient> 
+                <diffuse>0 1 0 1</diffuse>
+            </material>
+        </visual>
+    </link>
+    
+    <!--Right Ladle-->
+    <link name="ladle_link_3">
+        <pose>0 -0.08 -1.37 0 0 0</pose>
+        <collision name="ladle_collision_3">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/ladle.stl</uri>
+                    <scale>0.003 0.003 0.003</scale>
+                </mesh>
+            </geometry>
+        </collision>
+
+        <visual name="ladle_visual_3">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/ladle.stl</uri>
+                    <scale>0.003 0.003 0.003</scale>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>0 1 0 1</ambient> 
+                <diffuse>0 1 0 1</diffuse>
+            </material>
+        </visual>
+    </link>
+
+
+    <!--Left Bottle-->
+    <link name="bottle_link">
+        <pose>0.2 0.0 -1.56 0 0 0</pose>
+
+        <collision name="bottle_collision">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/bottle.stl</uri>
+                    <scale>0.005 0.005 0.005</scale>
+                </mesh>
+            </geometry>
+        </collision>
+
+        <visual name="bottle_visual">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/bottle.stl</uri>
+                    <scale>0.005 0.005 0.005</scale>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient> 
+                <diffuse>1 0 0 1</diffuse>
+            </material>
+        </visual>
+
+    </link>
+
+
+
+    <!--Middle Bottle-->
+    <link name="bottle_link_2">
+        <pose>0.2 -0.1 -1.56 0 0 0</pose>
+
+        <collision name="bottle_collision_2">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/bottle.stl</uri>
+                    <scale>0.005 0.005 0.005</scale>
+                </mesh>
+            </geometry>
+        </collision>
+
+        <visual name="bottle_visual_2">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/bottle.stl</uri>
+                    <scale>0.005 0.005 0.005</scale>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient> 
+                <diffuse>1 0 0 1</diffuse>
+            </material>
+        </visual>
+
+    </link>
+    
+    <!--Right Bottle-->
+    <link name="bottle_link_3">
+        <pose>0.2 -0.2 -1.56 0 0 0</pose>
+
+        <collision name="bottle_collision_3">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/bottle.stl</uri>
+                    <scale>0.005 0.005 0.005</scale>
+                </mesh>
+            </geometry>
+        </collision>
+
+        <visual name="bottle_visual_3">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/bottle.stl</uri>
+                    <scale>0.005 0.005 0.005</scale>
+                </mesh>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient> 
+                <diffuse>1 0 0 1</diffuse>
+            </material>
+        </visual>
+
+    </link>
+
+
+    <!--Table Link-->
+    <link name="table_link">
+        <pose>0 0 -0.60 0 3.14 0</pose>
+        <collision name="table_collision">
+            <geometry>
+                <mesh>
+                    <uri>model://trash/table.stl</uri>
+                    <scale>0.005 0.005 0.005</scale>
+                </mesh>
+            </geometry>
+        </collision>
+
+        <visual name="table_visual">
+            <geometry>
+            <mesh>
+                <uri>model://trash/table.stl</uri>
+                <scale>0.005 0.005 0.005</scale>
+            </mesh>
+            </geometry>
+            <material>
+                <ambient>0 0 1 1</ambient> 
+                <diffuse>0 0 1 1</diffuse>
+            </material>
+      </visual>
+    </link>
+
+
+  </model>
+</sdf>
+
