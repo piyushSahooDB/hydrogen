@@ -22,7 +22,7 @@ class ImageCollector(Node):
         # --- CONFIGURATION ---
         # subscribing to camera topic
         self.topic_name = '/camera/RGB_image_raw/front'
-        self.save_path = os.path.expanduser('~/test_for_yolo/images')
+        self.save_path = os.path.expanduser('~/poles_grp/images')
         # ---------------------
 
         self.subscription = self.create_subscription(

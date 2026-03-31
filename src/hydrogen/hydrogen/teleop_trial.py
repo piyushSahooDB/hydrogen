@@ -18,8 +18,8 @@ class TeleopNode(Node):
         super().__init__("teleop_thrusters")
 
         # ================= Controller Subscriptions (ONLY 3 thrusters) =================
-        self.sub_front = self.create_subscription(
-            Float64, 'new_thrust_front', self.cb_front, 10
+        self.sub_back = self.create_subscription(
+            Float64, 'new_thrust_back', self.cb_back, 10
         )
         self.sub_left = self.create_subscription(
             Float64, 'new_thrust_left', self.cb_left, 10
@@ -44,7 +44,7 @@ class TeleopNode(Node):
 
         # ================= Controller Values (ONLY 3 USED) =================
         self.ctrl_values = {
-            'front_propeller': 0.0,
+            'back_propeller': 0.0,
             'left_propeller_2': 0.0,
             'right_propeller_2': 0.0,
         }
@@ -58,8 +58,8 @@ class TeleopNode(Node):
         self.timer = self.create_timer(0.02, self.publish_all)
 
     # ================= Controller Callbacks =================
-    def cb_front(self, msg):
-        self.ctrl_values['front_propeller'] = msg.data
+    def cb_back(self, msg):
+        self.ctrl_values['back_propeller'] = msg.data
 
     def cb_left(self, msg):
         self.ctrl_values['left_propeller_2'] = msg.data
@@ -95,7 +95,7 @@ def main(args=None):
 Teleop + Controller Blending Active
 
 Controller + Keyboard:
-  - front_propeller
+  - back_propeller
   - left_propeller_2
   - right_propeller_2
 
@@ -157,12 +157,12 @@ Controls:
                         
 
                         elif ch == 'a':  # ascend
-                            node.manual_offsets['front_propeller'] = 2.1*node.step
+                            node.manual_offsets['back_propeller'] = 2.1*node.step
                             node.manual_offsets['left_propeller_2'] = node.step
                             node.manual_offsets['right_propeller_2'] = node.step
 
                         elif ch == 'd':  # descend
-                            node.manual_offsets['front_propeller'] = -2.1*node.step
+                            node.manual_offsets['back_propeller'] = -2.1*node.step
                             node.manual_offsets['left_propeller_2'] = -node.step
                             node.manual_offsets['right_propeller_2'] = -node.step
 

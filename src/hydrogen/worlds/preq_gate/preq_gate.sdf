@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<sdf version='1.9'>
+  <model name='preq_gate'>
+        <static>true</static>
+        
+        <link name='preq_gate'>
+            <collision name='preq_gate_collision'>
+                <geometry>
+                <mesh>
+                    <uri>model://preq_gate/preq_gate.dae</uri>
+                </mesh>
+                <scale>0.001 0.001 0.001</scale>
+                </geometry>
+            </collision>
+
+            <visual name='preq_gate_visual'>
+                <geometry>
+                <mesh>
+                    <uri>model://preq_gate/preq_gate.dae</uri>
+                </mesh>
+                <scale>0.001 0.001 0.001</scale>
+                </geometry>
+            </visual>
+            
+        </link>
+  </model>
+</sdf>

@@ -45,6 +45,10 @@ setup(
         ('share/' + package_name + '/worlds/buoy', package_files('worlds/buoy')),
         ('share/' + package_name + '/worlds/octagon', package_files('worlds/octagon')),
         ('share/' + package_name + '/worlds/trash', package_files('worlds/trash')),
+        ('share/' + package_name + '/worlds/preq_pole', package_files('worlds/preq_pole')),
+        ('share/' + package_name + '/worlds/preq_gate', package_files('worlds/preq_gate')),
+        ('share/' + package_name + '/worlds/preq_task', package_files('worlds/preq_task')),
+
         # Parameters
         ('share/' + package_name + '/parameters', ['parameters/bridge_params.yaml']),
     ],
@@ -65,6 +69,10 @@ setup(
             'imu_node = hydrogen.imu_publisher:main',
             'dshot_node = hydrogen.thruster_Dshot_publisher:main',
             'thruster_teleop_trial=hydrogen.teleop_trial:main',
+            'teleop_trial_v2=hydrogen.teleop_trial_v2:main',
+            'yolo_node=hydrogen.yolo_node:main',
+            'teleop_trial_v3=hydrogen.teleop_trial_v3:main',
+            'teleop_trial_v4=hydrogen.teleop_trial_v4_pid:main',
         ],
     },
 )

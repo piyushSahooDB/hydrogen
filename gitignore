@@ -1,4 +1,3 @@
 .vscode/
 *.db
-/bin/python3 /home/piyush/hydrogen/src/hydrogen/setup.py
 

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sdf version='1.9'>
+  <model name='preq_pole'>
+        <static>true</static>
+        
+        <link name='preq_pole'>
+            <collision name='preq_pole_collision'>
+                <geometry>
+                <mesh>
+                    <uri>model://preq_pole/preq_pole.stl</uri>
+                </mesh>
+                </geometry>
+            </collision>
+
+            <visual name='preq_pole_visual'>
+                <geometry>
+                <mesh>
+                    <uri>model://preq_pole/preq_pole.stl</uri>
+                </mesh>
+                </geometry>
+            </visual>
+            
+        </link>
+  </model>
+</sdf>
