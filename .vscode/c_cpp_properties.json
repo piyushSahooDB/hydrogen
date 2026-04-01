@@ -1,54 +1,20 @@
 {
-  "configurations": [
-    {
-      "browse": {
-        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
-        "limitSymbolsToIncludedHeaders": false
-      },
-      "includePath": [
-        "/home/piyush/hydrogen/install/custom_interfaces/include/**",
-        "/home/piyush/spbob/install/act_tut/include/**",
-        "/home/piyush/install/visualization_msgs/include/**",
-        "/home/piyush/install/test_msgs/include/**",
-        "/home/piyush/install/example_interfaces/include/**",
-        "/home/piyush/install/act_tut/include/**",
-        "/home/piyush/install/action_msgs/include/**",
-        "/home/piyush/install/unique_identifier_msgs/include/**",
-        "/home/piyush/install/trajectory_msgs/include/**",
-        "/home/piyush/install/stereo_msgs/include/**",
-        "/home/piyush/install/std_srvs/include/**",
-        "/home/piyush/install/shape_msgs/include/**",
-        "/home/piyush/install/sensor_msgs/include/**",
-        "/home/piyush/install/nav_msgs/include/**",
-        "/home/piyush/install/diagnostic_msgs/include/**",
-        "/home/piyush/install/geometry_msgs/include/**",
-        "/home/piyush/install/actionlib_msgs/include/**",
-        "/home/piyush/install/std_msgs/include/**",
-        "/home/piyush/install/statistics_msgs/include/**",
-        "/home/piyush/install/rosidl_typesupport_microxrcedds_test_msg/include/**",
-        "/home/piyush/install/rmw_microxrcedds/include/**",
-        "/home/piyush/install/rosidl_typesupport_microxrcedds_cpp/include/**",
-        "/home/piyush/install/rosidl_typesupport_microxrcedds_c/include/**",
-        "/home/piyush/install/rosgraph_msgs/include/**",
-        "/home/piyush/install/rclc_parameter/include/**",
-        "/home/piyush/install/rclc/include/**",
-        "/home/piyush/install/composition_interfaces/include/**",
-        "/home/piyush/install/rcl_interfaces/include/**",
-        "/home/piyush/install/micro_ros_utilities/include/**",
-        "/home/piyush/install/micro_ros_agent/include/**",
-        "/home/piyush/install/micro_ros_msgs/include/**",
-        "/home/piyush/install/lifecycle_msgs/include/**",
-        "/home/piyush/install/complex_msgs/include/**",
-        "/home/piyush/install/builtin_interfaces/include/**",
-        "/opt/ros/humble/include/**",
-        "/usr/include/**"
-      ],
-      "name": "ros2",
-      "intelliSenseMode": "gcc-x64",
-      "compilerPath": "/usr/bin/gcc",
-      "cStandard": "gnu11",
-      "cppStandard": "c++17"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "windows-gcc-x86"
+        }
+    ],
+    "version": 4
 }

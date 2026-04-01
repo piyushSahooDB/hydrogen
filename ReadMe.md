@@ -1,61 +1,72 @@
-# Hydrogen and Deuterium – Team AUV MIT-B
+# Hydrogen – Team AUV MIT-B
 
-Building our 2nd and 3rd prototype to participate in RoboSub 2026.
+## BMS Branch:
+> Focussed on the BMS controller
+Little Endian
 
+Sending frame structure:
+- 8 bits sof (0xAE)
+- 8 bits sequence number (wraps around at 0xFF, sequence gaps are permitted, and repeated sequence numbers indicate stalled telemetry)
+- 16 bits BMS Current (signed) -- mA
+- 16 bits BMS output voltage (unsigned) -- mV
+- 16 bits Total Battery Voltage (unsigned) -- mV
+- 16 bits Temp (signed) -- centi celsius
+- 8 bits ERROR (say bms turned off or smth, bit field, reflects current state)
+- 8 bits CRC8
+    - 0x07 -- x^8 + x^2 + x + 1
+    - does not cover sof
+    - Init value: 0x00
+    - RefIn: false
+    - RefOut: false
+    - XorOut: 0x00
+    - Coverage: all bytes except SOF
+    
+ERROR format
+    bit 0  : BMS off
+    bit 1  : Overcurrent
+    bit 2  : Undervoltage
+    bit 3  : Overtemperature
+    bit 4  : Comm fault
+    bit 5  : Sensor fault
+    bit 6–7: Reserved
+When error is set, call interrupt to make master immediately push a telemetry request
 
-## Overview
-We've created Hydrogen and Deuterium to replicate the complete RoboSub 2025 competition track for fully autonomous navigation. The modular file structure makes multi-person collaboration seamless across our team.
+Recieved frame structure:
+- 8 bits sof 
+- 8 bits command
+- 8 bits notted command
+- 8 bits crc
+SOF is AE
 
-We use it for preliminary testing of all tech stacks—from Electrical Team stabilization controllers to manual teleop interfaces. We're currently implementing initial autonomy through SAUVC tasks using Behaviour Trees, progressing toward full track navigation with our custom-trained object detection pipeline. This sim-based rapid prototyping gives us iteration flexibility before hardware deployment.
+Command structure:
+    bit 7   = 1 -> command
+    bit 6   = safety-critical (STOP_SYSTEM, STOP_THRUSTERS)
+    bit 5-0 = command ID
 
-This project utilizes:
-- **ROS 2** for communication
-- **Gazebo** for simulation
+Commands in priority order (lower is better): (All have minimum distance of 3)
+1. STOP_ELECTRONICS: No ACK, just shut down -- does not require crc match 
+    11 000000
+2. STOP_THRUSTERS: ACK -- does not require crc match
+    11 000111
+3. START_THRUSTERS: ACK -- requires crc match
+    10 111000
+4. TELEMETRY: response frame -- requires crc match
+    10 111111
+5. RESERVED (Safety non critical)
+    10 010101
+6. RESERVED (Safety critical)
+    11 101010
 
-## Prerequisites
-
-- **ROS 2**: Humble
-- **Gazebo**: Ignition Fortress
-
-Ensure that ROS 2 Humble and Gazebo Ignition Fortress are correctly installed and sourced on your system.
-
-## Installation
-
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/MITB-AUVTeam/hydrogen.git
-    cd hydrogen
-    ```
-
-2.  **Build the workspace**:
-    ```bash
-    colcon build
-    ```
-
-3.  **Source the setup file**:
-    ```bash
-    source install/setup.bash
-    ```
-
-4. **Launch the model file**:
-    ```bash 
-    ros2 launch hydrogen model.launch.py
-    ```
-
-## Project Structure
-
-- **launch/**: Contains Python launch files for the hydrogen/deuterium models.
-- **model/**: Robot description files, which have been made modular based on each aspect of the bot from the main_frame to propellers to Zed cameras etc.
-- **world/**: Gazebo world files (SDF), a completely underwater environment with relevant physics and hydrodynamics simulating the complete competition track from RoboSub 2025.
-- **parameters/**: Configuration files.
-- **meshes/**: 3D models for robots, primarily STL files designed in CAD by Mechanical Team members.
-
-# NOTE :-
-
-Before statring the simulation you need to set the enviorinment variable for your gazebo plugin directory, which includes a custom plugin written by one of our team members.
-
-
-```
-echo 'export IGN_GAZEBO_SYSTEM_PLUGIN_PATH=$IGN_GAZEBO_SYSTEM_PLUGIN_PATH:<path to your plugin folder>' >> ~/.bashrc
-```
-use pwd command to find the path to your plugins folder.
+ACK frame:
+    Single byte: 0xA5 (4 bit ack with inverse appended on)
+    Meaning: Command received and accepted
+    Does NOT imply action completed 
+    Make sure to query on master side
+NACK frame:
+    Single byte: 0x5A
+    Meaning: Command recieved BUT NOT accepted due to various reasons
+        - CMD / ~CMD mismatch
+        - Reserved command ID
+        - START_THRUSTERS while fault is latched 
+        - i.e, if the command is perfect, but the logic doesnt work or the command doesnt exist, send NACK. If malformed, let master time out
+ACK/NACK is sent immediately after command validation. No response is guaranteed for STOP_ELECTRONICS
